@@ -1,5 +1,4 @@
 """ Code for interfacing with the existing stevens course scheduler. """
-
 from datetime import datetime
 import re
 import urllib2
@@ -14,8 +13,8 @@ find_terms = re.compile(r'<Term Code="(.*)" Name="(.*)"/>').findall
 match_section = re.compile(r'(?P<prefix>[a-zA-Z]+)\s?(?P<number>\d+)(?P<code>\S+)').match
 
 
-def get_terms():
-    """ Get list of terms
+def terms():
+    """ Get Term Information
     :returns: A list of term codes and names
     :rtype: list
     """
@@ -23,39 +22,57 @@ def get_terms():
     return find_terms(f.read())
 
 
-def get_courses(term):
-    """ Get course data
+def courses(term):
+    """ Get Course Information
     :param term: The selected school term.
+    :returns: A generator yielding course information for selected term
+    :rtype: generator
     """
     f = urllib2.urlopen('https://web.stevens.edu/scheduler/core/core.php?cmd=getxml&term={0}'.format(term))
     for course in minidom.parse(f).getElementsByTagName("Course"):
-        course_entry = {"call_number": course.getAttribute('CallNumber'),
-                        "title": course.getAttribute('Title'),
-                        "status": course.getAttribute('Status'),
-                        "section": match_section(course.getAttribute('Section')).groupdict(),
-                        'max_enrollment': int(course.getAttribute('MaxEnrollment')),
-                        'current_enrollment': int(course.getAttribute('CurrentEnrollment')),
-                        'instructor': course.getAttribute('Instructor1'),
-                        "meetings": []}
 
+        # Basic Course Information
+        c = {"call_number": course.getAttribute('CallNumber'),
+             "title": course.getAttribute('Title'),
+             "status": course.getAttribute('Status'),
+             "section": match_section(course.getAttribute('Section')).groupdict(),
+             'max_enrollment': int(course.getAttribute('MaxEnrollment')),
+             'current_enrollment': int(course.getAttribute('CurrentEnrollment')),
+             'instructor_1': course.getAttribute('Instructor1'),
+             'instructor_2': course.getAttribute('Instructor2'),
+             "meetings": [],
+             'requirements': []}
+
+        # Course Meeting Information
         for meeting in course.getElementsByTagName("Meeting"):
-            meeting_entry = {'day': meeting.getAttribute('Day'),
-                             'site': meeting.getAttribute('Site'),
-                             'building': meeting.getAttribute('Building'),
-                             'room': meeting.getAttribute('Room'),
-                             'activity': meeting.getAttribute('Activity')}
-
+            m = {'day': meeting.getAttribute('Day'),
+                 'site': meeting.getAttribute('Site'),
+                 'building': meeting.getAttribute('Building'),
+                 'room': meeting.getAttribute('Room'),
+                 'activity': meeting.getAttribute('Activity')}
             if meeting.hasAttribute('StartTime') and meeting.hasAttribute('EndTime'):
-                meeting_entry.update({
+                m.update({
                     "start_time": datetime.strptime(meeting.getAttribute('StartTime')[:-4], "%H:%M").time(),
                     "end_time": datetime.strptime(meeting.getAttribute('EndTime')[:-4], "%H:%M").time()
                 })
+            c["meetings"].append(m)
 
-            course_entry["meetings"].append(meeting_entry)
+        # Course Requirement Information
+        for requirement in course.getElementsByTagName("Requirement"):
+            c["requirements"].append({"control": requirement.getAttribute('Control'),
+                                      "argument": requirement.getAttribute('Argument'),
+                                      "value_1": requirement.getAttribute('Value1'),
+                                      "operator": requirement.getAttribute('Operator'),
+                                      "value_2": requirement.getAttribute('Value2')})
 
-        # Todo: Include Requirement Elements
-        print course_entry
+        # Course Activity Information - To be used to group specific types of classes
+        c["activity"] = c["section"] if len(c["meetings"]) == 0 else c["meetings"][0]['activity']
+
+        yield c
 
 if __name__ == "__main__":
-    print get_terms()
-    get_courses(get_terms()[-1][0])
+    import pprint
+    pp = pprint.PrettyPrinter()
+    pp.pprint(terms())
+    most_recent_term = terms()[-1][0]
+    pp.pprint(list(courses(most_recent_term)))
