@@ -32,7 +32,7 @@ def courses(term):
     for course in minidom.parse(f).getElementsByTagName("Course"):
 
         # Basic Course Information
-        c = {"call_number": course.getAttribute('CallNumber'),
+        c = {"_id": course.getAttribute('CallNumber'),
              "title": course.getAttribute('Title'),
              "status": course.getAttribute('Status'),
              "section": match_section(course.getAttribute('Section')).groupdict(),
@@ -52,8 +52,8 @@ def courses(term):
                  'activity': meeting.getAttribute('Activity')}
             if meeting.hasAttribute('StartTime') and meeting.hasAttribute('EndTime'):
                 m.update({
-                    "start_time": datetime.strptime(meeting.getAttribute('StartTime')[:-4], "%H:%M").time(),
-                    "end_time": datetime.strptime(meeting.getAttribute('EndTime')[:-4], "%H:%M").time()
+                    "start_time": datetime.strptime(meeting.getAttribute('StartTime')[:-4], "%H:%M"),
+                    "end_time": datetime.strptime(meeting.getAttribute('EndTime')[:-4], "%H:%M")
                 })
             c["meetings"].append(m)
 
@@ -69,6 +69,16 @@ def courses(term):
         c["activity"] = c["section"] if len(c["meetings"]) == 0 else c["meetings"][0]['activity']
 
         yield c
+
+
+def clone_database():
+    """ Replicate existing course scheduler database in MongoDB
+    """
+    from pymongo import MongoClient
+    client = MongoClient()
+    db = client.schedule
+    [db[term[0]].insert_many(list(courses(term[0]))) for term in terms()]
+
 
 if __name__ == "__main__":
     import pprint
