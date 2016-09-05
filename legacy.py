@@ -5,7 +5,6 @@ import urllib2
 from xml.dom import minidom
 
 
-
 __author__ = "Constantine Davantzis"
 __status__ = "Prototype"
 
