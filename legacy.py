@@ -9,9 +9,9 @@ __author__ = "Constantine Davantzis"
 __status__ = "Prototype"
 
 # Compile regular expression to find terms in XML response.
-find_terms = re.compile(r'<Term Code="(.*)" Name="(.*)"/>').findall
+re_terms = re.compile(r'<Term Code="(.*)" Name="(.*)"/>')
 # Compile regular expression to match parts of course section
-match_section = re.compile(r'(?P<prefix>[a-zA-Z]+)\s?(?P<number>\d+)(?P<code>\S+)').match
+re_section = re.compile(r'(?P<prefix>[a-zA-Z]+)\s?(?P<number>\d+)(?P<code>\S+)')
 
 
 def terms():
@@ -20,7 +20,7 @@ def terms():
     :rtype: list
     """
     f = urllib2.urlopen("https://web.stevens.edu/scheduler/core/core.php?cmd=terms")
-    return find_terms(f.read())
+    return re_terms.findall(f.read())
 
 
 def courses(term):
@@ -36,7 +36,7 @@ def courses(term):
         c = {"_id": course.getAttribute('CallNumber'),
              "title": course.getAttribute('Title'),
              "status": course.getAttribute('Status'),
-             "section": match_section(course.getAttribute('Section')).groupdict(),
+             "section": re_section.match(course.getAttribute('Section')).groupdict(),
              'max_enrollment': int(course.getAttribute('MaxEnrollment')),
              'current_enrollment': int(course.getAttribute('CurrentEnrollment')),
              'instructor_1': course.getAttribute('Instructor1'),
