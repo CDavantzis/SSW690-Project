@@ -4,6 +4,8 @@ import re
 import urllib2
 from xml.dom import minidom
 
+
+
 __author__ = "Constantine Davantzis"
 __status__ = "Prototype"
 
@@ -77,12 +79,20 @@ def clone_database():
     from pymongo import MongoClient
     client = MongoClient()
     db = client.schedule
-    [db[term[0]].insert_many(list(courses(term[0]))) for term in terms()]
+    for term in terms():
+        if term[0] not in db.collection_names():
+            db[term[0]].insert_many(list(courses(term[0])))
+        else:
+            db.temp.drop()
+            db.temp.insert_many(list(courses(term[0])))
+            db.temp.aggregate([{"$out": term[0]}])
+            db.temp.drop()
 
 
 if __name__ == "__main__":
-    import pprint
-    pp = pprint.PrettyPrinter()
-    pp.pprint(terms())
-    most_recent_term = terms()[-1][0]
-    pp.pprint(list(courses(most_recent_term)))
+    #import pprint
+    #pp = pprint.PrettyPrinter()
+    #pp.pprint(terms())
+    #most_recent_term = terms()[-1][0]
+    #pp.pprint(list(courses(most_recent_term)))
+    clone_database()
