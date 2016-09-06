@@ -67,7 +67,7 @@ def courses(term):
                                       "value_2": requirement.getAttribute('Value2')})
 
         # Course Activity Information - To be used to group specific types of classes
-        c["activity"] = c["section"] if len(c["meetings"]) == 0 else c["meetings"][0]['activity']
+        c["activity"] = c["section"]["code"] if len(c["meetings"]) == 0 else c["meetings"][0]['activity']
 
         yield c
 
@@ -82,6 +82,7 @@ def clone_database():
         if term[0] not in db.collection_names():
             db[term[0]].insert_many(list(courses(term[0])))
         else:
+            # Todo: Fix
             db.temp.drop()
             db.temp.insert_many(list(courses(term[0])))
             db.temp.aggregate([{"$out": term[0]}])
@@ -89,9 +90,7 @@ def clone_database():
 
 
 if __name__ == "__main__":
-    #import pprint
-    #pp = pprint.PrettyPrinter()
-    #pp.pprint(terms())
     #most_recent_term = terms()[-1][0]
     #pp.pprint(list(courses(most_recent_term)))
-    clone_database()
+    #clone_database()
+    print terms()[-1][0]
