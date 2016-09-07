@@ -82,7 +82,6 @@ def clone_database():
         if term[0] not in db.collection_names():
             db[term[0]].insert_many(list(courses(term[0])))
         else:
-            # Todo: Fix
             db.temp.drop()
             db.temp.insert_many(list(courses(term[0])))
             db.temp.aggregate([{"$out": term[0]}])
@@ -90,7 +89,4 @@ def clone_database():
 
 
 if __name__ == "__main__":
-    #most_recent_term = terms()[-1][0]
-    #pp.pprint(list(courses(most_recent_term)))
-    #clone_database()
-    print terms()[-1][0]
+    clone_database()
