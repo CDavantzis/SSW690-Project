@@ -1,0 +1,387 @@
+SCHAEFER SCHOOL OF ENGINEERING AND SCIENCE
+    CORE CURRICULUM COURSES / E
+    Department of Biomedical Engineering, Chemistry and Biological Sciences
+        UNDERGRADUATE PROGRAMS
+            Chemistry
+            Chemical Biology
+            Bioinformatics
+            Bioanalytical Chemistry
+            Biology
+            Accelerated Program in Medicine
+            Biomedical Engineering
+                Biomechanics & Biomaterials
+                Bioinstrumentation
+        Minors
+            Chemistry
+            Chemical Biology
+            Biology
+            Biomedical Engineering (for students in Engineering Curriculum)
+        GRADUATE PROGRAMS
+            Master of Science - Chemistry
+            Master of Science - Chemical Biology
+            Master of Science - Bioengineering
+            Master of Science - Computational and Medicinal Chemistry for Drug Discovery
+            Master of Engineering - Biomedical
+        Doctoral Programs
+            Chemistry and in Chemical Biology
+            Biomedical Engineering
+        Graduate Certificate Programs
+            Analytical Chemistry
+            Biomedical Chemistry
+            Biomedical Engineering
+            Chemical Biology
+            Chemical Physiology
+            Laboratory Methods in Chemical Biology
+            Polymer Chemistry
+        Course Offerings
+            Biology / BIO
+            Biomedical Engineering / BME
+            Chemistry and Chemical Biology / CH
+    Department of Chemical Engineering & Materials Science
+        UNDERGRADUATE PROGRAMS
+            Chemical Engineering
+        GRADUATE PROGRAMS
+            Master of Engineering - Chemical
+                Chemical Engineering Concentration (10 Courses)
+                Polymer Engineering Concentration (10 Courses)
+            Master of Engineering or Science – Materials Science and Engineering
+            Microelectronics and Photonics Science and Technology - Interdisciplinary
+        Doctoral Programs
+            Doctoral Program in Chemical Engineering or Materials Science and Engineering
+            Interdisciplinary
+        Graduate Certificate Programs
+            Pharmaceutical Manufacturing Practices
+            Photonics
+            Microelectronics
+            Microdevices and Microsystems
+        COURSE OFFERINGS
+            Chemical Engineering / CHE
+            Materials Science and Engineering / MT
+            Nanotechnology / NANO
+    Department of Civil, Environmental,& Ocean Engineering
+        UNDERGRADUATE PROGRAMS
+            B.E. in Civil Engineering
+            B.E. in Environmental Engineering
+            B.E. in Engineering (Concentration in Naval Engineering)
+        Minors
+            Structural Engineering
+            Water Resources
+            Coastal Engineering
+            Environmental Engineering
+        GRADUATE PROGRAMS
+            Master of Engineering - Civil Engineering
+                Structural Engineering
+                Transportation Engineering
+                Geotechnical/Geoenvironmental Engineering
+                Water Resources Engineering
+            Master of Engineering - Environmental Engineering
+                Environmental Control Processes
+                Groundwater and Soil Pollution Control
+                Modeling of Environmental Systems
+                Inland and Coastal Environmental Hydrodynamics
+                Water Resources
+                Air Pollution Control
+                Environmental Sustainability
+            Master of Engineering - Ocean Engineering
+                Coastal Engineering Concentration
+                Naval Engineering Concentration
+                Maritime Systems Engineering Concentration
+                Maritime Structures Concentration
+                Global Change & Urban Coastal Resilience Concentration
+                Earth Systems Concentration
+            Master of Engineering- Construction Engineering and Management
+            Master of Science - Construction Management
+            Master of Science - Sustainability Management
+        Graduate Certificate Programs
+            Applied Coastal Oceanography
+            Atmospheric and Environmental Science and Engineering (Interdisciplinary)
+            Construction Professional Certificate
+            Construction/Quality Management
+            Construction Accounting/Estimating
+            Construction Law/Disputes
+            Environmental Compatibility in Engineering
+            Environmental Processes
+            Geotechnical Engineering
+            Inland and Coastal Environmental Hydrodynamics
+            Ocean Engineering
+            Ship Hydrodynamics
+            Soil and Groundwater Pollution Control
+            Structural Engineering
+            Water Resources Engineering
+            Maritime Security
+            Maritime Structures
+            Maritime Systems Engineering
+            Maritime Systems Management
+            Maritime Transportation
+        Doctoral Program
+        Civil Engineer Degree
+        COURSE OFFERINGS
+            Civil Engineering / CE
+            Construction / CM
+            Environmental / EN
+            Nanotechnology / NANO
+            Naval Engineering / NE
+            Ocean Engineering / OE
+    Department of Computer Science
+        UNDERGRADUATE PROGRAMS
+            BACHELOR OF SCIENCE IN COMPUTER SCIENCE
+            BACHELOR OF SCIENCE IN CYBERSECURITY
+        Minors
+            COMPUTER SCIENCE
+            CYBERSECURITY
+        GRADUATE PROGRAMS
+            Master of Science - Computer Science
+            Master of Engineering – Media and Broadcast Engineering
+                Track I: Signal Processing and Data Communication
+                Track II: Software Infrastructure for Media and Broadcast Engineering
+            Master of Science - Enterprise and Cloud Computing
+            Master of Science - Cybersecurity
+        Graduate Certificate Programs
+            Databases
+            Cybersecurity
+            Enterprise Security and Information Assurance
+            Service-Oriented Computing
+            Enterprise and Cloud Computing
+            Health Informatics
+            Distributed Systems
+            Computer Systems
+            Computer Graphics
+            Multimedia Experience and Management
+        Engineer Degree
+        Doctoral Program
+        COURSE OFFERINGS
+            Computer Science / CS
+            Service Oriented / SOC
+    Department of Electrical & Computer Engineering
+        UNDERGRADUATE PROGRAMS
+            Electrical Engineering
+            Computer Engineering
+        Areas of Concentration for Electrical Engineering and Computer Engineering
+            Computer Architectures
+            Electronics and Embedded Systems
+            Software Engineering and Design
+            Networks and Security
+            Power Engineering
+            Robotics and Control
+            Image Processing and Multimedia
+            Wireless Communications
+            Engineering with a Concentration in Information Systems Engineering
+                Network Information Systems (NIS)
+                Information Systems Management (ISM)
+        Minors
+            Electrical Engineering
+            Requirements for a Minor in Computer Engineering
+            Media Engineering (for EE and CPE students)
+        GRADUATE PROGRAMS
+            Master of Engineering- Electrical Engineering
+            Master of Science - Electrical Engineering
+                Autonomous Robotics
+                Computer Architectures and Digital Systems
+                Embedded Systems
+                Microelectronic Devices and Systems
+                Signal Processing for Communications
+                Telecommunications Systems Engineering
+                Wireless Communications
+                Interdepartmental Concentration in Microelectronics and Photonics Science and Technology
+            Master of Engineering - Computer Engineering
+            Master of Science - Computer Engineering
+                Computer Systems
+                Data Communications and Networks
+                Digital Systems Design
+                Image Processing and Multimedia
+                Information Systems
+                Information Systems Security
+                Intelligent Systems
+                Real-Time and Embedded Systems
+            Master of Engineering - Information Data Engineering
+            Master of Science - Information Data Engineering
+                Data Communications and Networks
+                Information Networks
+                Multimedia Information Systems
+                Multimedia Technologies
+                Networked Information Systems: Business Practices
+                Network Systems Technologies
+                Secure Network Systems Design
+            Interdisciplinary Programs
+                Integrated Product Development
+                Electrical and Computer Engineering Track
+            Doctoral
+            Degree of Electrical Engineer and Degree of Computer Engineer
+            Graduate Certificate Programs
+                Autonomous Robotics
+                Digital Signal Processing
+                Digital Systems and VLSI Design
+                Microelectronics
+                Photonics
+                Multimedia Technology
+                Networked Information Systems
+                Real-Time and Embedded Systems
+                Secure Network Systems Design
+                Software Design for Embedded and Information Systems
+                Wireless Communications
+            COURSE OFFERINGS
+                Electrical Engineering / EE
+                Computer Engineering / CPE
+                Information and Data Engineering / NIS
+        Department of Mathematical Sciences
+            Bachelor of Science in Mathematics
+            Minor in Mathematics
+            Interdisciplinary Program in Computational Science
+            GRADUATE PROGRAMS
+                Master of Science - Applied Mathematics
+                Master of Science - Mathematics
+                Master of Science - Stochastic Systems
+            Doctoral Program
+            Graduate Certificates
+                Applied Statistics
+                Stochastic Systems
+            COURSE OFFERINGS
+                Mathematics / MA
+        Department of Mechanical Engineering
+            UNDERGRADUATE PROGRAMS
+                Mechanical Engineering
+                    Aerospace Engineering
+                    Automotive Engineering
+                    Biomedical Engineering
+                    Mechatronics (Electro-mechanical Systems)
+                    Nuclear Power Engineering
+                    Pharmaceutical Manufacturing
+                    Power Generation
+                    Product Design and Manufacturing
+                    Robotics and Automation
+                    Sustainable Energy
+                    Product Engineering Architectur
+            Minors
+                Minor in Mechatronics
+            GRADUATE PROGRAMS
+                Master’s Program in Mechanical Engineering
+                    Product Design
+                    Manufacturing
+                    Thermal, Fluids, Energy
+                    Pharmaceutical Manufacturing
+                    Medical Devices
+                    Robotics & Control
+                    Micro/Nano Systems
+                Master’s Program in Product Architecture and Engineering
+                Master’s Program in Integrated Product Development
+                    Armament Engineering Track
+                    Manufacturing Technologies Track
+                    Electrical and Computer Engineering Track
+                    Systems Reliability and Design Track
+                Master’s Program in Pharmaceutical Manufacturing
+                Doctoral Program in Mechanical Engineering
+            Graduate Certificate Programs
+                Additive Manufacturing
+                Advanced Manufacturing
+                Air Pollution Technology
+                Computational Fluid Mechanics and Heat Transfer
+                Design and Production Management
+                Medical Devices
+                Nuclear Power Engineering
+                Ordnance Engineering
+                Power Generation
+                Robotics and Control
+                Structural Analysis and Design
+                Sustainable Energy Systems
+                Vibration and Noise Control
+            COURSE OFFERINGS
+                Mechanical Engineering / ME
+                Integrated Product Development / IDP
+                Product Architecture and Engineering / PAE
+                Pharmaceutical / PME
+        Department of Physics & Engineering Physics
+            UNDERGRADUATE PROGRAMS
+                Bachelor of Science in Physics
+                Bachelor of Science in Engineering Physics (EP)
+                    Microelectronics and Photonics
+                    Atmospheric and Environmental Science
+            Minors
+                Physics
+                Astronomy
+                Photonics
+            Interdisciplinary Program in Computational Science
+            GRADUATE PROGRAMS
+                Master of Science - Physics
+                Master of Engineering - Engineering Physics
+                Master of Engineering Physics- Concentration Nanotechnology
+                Interdisciplinary Concentration Microelectronics and Photonics Science and Technology
+            Doctoral Program
+                Physics
+                Interdisciplinary
+            Graduate Certificate Programs
+                Applied Optics
+                Atmospheric and Environmental Science and Engineering
+                Microdevices and Microsystems
+                Microelectronics
+                Photonics
+            COURSE OFFERINGS
+                Physics and Engineering Physics / PEP
+School of Systems and Enterprises (SSE)
+	Bachelor of Engineering
+		Engineering Management
+		Software Engineering
+	Master of Science
+		Financial Analytics
+		Financial Engineering
+		Software Engineering
+		Sociotechnical Systems
+	Master of Engineering
+		Engineering Management
+		Systems Analytics
+		Space Systems Engineering
+		    Space
+            Systems
+		Systems Engineering
+	Master of Philosophy
+	DOCTORAL PROGRAMS
+	Graduate Certificates
+		Acquisition and Management of Trusted Software Systems
+		Advanced Systems Architecture
+		Algorithmic Trading Strategies
+		Data Exploration and Visualization for Risk and Decision Making
+		Dependable Systems
+		Development of Trusted Software Systems
+		Engineering Management
+		Enterprise Architecture and Governance
+		Financial Computing
+		Financial Engineering
+		Financial Risk Engineering
+		Financial Services Analytics
+		Financial Software Engineering
+		Financial Statistics
+		Infrastructure Management
+		Integrated Ship Systems Engineering
+		Logistics and Supply Chain Analysis
+		Sociotechnical Systems
+		Software Acquisition and Integration
+		Software Design and Development
+		Software Engineering
+		Software Engineering in Finance
+		Software Program Management
+		Software Systems Architecture
+		Space Systems Engineering
+		Systems-Centric Software Engineering
+		Systems and Supportability Engineering
+		Systems Engineering and Architecting
+		Systems Engineering of Embedded/Cyber-Physical Systems
+		Systems Engineering Management
+		Systems Lens for Technical Leaders (Special programs only)
+		Systems Security and Information Assurance (Special programs only)
+		Systems Security Engineering
+		Urban Resilience
+		SET: Modeling and Simulation
+		SET: Software Engineering Fundamentals
+		SET: Systems Engineering Foundation
+		SET: Systems Security
+    Minor
+        Engineering Management
+        Systems Engineering
+    COURSE OFFERINGS
+        Engineering Management / EM
+        Socio-technical Systems / ES
+        Financial Engineering / FE
+        Systems Design and Operational Effectiveness / SDOE
+        Systems Engineering Security / SES
+        Software Engineering / SSW
+        Systems Engineering / SYS
+        Engineering Management / TG
