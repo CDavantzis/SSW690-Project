@@ -3452,24 +3452,22 @@
         "prerequisites": []
     },
     {
-        "corequisites": [],
+        "corequisites": ["MA 116"],
         "cross_listed": [],
-        "details": "Topics in biology are discussed from a quantitative point of view to develop an appreciation for biology and mathematics and the connections between them. Living systems are viewed through an engineering perspective as open systems using descriptive and quantitative models. Mathematical approaches are taken to heredity and genetics, cellular organization, transport and metabolism, human physiology, ecology, and toxicology. These are presented as applications of probability, linear algebra, ordinary differential equations, and other methods. The relevant mathematical principles are introduced as needed in each module. Prerequisites: MA 116 or MA 124 Corequisites: MA 116",
+        "details": "Topics in biology are discussed from a quantitative point of view to develop an appreciation for biology and mathematics and the connections between them. Living systems are viewed through an engineering perspective as open systems using descriptive and quantitative models. Mathematical approaches are taken to heredity and genetics, cellular organization, transport and metabolism, human physiology, ecology, and toxicology. These are presented as applications of probability, linear algebra, ordinary differential equations, and other methods. The relevant mathematical principles are introduced as needed in each module.",
         "letter": "EN",
         "name": "Quantitative Biology",
         "number": "250",
-        "prerequisites": [
-            "MA 116 or MA 124"
-        ]
+        "prerequisites": [["MA 116", "MA 124"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course examines the global environmental and resource issues that we face as a result of human actions, in particular those to which engineering has been a contributor and also for which it can offer the potential for solutions that move us along the path to a sustainable future. A variety of techniques and paradigms will be studied that can make production, use and disposal of our engineered products sustainable. These include industrial ecology, life cycle analysis, green engineering, and design for the environment. Prerequisites: CH 115, and MA 116 or MA 124",
+        "details": "This course examines the global environmental and resource issues that we face as a result of human actions, in particular those to which engineering has been a contributor and also for which it can offer the potential for solutions that move us along the path to a sustainable future. A variety of techniques and paradigms will be studied that can make production, use and disposal of our engineered products sustainable. These include industrial ecology, life cycle analysis, green engineering, and design for the environment.",
         "letter": "EN",
         "name": "Sustainable Engineering",
         "number": "301",
-        "prerequisites": []
+        "prerequisites": ["CH 115", ["MA 116","MA 124"]]
     },
     {
         "corequisites": [],
