@@ -1,0 +1,226 @@
+Engineering Management
+"letter": EM 
+"number": 224  
+"name": Informatics and Software Development  ( 3 - 3 - 0 )
+"description": This course deals with the challenges associated with the variety and volume of information encountered in today’s workplace,
+and working with others in a software development environment. Students will analyze and work with both structured and
+semi-structured data, using the python programming language. Students will learn about the types of software development
+environments they are likely to encounter in their careers. The capstone of the course is a small-group project that analyzes
+real-world data to answer a business or research question. 
+"prerequisites": 
+"corequisites": EM 275
+"letter": EM 275  
+"name": Project Management  ( 3 - 3 - 0 )
+"description": This course presents the tools and techniques for project definition, work breakdown, estimating, resource planning,
+critical path development, scheduling, project monitoring and control and scope management. Students will use project
+management software to accomplish these tasks. In addition, the student will become familiar with the responsibilities, skills
+and effective leadership styles of a good project manager. The role organization design plays in project management will also
+be addressed.
+"letter": EM 
+"number": 301  
+"name": Accounting & Business Analysis  ( 4 - 3 - 3 )
+"description": This course introduces students to the fundamental concepts of financial and managerial accounting, with an emphasis
+on actions managers can take to more effectively address the goals of the firm. Key topics covered include the preparation
+and analysis of financial statements, particularly creating cash flow statements needed for engineering economic analysis;
+consideration of variable costs, fixed costs, cost of goods sold, operating costs, product costs, period costs; job costing
+and process costing; application of accounting information for decision-making: marketing decisions, production decisions;
+capital budgeting: depreciation, taxation; budgeting process, master budgets, flexible budgets, analysis of budget variances;
+asset valuation, and inventory costing. The laboratory portion of the course provides the student opportunity to use the
+personal computer for solving problems related to the major topics of the course, such as spreadsheet analysis, and in
+addition covers managerial topics, including sessions focused on group dynamics and teamwork, research using the Internet
+and business ethics
+"letter": EM 
+"number": 322  
+"name": Engineering Design VI  ( 2 - 1 - 2 )
+"description": This course is an integral part of the Engineering Management program - it provides students with experience and tools for new
+product/process development. Students will participate in a semester long class project meant to provide the students with
+insights that will serve to improve their senior project experience. Participation will be in small groups, and will complement
+EM385. Students will explore the detail design through validation in the systems engineering lifecycle. Tools that have been
+introduced in earlier engineering management courses may be brought together as part of this pre senior design experience.
+Students will be required to maintain an engineering notebook throughout the course. Prerequisites: E 321 Corequisites:
+EM 345, EM 385
+"letter": EM 
+"number": 345  
+"name": Modeling and Simulation  ( 3 - 3 - 0 )
+"description": This course covers contemporary decision support models of forecasting, optimization and simulation for management.
+Students will learn how to identify the problem situation, choose the appropriate methods, collect the data and find the
+solution. The course also covers handling the information and generating alternative decisions based upon operations
+Stevens Institute of Technology • 2016-2017 438
+SCHOOL OF SYSTEMS AND ENTERPRISES
+research optimization, statistical simulation, and systems dynamic forecasting. Computer simulations will be performed on
+PCs using user-friendly graphical interface with multimedia report generation for visualization and animation. Students will
+also be trained in management simulations for group decision support. Prerequisites: EM 365
+"letter": EM 
+"number": 357  
+"name": Elements of Operations Research  ( 3 - 3 - 0 )
+"description": Application of forecasting and optimization models to typical engineering management situations and problems. Topics
+include: optimization theory and its special topics (linear programming, transportation models, and assignment models),
+dynamic programming, forecasting models, decision trees, game theory, and queuing theory. Applications to resource
+allocation, scheduling and routing, location of facilities, and waiting lines will be covered. Prerequisites: EM 365
+"letter": EM 
+"number": 360  
+"name": Operations Management and Process Engineering  ( 3 - 3 - 0 )
+"description": The aim of the course is to provide an introduction to major business process problems, issues with a focus on process
+solutions that confront managers in highly competitive manufacturing and service environments. The course provides
+students with conceptual frameworks and qualitative/quantitative tools to deal with these issues. The course also explores the
+interconnections between business strategy and business processes. A rigorous introduction is provided for people aspiring
+to a career in designing and managing business processes, or for people aspiring to enter the management consulting world.
+"letter": EM 
+"number": 364  
+"name": Statistics For Engineers Laboratory  ( 1 - 0 - 1 )
+"description": This one credit course is the lab component of EM 365. The lab provides an integrated experience with statistics and
+probability on real and manipulated data sets using flipped classroom and project based learning environments . Those
+students who have taken E 243 at Stevens, or have other credit for statistics, are still required to take this one credit EM
+Statistics lab. Prerequisites: Corequisites: EM 365
+"letter": EM 
+"number": 365  
+"name": Statistics for Engineering Managers  ( 4 - 3 - 2 )
+"description": Provides a working knowledge of basic statistics as it is most often applied in engineering. Topics include: fundamentals of
+probability theory, review of distributions of special interest in statistics, analysis and enumeration of data, linear regression
+and correlation, statistical design of engineering experiments, completely randomized design, randomized block design,
+factorial experiments, engineering applications and use of the computer as a tool for statistical analysis.
+"letter": EM 
+"number": 385  
+"name": Innovative System Design  ( 3 - 3 - 0 )
+"description": This project-based course addresses the fundamentals of systems engineering. Principles and concepts of systems
+engineering within a life-cycle perspective are presented through case studies and applied throughout the course to a
+student-selected team project. The initial focus is on the understanding of business drivers for systems engineering and the
+generation of innovative ideas. Students then engage in analysis, synthesis, and evaluation activities as they progress through
+the conceptual and preliminary design phases. Emphasis is placed on tools and methodologies for system evaluation during
+all phases of the design process with the goal of enhancing the effectiveness and efficiency of deployed systems as well as
+reducing operational and support costs. Prerequisites: Corequisites: EM 365
+"letter": EM 
+"number": 423  
+"name": Engineering Design VII  ( 3 - 0 - 8 )
+"description": This year long two-course sequence involves the students in a small-team Engineering Management project. The problem for
+the project is taken from industry, business, government or a not-for-profit organization. Each student team works with a client
+and is expected to collect data, analyze it and develop a design by the end of the first semester. In the second semester the
+design solution of the problem is completed and a written report is submitted for binding. During the year, oral and written
+progress reports are presented to peers and clients. The total project involves the application of the subject areas covered in the
+EM 385 Engineering Management Laboratory course, as well as skills learned in the other technical and non-technical courses
+of the Engineering Management curriculum. Prerequisites: EM 275, and EM 301, and EM 322, and EM 345, and EM 385
+"letter": EM 
+"number": 424  
+"name": Engineering Design VIII  ( 3 - 0 - 8 )
+"description": This year long two-course sequence involves the students in a small-team Engineering Management project. The problem
+for the project is taken from industry, business, government or a not-for-profit organization. Each student team works with a
+client and is expected to collect data, analyze it and develop a design by the end of the first semester. In the second semester
+the design solution of the problem is completed and a written report is submitted for binding. During the year, oral and written
+progress reports are presented to peers and clients. The total project involves the application of the subject areas covered in
+the EM 385 Engineering Management Laboratory course, as well as skills learned in the other technical and non-technical
+courses of the Engineering Management curriculum. Prerequisites: EM 385
+EM 450  Logistics and Supply Chain Management  ( 3 - 3 - 0 )
+This course will provide an introduction to supply chains, logistics & supply chain management. Topics covered include
+supply chain performance and metrics related to facilities, inventory, transportation, sourcing, pricing and information.
+Design of distribution networks, forecasting, and planning of demand & supply would be covered. Contemporary topics like
+e-business, IT and global supply chains would also be covered. Prerequisites: EM 357 or BT 223
+EM 451  Analysis of Networks & Strategies  ( 3 - 3 - 0 )
+This course is designed to help with understanding the complexity, structure and dynamics of a highly connected world. It
+takes an interdisciplinary look at economics, sociology, information science and applied mathematics to discuss some of
+the fundamental features of networks and their behavior. The course is designed to equip students with a modeling lens to
+analyze, quantify and reason about structures, dynamics and evolution of complex networks. Key topics that are covered in
+the course are mathematical description of complex networks, fundamental measures of network structure, diffusion and
+cascading, voting and economic and market implications. The course will also have a particular emphasis on game theory as
+the method to model resource allocation in networks in the presence of autonomous agents. Prerequisites: EM 365
+EM 489  Data-Mining and Risk Assessment  ( 3 - 3 - 0 )
+This course will use tools and techniques which have proven to be of value in recognizing patterns, making predictions, and
+evaluation risk from both large data sets (using data-mining techniques), and small data sets (using networks constructed
+from problem definition and discovery). Both approaches are critical to today’s engineers and managers, because they span
+a range of possible data availability and reliability. Using these tools and techniques, the student will survey applications, and
+have hands-on experimenttaion with both data mining and network construction, using real-world examples and situations.
+Prerequisites: EM 224, and EM 365
+EM 498  Research in Engineering Management I  ( - - )
+Individual investigation of a substantive character undertaken at an undergraduate level under the guidance of a member of
+the departmental faculty. A written report is required. Hours to be arranged with the faculty advisor. Prior approval required.
+This course can be used as a general elective. EM 498 and EM 499 cannot be taken simultaneously.
+EM 499  Research In Engineering Management II  ( - - )
+Individual investigation of a substantive character undertaken at an undergraduate level under the guidance of a member of
+the departmental faculty. A written report is required. Hours to be arranged with the faculty advisor. Prior approval required.
+This course can be used as a general elective. EM 498 and EM 499 cannot be taken simultaneously.
+EM 585  Introduction to Systems Architecture and Design  ( 3 - 3 - 0 )
+EM 585 builds on EM 385 and gives the student a practical introduction to Systems Architecture and Design. Lectures will
+introduce the students to the motivation for System Architecture and Design, the different views on a System Architecture,
+as well as theory and best practices on behavioral definition, logical and physical partitioning, and interface definitions. Key
+aspects of system verification and validation will also be discussed. Tutorials will give the students practical experience using
+SySML and a commercial modeling tool to model system architectures. The students will apply the principles on a team
+project, designing and building a robot. Pre-requisite EM 385 or instructor approval. Prerequisites: EM 385
+EM 600  Engineering Economics and Cost Analysis  ( 3 - 0 - 0 )
+This course presents advanced techniques and analysis designed to permit managers to estimate and use cost information
+in decision making. Topics include: historical overview of the management accounting process, statistical cost estimation,
+cost allocation, and uses of cost information in evaluating decisions about pricing, quality, manufacturing processes (e.g.,
+JIT, CIM), investments in new technologies, investment centers, the selection process for capital investments, both tangible
+and intangible, and how this process is structured and constrained by the time value of money, the source of funds, market
+demand, and competitive position. Cross-listed with: PME 600, MGT 618
+EM 605  Elements of Operations Research  ( 3 - 0 - 0 )
+This course brings a strong modeling orientation to bear on the process of obtaining and utilizing resources to produce
+and deliver useful goods and services so as to meet the goals of the organization. Decision-oriented models such as linear
+programming, inventory control, and forecasting are discussed and then implemented utilizing spreadsheets and other
+commercial software. A review of the fundamentals of statistical analysis oriented toward business problems will also be
+conducted.
+EM 612  Project Management of Complex Systems  ( 3 - 3 - 0 )
+This project-based course exposes students to tools and methodologies useful for forming and managing an effective
+engineering design team in a bussiness environment. Topics covered will include: personality profiles for creating teams with
+balanced diversity; computational tools for project coordination and management; real time electronic documentation as a
+critical design process variable; and methods for refining project requirements to ensure that the team addresses the right
+problem with the right solution.
+EM 622  Decision Making via Data Analysis Techniques  ( 3 - 3 - 0 )
+This course provides a hands-on introduction to the modern techniques for visualizing data and leverages such techniques
+with the corresponding problem solving skills necessary to complement data visualization into specific strategic decision
+making. The student will first learn to use the latest off the shelf software for data visualization. In specific the student will
+learn the following languages: R, D3, Google refine and Spot fire.
+EM 623  Data Science and Knowledge Discovery  ( 3 - 3 - 0 )
+This course provides an hands-on introduction to the major techniques and solutions to discover knowledge in data and text.
+Traditional data mining along with text mining and network analysis will be presented and will be used by the students via
+open source software, addressing information mining needs on both structured and unstructured data.
+EM 624  Informatics for Engineering Management  ( 3 - 3 - 0 )
+This course enables the Engineering Management student to acquire the knowledge and skills he/she will need to handle the
+variety and volume of information encountered in today’s workplace. The course uses Python, which is rapidly becoming the
+language of choice for information handling and data analysis. Students will work with both structured and semi-structured data.
+EM 630  Introduction to Complexity and Dynamic Systems  ( 3 - 3 - 0 )
+This course will introduce and explore complexity and chaos, and investigate a broad range of examples from both natural
+(biological) and man-made systems. Complex systems, distinct from, but related to, complicated systems, display a range of
+behaviors. One of the most distinguishing of these behaviors is emergence - behavior that is not predictable from knowledge
+of specific, individual agent capabilities. In addition, systems are said to be complex when emergent behavior is not resulting
+from a central control, when they display chaotic characteristics, and when the systems have more frequent occurrences of
+rare events, especially when initial conditions vary. This course will study and model complex and adaptive (as well as non-
+adaptive) systems, and will present and discuss the characteristics of complex and chaotic systems. Prerequisites: E 243,
+and MA 221
+EM 650  Quality and Process Management  ( 3 - 3 - 0 )
+Principles and techniques of total quality management (TQM) with emphasis on their application to technical organizations.
+Topics include management philosophy, concepts and critique of quality “Gurus”; TQM modeling and strategy; TQM tools and
+techniques; Dept. of Defense 5000.51-G TQM guides; review and critique of the Deming and Baldrige Awards; concurrent
+engineering; quality function, deployment and design for cost. Students will form teams to analyze a case study involving
+TQM concepts and techniques (Formerly EM750).
+EM 665  Integrated Supply Chain Management  ( 3 - 3 - 0 )
+This course illustrates the theory and practice of designing and analyzing supply chains. It provides tool sets to identify key
+drivers of supply chain performance such as inventory, transportation, information and facilities. Recognizing the interactions
+between the supply and demand components, the course provides a methodology for implementing integrated supply
+chains, enabling a framework to leverage these dynamics for effective product/process design and enterprise operations.
+EM 680  Designing and Managing the Development Enterprise  ( 3 - 3 - 0 )
+This course addresses the design of the peopled-system that is responsible for designing and testing a product or operational
+system. There are three keys to designing the development system that are emphasized as part of this course: the fact that
+the design process should be a discovery process, the critical feedback and control activities that must be implemented
+for cost-discovery process, the critical feedback and control activities that must be implemented for cost-effective success,
+and the design of risk management(with an emphasis on adaptive testing) activities. This course will focus on the functional
+processes that must be performed by the development system, but will also address physical resources(people and software)
+and associated organizational structures.
+EM 690  Selected Topics in Engineering Management  ( 3 - 3 - 0 )
+Selected topics from various areas within Engineering Management.
+EM 800  Special Problems in Engineering Management (ME)  (3 - - )
+Three credits for the degree of Master of Engineering (Engineering Management). This course is typically conducted as a
+one-on-one course between a faculty member and a student. A student may take up to two special problems course in a
+master’s degree program. A department technical report is required as the final product for this course.
+EM 801  Special Problems in Engineering Management (PhD)  (3 - - )
+Three credit for the degree of Doctor of Philosophy. This course is typically conducted as a one-on-one investigation of a
+topic of particular interest between a faculty member and a student and is often used to explore topical areas that can serve
+as a dissertation. A student may take up to two special problems course in a Ph.D. degree program. A department technical
+report is required as the final product for this course.
+EM 810  Special Topics in Engineering Management  ( 3 - - )
+Selected topics from various areas within Engineering Management. This course is typically taught to more than one student
+and often takes the form of a visiting professor’s course. Prerequisite: consent of instructor.
+EM 900  Thesis in Engineering Management (ME)  (1 to 6 - - )
+For the degree of Master of Engineering (Engineering Management). A minimum of six credit hours is required. Hours and
+credit to be arranged.
+EM 960  Research in Engineering Management (PhD)  (- - )
+Original work, which may serve as the basis for the dissertation, required for the degree of Doctor of Philosophy. A minimum
+of 30 hours of EM 960 research is required for the Ph.D. degree. Hours and credits to be arranged
