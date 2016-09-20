@@ -1,0 +1,99 @@
+[ 
+  { 
+    "name" : "Software Engineering",
+    "school" : "School of Systems and Enterprises",
+    "type" : "Master of Science",
+    "_id" : { "$oid" : "57d8c4b2e1c334a77353765a" }
+  },
+  { 
+    "name" : "Software Engineering",
+    "school" : "School of Systems and Enterprises",
+    "type" : "Bachelor of Science",
+    "_id" : { "$oid" : "57d8c4fbe1c334a77353765b" }
+  },
+  { 
+    "name" : "Financal Analysis",
+    "school" : "School of Systems and Enterprises",
+    "type" : "Master of Science",
+    "_id" : { "$oid" : "57d8c555e1c334a77353765c" }
+  },
+  { 
+    "name" : "Financial Engineering",
+    "school" : "School of Systems and Enterprises",
+    "type" : "Master of Science",
+    "_id" : { "$oid" : "57d8c588e1c334a77353765d" }
+  },
+  { 
+    "name" : "Sociotechnical Systems",
+    "school" : "School of Systems and Enterprises",
+    "type" : "Master of Science",
+    "_id" : { "$oid" : "57d8c5a9e1c334a77353765e" }
+  },
+  { 
+    "name" : "Engineering Management",
+    "school" : "School of Systems and Enterprises",
+    "type" : "Master of Engineering",
+    "_id" : { "$oid" : "57d8c628e1c334a77353765f" }
+  },
+  { 
+    "name" : "Systems Analytics",
+    "school" : "School of Systems and Enterprises",
+    "type" : "Master of Engineering",
+    "_id" : { "$oid" : "57d8c651e1c334a773537660" }
+  },
+  { 
+    "name" : "Systems Engineering",
+    "school" : "School of Systems and Enterprises",
+    "type" : "Master of Engineering",
+    "_id" : { "$oid" : "57d8c674e1c334a773537661" }
+  },
+  { 
+    "minCredits" : 30,
+    "minDegreeCredits" : 21,
+    "minGPA" : 3,
+    "name" : "Computer Science",
+    "possibleCourses" : { 
+        "courseSet" : [ 
+            "CS 510",
+            "CS 511",
+            "CS 513",
+            "CS 520",
+            "CS 521",
+            "CS 522",
+            "CS 524",
+            "CS 526",
+            "CS 537",
+            "CS 541",
+            "CS 545",
+            "CS 546",
+            "CS 548",
+            "CS 549",
+            "CS 561",
+            "CS 573",
+            "CS 578",
+            "CS 600",
+            "CS 677",
+            "CS 694"
+          ],
+        "numCoursesFromSet" : 3
+      },
+    "possibleRelatedFields" : { 
+        "fieldsSet" : [ 
+            "Cloud Computing",
+            "Databases",
+            "Gaming and Simulation",
+            "Mobile Systems",
+            "Modeling, Simulation, and Visualization",
+            "Network and Systems Administration",
+            "Secure Systems",
+            "Software Development",
+            "Visual Computing and Information Extraction",
+            "Web Application Development"
+          ],
+        "numCoursesFromSet" : 3
+      },
+    "school" : "Schaefer School of Engineering and Science",
+    "type" : "Master of Science",
+    "_id" : { "$oid" : "57da019de1c334a773537663" }
+  }
+]
