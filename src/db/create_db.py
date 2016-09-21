@@ -6,4 +6,4 @@ import schedule
 client = MongoClient()
 
 catalog.create(client)
-schedule.clone_database(client)
+schedule.update_mongodb(client)
