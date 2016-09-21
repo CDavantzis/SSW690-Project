@@ -78,14 +78,19 @@ def clone_database():
     client = MongoClient()
     db = client.schedule
     for term in terms():
-        if term[0] not in db.collection_names():
-            db[term[0]].insert_many(list(courses(term[0])))
+        term_data = list(courses(term[0]))
+        if len(term_data) != 0:
+            if term[0] not in db.collection_names():
+                db[term[0]].insert_many(term_data)
+            else:
+                db.temp.drop()
+                db.temp.insert_many(term_data)
+                db.temp.aggregate([{"$out": term[0]}])
+                db.temp.drop()
         else:
-            db.temp.drop()
-            db.temp.insert_many(list(courses(term[0])))
-            db.temp.aggregate([{"$out": term[0]}])
-            db.temp.drop()
+            print "??? Not data for:", term
 
 
 if __name__ == "__main__":
     clone_database()
+
