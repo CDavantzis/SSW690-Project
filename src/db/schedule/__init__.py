@@ -1,4 +1,5 @@
 """ Code for interfacing with the existing stevens course scheduler. """
+from pymongo import MongoClient
 from datetime import datetime
 import re
 import urllib2
@@ -71,11 +72,9 @@ def courses(term):
         yield c
 
 
-def clone_database():
+def clone_database(client):
     """ Replicate existing course scheduler database in MongoDB
     """
-    from pymongo import MongoClient
-    client = MongoClient()
     db = client.schedule
     for term in terms():
         term_data = list(courses(term[0]))
@@ -90,5 +89,6 @@ def clone_database():
 
 
 if __name__ == "__main__":
-    clone_database()
+    client = MongoClient()
+    clone_database(client)
 

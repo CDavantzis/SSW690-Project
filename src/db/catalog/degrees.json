@@ -2,50 +2,42 @@
   { 
     "name" : "Software Engineering",
     "school" : "School of Systems and Enterprises",
-    "type" : "Master of Science",
-    "_id" : { "$oid" : "57d8c4b2e1c334a77353765a" }
+    "type" : "Master of Science"
   },
   { 
     "name" : "Software Engineering",
     "school" : "School of Systems and Enterprises",
-    "type" : "Bachelor of Science",
-    "_id" : { "$oid" : "57d8c4fbe1c334a77353765b" }
+    "type" : "Bachelor of Science"
   },
   { 
     "name" : "Financal Analysis",
     "school" : "School of Systems and Enterprises",
-    "type" : "Master of Science",
-    "_id" : { "$oid" : "57d8c555e1c334a77353765c" }
+    "type" : "Master of Science"
   },
   { 
     "name" : "Financial Engineering",
     "school" : "School of Systems and Enterprises",
-    "type" : "Master of Science",
-    "_id" : { "$oid" : "57d8c588e1c334a77353765d" }
+    "type" : "Master of Science"
   },
   { 
     "name" : "Sociotechnical Systems",
     "school" : "School of Systems and Enterprises",
-    "type" : "Master of Science",
-    "_id" : { "$oid" : "57d8c5a9e1c334a77353765e" }
+    "type" : "Master of Science"
   },
   { 
     "name" : "Engineering Management",
     "school" : "School of Systems and Enterprises",
-    "type" : "Master of Engineering",
-    "_id" : { "$oid" : "57d8c628e1c334a77353765f" }
+    "type" : "Master of Engineering"
   },
   { 
     "name" : "Systems Analytics",
     "school" : "School of Systems and Enterprises",
-    "type" : "Master of Engineering",
-    "_id" : { "$oid" : "57d8c651e1c334a773537660" }
+    "type" : "Master of Engineering"
   },
   { 
     "name" : "Systems Engineering",
     "school" : "School of Systems and Enterprises",
-    "type" : "Master of Engineering",
-    "_id" : { "$oid" : "57d8c674e1c334a773537661" }
+    "type" : "Master of Engineering"
   },
   { 
     "minCredits" : 30,
@@ -93,7 +85,6 @@
         "numCoursesFromSet" : 3
       },
     "school" : "Schaefer School of Engineering and Science",
-    "type" : "Master of Science",
-    "_id" : { "$oid" : "57da019de1c334a773537663" }
+    "type" : "Master of Science"
   }
 ]
