@@ -87,8 +87,6 @@ def clone_database():
                 db.temp.insert_many(term_data)
                 db.temp.aggregate([{"$out": term[0]}])
                 db.temp.drop()
-        else:
-            print "??? Not data for:", term
 
 
 if __name__ == "__main__":
