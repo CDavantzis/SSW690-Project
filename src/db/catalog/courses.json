@@ -11537,13 +11537,13 @@
         "prerequisites": []
     },
     {
-        "corequisites": [],
+        "corequisites": ["EM 275"],
         "cross_listed": [],
-        "details": "This course deals with the challenges associated with the variety and volume of information encountered in today\u2019s workplace, and working with others in a software development environment. Students will analyze and work with both structured and semi-structured data, using the python programming language. Students will learn about the types of software development environments they are likely to encounter in their careers. The capstone of the course is a small-group project that analyzes real-world data to answer a business or research question. Prerequisites: Corequisites: EM 275",
+        "details": "This course deals with the challenges associated with the variety and volume of information encountered in today\u2019s workplace, and working with others in a software development environment. Students will analyze and work with both structured and semi-structured data, using the python programming language. Students will learn about the types of software development environments they are likely to encounter in their careers. The capstone of the course is a small-group project that analyzes real-world data to answer a business or research question.",
         "letter": "EM",
         "name": "Informatics and Software Development",
         "number": "224",
-        "prerequisites": []
+        "prerequisites": ["EM 275"]
     },
     {
         "corequisites": [],
@@ -11564,33 +11564,31 @@
         "prerequisites": []
     },
     {
-        "corequisites": [],
+        "corequisites": ["EM 345", "EM 385"],
         "cross_listed": [],
-        "details": "This course is an integral part of the Engineering Management program - it provides students with experience and tools for new product/process development. Students will participate in a semester long class project meant to provide the students with insights that will serve to improve their senior project experience. Participation will be in small groups, and will complement EM385. Students will explore the detail design through validation in the systems engineering lifecycle. Tools that have been introduced in earlier engineering management courses may be brought together as part of this pre senior design experience. Students will be required to maintain an engineering notebook throughout the course. Prerequisites: E\u00a0321 Corequisites: EM\u00a0345, EM 385",
+        "details": "This course is an integral part of the Engineering Management program - it provides students with experience and tools for new product/process development. Students will participate in a semester long class project meant to provide the students with insights that will serve to improve their senior project experience. Participation will be in small groups, and will complement EM385. Students will explore the detail design through validation in the systems engineering lifecycle. Tools that have been introduced in earlier engineering management courses may be brought together as part of this pre senior design experience. Students will be required to maintain an engineering notebook throughout the course.",
         "letter": "EM",
         "name": "Engineering Design VI",
         "number": "322",
-        "prerequisites": [
-            "E\u00a0321"
-        ]
+        "prerequisites": ["E 0321"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course covers contemporary decision support models of forecasting, optimization and simulation for management. Students will learn how to identify the problem situation, choose the appropriate methods, collect the data and find the solution. The course also covers handling the information and generating alternative decisions based upon operations Stevens Institute of Technology \u2022 2016-2017",
+        "details": "This course covers contemporary decision support models of forecasting, optimization and simulation for management. Students will learn how to identify the problem situation, choose the appropriate methods, collect the data and find the solution. The course also covers handling the information and generating alternative decisions based upon operations research optimization, statistical simulation, and systems dynamic forecasting. Computer simulations will be performed on PCs using user-friendly graphical interface with multimedia report generation for visualization and animation. Students will also be trained in management simulations for group decision support.",
         "letter": "EM",
         "name": "Modeling and Simulation",
         "number": "345",
-        "prerequisites": []
+        "prerequisites": ["EM 365"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Application of forecasting and optimization models to typical engineering management situations and problems. Topics include: optimization theory and its special topics (linear programming, transportation models, and assignment models), dynamic programming, forecasting models, decision trees, game theory, and queuing theory. Applications to resource allocation, scheduling and routing, location of facilities, and waiting lines will be covered. Prerequisites: EM 365",
+        "details": "Application of forecasting and optimization models to typical engineering management situations and problems. Topics include: optimization theory and its special topics (linear programming, transportation models, and assignment models), dynamic programming, forecasting models, decision trees, game theory, and queuing theory. Applications to resource allocation, scheduling and routing, location of facilities, and waiting lines will be covered.",
         "letter": "EM",
         "name": "Elements of Operations Research",
         "number": "357",
-        "prerequisites": []
+        "prerequisites": ["EM 365"]
     },
     {
         "corequisites": [],
@@ -11602,13 +11600,13 @@
         "prerequisites": []
     },
     {
-        "corequisites": [],
+        "corequisites": ["EM 365"],
         "cross_listed": [],
-        "details": "This one credit course is the lab component of EM 365. The lab provides an integrated experience with statistics and probability on real and manipulated data sets using flipped classroom and project based learning environments . Those students who have taken E 243 at Stevens, or have other credit for statistics, are still required to take this one credit EM Statistics lab. Prerequisites: Corequisites: EM 365",
+        "details": "This one credit course is the lab component of EM 365. The lab provides an integrated experience with statistics and probability on real and manipulated data sets using flipped classroom and project based learning environments . Those students who have taken E 243 at Stevens, or have other credit for statistics, are still required to take this one credit EM Statistics lab.",
         "letter": "EM",
         "name": "Statistics For Engineers Laboratory",
         "number": "364",
-        "prerequisites": []
+        "prerequisites": ["EM 365"]
     },
     {
         "corequisites": [],
@@ -11620,58 +11618,58 @@
         "prerequisites": []
     },
     {
-        "corequisites": [],
+        "corequisites": ["EM 365"],
         "cross_listed": [],
-        "details": "This project-based course addresses the fundamentals of systems engineering. Principles and concepts of systems engineering within a life-cycle perspective are presented through case studies and applied throughout the course to a student-selected team project. The initial focus is on the understanding of business drivers for systems engineering and the generation of innovative ideas. Students then engage in analysis, synthesis, and evaluation activities as they progress through the conceptual and preliminary design phases. Emphasis is placed on tools and methodologies for system evaluation during all phases of the design process with the goal of enhancing the effectiveness and efficiency of deployed systems as well as reducing operational and support costs. Prerequisites: Corequisites: EM 365",
+        "details": "This project-based course addresses the fundamentals of systems engineering. Principles and concepts of systems engineering within a life-cycle perspective are presented through case studies and applied throughout the course to a student-selected team project. The initial focus is on the understanding of business drivers for systems engineering and the generation of innovative ideas. Students then engage in analysis, synthesis, and evaluation activities as they progress through the conceptual and preliminary design phases. Emphasis is placed on tools and methodologies for system evaluation during all phases of the design process with the goal of enhancing the effectiveness and efficiency of deployed systems as well as reducing operational and support costs.",
         "letter": "EM",
         "name": "Innovative System Design",
         "number": "385",
-        "prerequisites": []
+        "prerequisites": ["EM 365"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This year long two-course sequence involves the students in a small-team Engineering Management project. The problem for the project is taken from industry, business, government or a not-for-profit organization. Each student team works with a client and is expected to collect data, analyze it and develop a design by the end of the first semester. In the second semester the design solution of the problem is completed and a written report is submitted for binding. During the year, oral and written progress reports are presented to peers and clients. The total project involves the application of the subject areas covered in the EM 385 Engineering Management Laboratory course, as well as skills learned in the other technical and non-technical courses of the Engineering Management curriculum. Prerequisites: EM 275, and EM 301, and EM 322, and EM 345, and EM 385",
+        "details": "This year long two-course sequence involves the students in a small-team Engineering Management project. The problem for the project is taken from industry, business, government or a not-for-profit organization. Each student team works with a client and is expected to collect data, analyze it and develop a design by the end of the first semester. In the second semester the design solution of the problem is completed and a written report is submitted for binding. During the year, oral and written progress reports are presented to peers and clients. The total project involves the application of the subject areas covered in the EM 385 Engineering Management Laboratory course, as well as skills learned in the other technical and non-technical courses of the Engineering Management curriculum. ",
         "letter": "EM",
         "name": "Engineering Design VII",
         "number": "423",
-        "prerequisites": []
+        "prerequisites": ["EM 275", "EM 301", "EM 322", "EM 345", "EM 385"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This year long two-course sequence involves the students in a small-team Engineering Management project. The problem for the project is taken from industry, business, government or a not-for-profit organization. Each student team works with a client and is expected to collect data, analyze it and develop a design by the end of the first semester. In the second semester the design solution of the problem is completed and a written report is submitted for binding. During the year, oral and written progress reports are presented to peers and clients. The total project involves the application of the subject areas covered in the EM 385 Engineering Management Laboratory course, as well as skills learned in the other technical and non-technical courses of the Engineering Management curriculum. Prerequisites: EM 385",
+        "details": "This year long two-course sequence involves the students in a small-team Engineering Management project. The problem for the project is taken from industry, business, government or a not-for-profit organization. Each student team works with a client and is expected to collect data, analyze it and develop a design by the end of the first semester. In the second semester the design solution of the problem is completed and a written report is submitted for binding. During the year, oral and written progress reports are presented to peers and clients. The total project involves the application of the subject areas covered in the EM 385 Engineering Management Laboratory course, as well as skills learned in the other technical and non-technical courses of the Engineering Management curriculum.",
         "letter": "EM",
         "name": "Engineering Design VIII",
         "number": "424",
-        "prerequisites": []
+        "prerequisites": ["EM 385"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course will provide an introduction to supply chains, logistics & supply chain management. Topics covered include supply chain performance and metrics related to facilities, inventory, transportation, sourcing, pricing and information. Design of distribution networks, forecasting, and planning of demand & supply would be covered. Contemporary topics like e-business, IT and global supply chains would also be covered. Prerequisites: EM 357 or BT 223",
+        "details": "This course will provide an introduction to supply chains, logistics & supply chain management. Topics covered include supply chain performance and metrics related to facilities, inventory, transportation, sourcing, pricing and information. Design of distribution networks, forecasting, and planning of demand & supply would be covered. Contemporary topics like e-business, IT and global supply chains would also be covered.",
         "letter": "EM",
         "name": "Logistics and Supply Chain Management",
         "number": "450",
-        "prerequisites": []
+        "prerequisites": [["EM 357", "BT 223"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course is designed to help with understanding the complexity, structure and dynamics of a highly connected world. It takes an interdisciplinary look at economics, sociology, information science and applied mathematics to discuss some of the fundamental features of networks and their behavior. The course is designed to equip students with a modeling lens to analyze, quantify and reason about structures, dynamics and evolution of complex networks. Key topics that are covered in the course are mathematical description of complex networks, fundamental measures of network structure, diffusion and cascading, voting and economic and market implications. The course will also have a particular emphasis on game theory as the method to model resource allocation in networks in the presence of autonomous agents. Prerequisites: EM 365",
+        "details": "This course is designed to help with understanding the complexity, structure and dynamics of a highly connected world. It takes an interdisciplinary look at economics, sociology, information science and applied mathematics to discuss some of the fundamental features of networks and their behavior. The course is designed to equip students with a modeling lens to analyze, quantify and reason about structures, dynamics and evolution of complex networks. Key topics that are covered in the course are mathematical description of complex networks, fundamental measures of network structure, diffusion and cascading, voting and economic and market implications. The course will also have a particular emphasis on game theory as the method to model resource allocation in networks in the presence of autonomous agents.",
         "letter": "EM",
         "name": "Analysis of Networks & Strategies",
         "number": "451",
-        "prerequisites": []
+        "prerequisites": ["EM 365"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course will use tools and techniques which have proven to be of value in recognizing patterns, making predictions, and evaluation risk from both large data sets (using data-mining techniques), and small data sets (using networks constructed from problem definition and discovery). Both approaches are critical to today\u2019s engineers and managers, because they span a range of possible data availability and reliability. Using these tools and techniques, the student will survey applications, and have hands-on experimenttaion with both data mining and network construction, using real-world examples and situations. Prerequisites: EM 224, and EM 365",
+        "details": "This course will use tools and techniques which have proven to be of value in recognizing patterns, making predictions, and evaluation risk from both large data sets (using data-mining techniques), and small data sets (using networks constructed from problem definition and discovery). Both approaches are critical to today\u2019s engineers and managers, because they span a range of possible data availability and reliability. Using these tools and techniques, the student will survey applications, and have hands-on experimenttaion with both data mining and network construction, using real-world examples and situations.",
         "letter": "EM",
         "name": "Data-Mining and Risk Assessment",
         "number": "489",
-        "prerequisites": []
+        "prerequisites": ["EM 224", "EM 365"]
     },
     {
         "corequisites": [],
@@ -11694,16 +11692,16 @@
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "EM 585 builds on EM 385 and gives the student a practical introduction to Systems Architecture and Design. Lectures will introduce the students to the motivation for System Architecture and Design, the different views on a System Architecture, as well as theory and best practices on behavioral definition, logical and physical partitioning, and interface definitions. Key aspects of system verification and validation will also be discussed. Tutorials will give the students practical experience using SySML and a commercial modeling tool to model system architectures. The students will apply the principles on a team project, designing and building a robot. Pre-requisite EM 385 or instructor approval. Prerequisites: EM 385",
+        "details": "EM 585 builds on EM 385 and gives the student a practical introduction to Systems Architecture and Design. Lectures will introduce the students to the motivation for System Architecture and Design, the different views on a System Architecture, as well as theory and best practices on behavioral definition, logical and physical partitioning, and interface definitions. Key aspects of system verification and validation will also be discussed. Tutorials will give the students practical experience using SySML and a commercial modeling tool to model system architectures. The students will apply the principles on a team project, designing and building a robot.",
         "letter": "EM",
         "name": "Introduction to Systems Architecture and Design",
         "number": "585",
-        "prerequisites": []
+        "prerequisites": ["EM 385"]
     },
     {
         "corequisites": [],
-        "cross_listed": [],
-        "details": "This course presents advanced techniques and analysis designed to permit managers to estimate and use cost information in decision making. Topics include: historical overview of the management accounting process, statistical cost estimation, cost allocation, and uses of cost information in evaluating decisions about pricing, quality, manufacturing processes (e.g., JIT, CIM), investments in new technologies, investment centers, the selection process for capital investments, both tangible and intangible, and how this process is structured and constrained by the time value of money, the source of funds, market demand, and competitive position. Cross-listed with: PME 600, MGT 618",
+        "cross_listed": ["PME 600", "MGT 618"],
+        "details": "This course presents advanced techniques and analysis designed to permit managers to estimate and use cost information in decision making. Topics include: historical overview of the management accounting process, statistical cost estimation, cost allocation, and uses of cost information in evaluating decisions about pricing, quality, manufacturing processes (e.g., JIT, CIM), investments in new technologies, investment centers, the selection process for capital investments, both tangible and intangible, and how this process is structured and constrained by the time value of money, the source of funds, market demand, and competitive position.",
         "letter": "EM",
         "name": "Engineering Economics and Cost Analysis",
         "number": "600",
@@ -11757,11 +11755,11 @@
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course will introduce and explore complexity and chaos, and investigate a broad range of examples from both natural (biological) and man-made systems. Complex systems, distinct from, but related to, complicated systems, display a range of behaviors. One of the most distinguishing of these behaviors is emergence - behavior that is not predictable from knowledge of specific, individual agent capabilities. In addition, systems are said to be complex when emergent behavior is not resulting from a central control, when they display chaotic characteristics, and when the systems have more frequent occurrences of rare events, especially when initial conditions vary. This course will study and model complex and adaptive (as well as nonadaptive) systems, and will present and discuss the characteristics of complex and chaotic systems. Prerequisites: E 243, and MA 221",
+        "details": "This course will introduce and explore complexity and chaos, and investigate a broad range of examples from both natural (biological) and man-made systems. Complex systems, distinct from, but related to, complicated systems, display a range of behaviors. One of the most distinguishing of these behaviors is emergence - behavior that is not predictable from knowledge of specific, individual agent capabilities. In addition, systems are said to be complex when emergent behavior is not resulting from a central control, when they display chaotic characteristics, and when the systems have more frequent occurrences of rare events, especially when initial conditions vary. This course will study and model complex and adaptive (as well as nonadaptive) systems, and will present and discuss the characteristics of complex and chaotic systems.",
         "letter": "EM",
         "name": "Introduction to Complexity and Dynamic Systems",
         "number": "630",
-        "prerequisites": []
+        "prerequisites": ["E 243", "MA 221"]
     },
     {
         "corequisites": [],
@@ -11846,8 +11844,8 @@
     },
     {
         "corequisites": [],
-        "cross_listed": [],
-        "details": "Parametric modeling links mathematical modeling with spatial modeling. The course provides a practical introduction to the concepts and application of parametric modeling, using examples from the built environment to apply those techniques at a number of scales ranging from a city-scale urban grid to the individual building elements within it. The course will be structured around the practical, hands-on application of the techniques addressed, using Grasshopper 3d as the primary parametric programming platform. The history, theory, and broader applications of computational parametric modeling and design will be periodically addressed where needed and more in-depth reading swill be provided as supplementary texts. Cross-listed with: CE 522",
+        "cross_listed": ["CE 522"],
+        "details": "Parametric modeling links mathematical modeling with spatial modeling. The course provides a practical introduction to the concepts and application of parametric modeling, using examples from the built environment to apply those techniques at a number of scales ranging from a city-scale urban grid to the individual building elements within it. The course will be structured around the practical, hands-on application of the techniques addressed, using Grasshopper 3d as the primary parametric programming platform. The history, theory, and broader applications of computational parametric modeling and design will be periodically addressed where needed and more in-depth reading swill be provided as supplementary texts.",
         "letter": "ES",
         "name": "Parametric Modeling in the Urban Environment",
         "number": "522",
@@ -12459,25 +12457,25 @@
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course enhances the systems security knowledge base introduced in SES 622 with project experience in security design and architecture. It covers systems security considerations in functional analysis, decomposition, and requirements processes, and teaches practical heuristics for developing secure architectures. It demonstrates how to incorporate threat and vulnerability analysis into the architecture and design process. The students execute multiple phases of a project wherein a system security strategy is proposed, designed, architected, and supplemented with operational guidelines. Prerequisites: SES 622",
+        "details": "This course enhances the systems security knowledge base introduced in SES 622 with project experience in security design and architecture. It covers systems security considerations in functional analysis, decomposition, and requirements processes, and teaches practical heuristics for developing secure architectures. It demonstrates how to incorporate threat and vulnerability analysis into the architecture and design process. The students execute multiple phases of a project wherein a system security strategy is proposed, designed, architected, and supplemented with operational guidelines.",
         "letter": "SES",
         "name": "Systems Security Architecture and Design",
         "number": "623",
-        "prerequisites": []
+        "prerequisites": ["SES 622"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "In this course students learn to practice a disciplined engineering process for developing software. Individual skills and practices, such as effort estimation and unit testing, are mastered so that students can become successful members of software engineering teams. Best practices in software engineering are followed, including the use of simple design patterns with well-known properties. Students work in small teams to construct a simple web service using the industry standard Ruby programming language, Rails framework and MySQL database technology. Prerequisites: E 115",
+        "details": "In this course students learn to practice a disciplined engineering process for developing software. Individual skills and practices, such as effort estimation and unit testing, are mastered so that students can become successful members of software engineering teams. Best practices in software engineering are followed, including the use of simple design patterns with well-known properties. Students work in small teams to construct a simple web service using the industry standard Ruby programming language, Rails framework and MySQL database technology.",
         "letter": "SSW",
         "name": "Individual Software Engineering",
         "number": "215",
-        "prerequisites": []
+        "prerequisites": ["E 115"]
     },
     {
         "corequisites": [],
-        "cross_listed": [],
-        "details": "The course deals with the management of software projects using objective metrics that help developers and managers to understand the scope of the work to be accomplished, the risks that will occur, the tasks to be performed, the resources and effort to be expended, and the schedule to be observed. It provides the student with a thorough introduction to facility with, and understanding of such industry-standard software sizing metrics as Function, Feature, and Object Points and their relationship to the lines-of-code metric. It provides the student with a thorough introduction to and understanding of such industry-standard software estimation tools such as COCOMO II used in cost estimation. Cross-listed with: CS 533",
+        "cross_listed": ["CS 533"],
+        "details": "The course deals with the management of software projects using objective metrics that help developers and managers to understand the scope of the work to be accomplished, the risks that will occur, the tasks to be performed, the resources and effort to be expended, and the schedule to be observed. It provides the student with a thorough introduction to facility with, and understanding of such industry-standard software sizing metrics as Function, Feature, and Object Points and their relationship to the lines-of-code metric. It provides the student with a thorough introduction to and understanding of such industry-standard software estimation tools such as COCOMO II used in cost estimation",
         "letter": "SSW",
         "name": "Cost Estimation and Metrics",
         "number": "533",
@@ -12503,8 +12501,8 @@
     },
     {
         "corequisites": [],
-        "cross_listed": [],
-        "details": "In software problem areas that require exploratory development efforts, those with complex requirements and high levels of change, agile software development practices are highly effective when deployed in a collaborative, people-centered organizational culture. This course examines agile methods, including Extreme Programming (XP), Scrum, Lean, Crystal, Dynamic Systems Development Method and Feature-Driven Development to understand how rapid realization of software occurs most effectively. The ability of agile development teams to rapidly develop high quality, customer-valued software is examined and contrasted with teams following more traditional methodologies that emphasize planning and documentation. Students will learn agile development principles and techniques covering the entire software development process from problem conception through development, testing and deployment, and will be able to effectively participate in and manage agile software developments as a result of their successfully completing this course. Case studies and software development projects are used throughout. Cross-listed with: CS 555",
+        "cross_listed": ["CS 555"],
+        "details": "In software problem areas that require exploratory development efforts, those with complex requirements and high levels of change, agile software development practices are highly effective when deployed in a collaborative, people-centered organizational culture. This course examines agile methods, including Extreme Programming (XP), Scrum, Lean, Crystal, Dynamic Systems Development Method and Feature-Driven Development to understand how rapid realization of software occurs most effectively. The ability of agile development teams to rapidly develop high quality, customer-valued software is examined and contrasted with teams following more traditional methodologies that emphasize planning and documentation. Students will learn agile development principles and techniques covering the entire software development process from problem conception through development, testing and deployment, and will be able to effectively participate in and manage agile software developments as a result of their successfully completing this course. Case studies and software development projects are used throughout.",
         "letter": "SSW",
         "name": "Agile Methods for Software Development",
         "number": "555",
@@ -12522,11 +12520,11 @@
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Requirements Acquisition is one of the least understood and hardest phases in the development of software products, especially because requirements are often unclear in the minds of many or most stakeholders. This course deals with the identification of stakeholders, the elicitation and verification of requirements from them, and translation into detailed requirements for a new or to-be-extended software product. It deals further with the analysis and modeling of requirements, the first steps in the direction of software design. The quality assurance aspects of the software requirements phase of the software development process is studied. Also an introduction to several formal methods for requirements specification is presented. Prerequisites: CS 551, SSW 540",
+        "details": "Requirements Acquisition is one of the least understood and hardest phases in the development of software products, especially because requirements are often unclear in the minds of many or most stakeholders. This course deals with the identification of stakeholders, the elicitation and verification of requirements from them, and translation into detailed requirements for a new or to-be-extended software product. It deals further with the analysis and modeling of requirements, the first steps in the direction of software design. The quality assurance aspects of the software requirements phase of the software development process is studied. Also an introduction to several formal methods for requirements specification is presented.",
         "letter": "SSW",
         "name": "Software Requirements Analysis and Engineering",
         "number": "564",
-        "prerequisites": []
+        "prerequisites": ["CS 551", "SSW 540"]
     },
     {
         "corequisites": [],
@@ -12549,20 +12547,20 @@
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Students will learn how to deal with issues impacting industrial software developments. A broad range of topics will be covered, emphasizing large project issues. Large software projects are those employing 50 or more software developers for three years or more. Throughout the course, emphasis will be placed on quantitative evaluation of alternatives. Specific examples and case histories from real projects in the telephone industry are provided. Students will learn how to create architectures for large systems based on the \u20184+1\u2019 model; how to use modern software connector technology; module decomposition; scaling of agile methods to large projects, the use of work flows to drive software process and database designs, test plans, and implementation; and configuration control and software manufacturing. The special issues of database conversion data consistency, database maintenance, and performance tuning will be addressed for large data bases. The physical environment of the computer systems, including multisite deployment, software releases, and special management report generation, are examined. Prerequisites: SSW 540",
+        "details": "Students will learn how to deal with issues impacting industrial software developments. A broad range of topics will be covered, emphasizing large project issues. Large software projects are those employing 50 or more software developers for three years or more. Throughout the course, emphasis will be placed on quantitative evaluation of alternatives. Specific examples and case histories from real projects in the telephone industry are provided. Students will learn how to create architectures for large systems based on the \u20184+1\u2019 model; how to use modern software connector technology; module decomposition; scaling of agile methods to large projects, the use of work flows to drive software process and database designs, test plans, and implementation; and configuration control and software manufacturing. The special issues of database conversion data consistency, database maintenance, and performance tuning will be addressed for large data bases. The physical environment of the computer systems, including multisite deployment, software releases, and special management report generation, are examined.",
         "letter": "SSW",
         "name": "Engineering of Large Software Systems",
         "number": "687",
-        "prerequisites": []
+        "prerequisites": ["SSW 540"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Trusted systems are dependable, safe, and secure. None of this happens by accident \u2013 it all must be engineered in. The course goes beyond the traditional software engineering, quality and development courses to focus on the theory and practical techniques required to create trusted systems. The course covers software reliability engineering, software security engineering, control systems concepts, hazard analysis and management, trusted architecture patterns, and software fault and failure tolerance and management. Specific techniques such as analysis of attack patterns, degraded operation, simplex architectures and rejuvenations, are studied in depth to understand their usefulness and contribution to an overall trusted system solution. Case studies (e.g. Mars Rover) and team projects (e.g. analyzing and reengineering a system to be trustworthy) are used throughout. Prerequisites: SSW 533",
+        "details": "Trusted systems are dependable, safe, and secure. None of this happens by accident \u2013 it all must be engineered in. The course goes beyond the traditional software engineering, quality and development courses to focus on the theory and practical techniques required to create trusted systems. The course covers software reliability engineering, software security engineering, control systems concepts, hazard analysis and management, trusted architecture patterns, and software fault and failure tolerance and management. Specific techniques such as analysis of attack patterns, degraded operation, simplex architectures and rejuvenations, are studied in depth to understand their usefulness and contribution to an overall trusted system solution. Case studies (e.g. Mars Rover) and team projects (e.g. analyzing and reengineering a system to be trustworthy) are used throughout.",
         "letter": "SSW",
         "name": "Engineering of Trusted Software Systems",
         "number": "689",
-        "prerequisites": []
+        "prerequisites": ["SSW 533"]
     },
     {
         "corequisites": [],
