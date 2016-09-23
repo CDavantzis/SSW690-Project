@@ -12133,11 +12133,11 @@
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "In this course the students will learn how to estimate financial data model and predict using time series models. The course will cover linear time series (ARIMA) models, conditional heteroskedastic models (ARCH type models), non-linear models (TAR, STAR, MSA), non-parametric models (kernel regression, local regression, neural networks), non-parametric methods of evaluating fit such as bootstrap, parametric bootstrap and cross-validation. The course will also introduce multivariate time series models such as VAR. Prerequisites: FE 541 or MA 331 or MA 541 or MA 612",
+        "details": "In this course the students will learn how to estimate financial data model and predict using time series models. The course will cover linear time series (ARIMA) models, conditional heteroskedastic models (ARCH type models), non-linear models (TAR, STAR, MSA), non-parametric models (kernel regression, local regression, neural networks), non-parametric methods of evaluating fit such as bootstrap, parametric bootstrap and cross-validation. The course will also introduce multivariate time series models such as VAR.",
         "letter": "FE",
         "name": "Time Series with Applications to Finance",
         "number": "542",
-        "prerequisites": []
+        "prerequisites": [["FE 541", "MA 331", "MA 541", "MA 612"]]
     },
     {
         "corequisites": [],
@@ -12160,20 +12160,20 @@
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Effective visualization of complex data allows for useful insights, more effective communication, and making decisions. This course investigates methods for visualizing financial datasets from a variety of perspectives in order to best identify the right tool for a given task. Students will use a number of tools to refine their data and create visualizations, including: R and associated visualization libraries, Ruby on Rails visualization tools, ManyEyes, HTML5 & CSS 3, D3.js and related javascript libraries, Google Chart Tools, Google Refine, and image-editing programs. Prerequisites: FE 540",
+        "details": "Effective visualization of complex data allows for useful insights, more effective communication, and making decisions. This course investigates methods for visualizing financial datasets from a variety of perspectives in order to best identify the right tool for a given task. Students will use a number of tools to refine their data and create visualizations, including: R and associated visualization libraries, Ruby on Rails visualization tools, ManyEyes, HTML5 & CSS 3, D3.js and related javascript libraries, Google Chart Tools, Google Refine, and image-editing programs.",
         "letter": "FE",
         "name": "Data Visualization Applications",
         "number": "550",
-        "prerequisites": []
+        "prerequisites": ["FE 540"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Building effective and efficient tools for next generation integration of data analysis into strategic decision-making requires knowledge of existing software packages as well as the ability to build or extend software when needed. This course will address strategies for representing complex data through coverage of responsive web technologies, programming methods, libraries, and current techniques for transforming local and distributed data sets into meaningful visualizations using data acquisition and machine learning techniques. Prerequisites: FE 540",
+        "details": "Building effective and efficient tools for next generation integration of data analysis into strategic decision-making requires knowledge of existing software packages as well as the ability to build or extend software when needed. This course will address strategies for representing complex data through coverage of responsive web technologies, programming methods, libraries, and current techniques for transforming local and distributed data sets into meaningful visualizations using data acquisition and machine learning techniques.",
         "letter": "FE",
         "name": "2D Data Visualization Programming for Financial Applications",
         "number": "555",
-        "prerequisites": []
+        "prerequisites": ["FE 540"]
     },
     {
         "corequisites": [],
@@ -12187,11 +12187,11 @@
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Hedge funds are among the most influential participants in the financial markets with unique features. They are subject to less regulation and their strategies vary significantly from one another. Examples of common strategies include discretionary investing, quantitative equity investing, global macro, managed futures and exploitation of arbitrage opportunities. This course provides an overview of the hedge fund industry by going into the mechanics of the industry and then follows with detailed descriptions of the different strategies employed. Furthermore, it provides the economic intuition behind each of these strategies as well as the implementation along with practical considerations. It also discusses various examples of how financial engineering toolsets can be utilized to enhance hedge fund performance. In addition, this course emphasizes on the practical techniques of building a quantitative trading system using R programming language. Topics such as the lifecycle of developing a sound trading strategy and strategy validation in the form of back-testing are introduced. Prerequisites: FE 570",
+        "details": "Hedge funds are among the most influential participants in the financial markets with unique features. They are subject to less regulation and their strategies vary significantly from one another. Examples of common strategies include discretionary investing, quantitative equity investing, global macro, managed futures and exploitation of arbitrage opportunities. This course provides an overview of the hedge fund industry by going into the mechanics of the industry and then follows with detailed descriptions of the different strategies employed. Furthermore, it provides the economic intuition behind each of these strategies as well as the implementation along with practical considerations. It also discusses various examples of how financial engineering toolsets can be utilized to enhance hedge fund performance. In addition, this course emphasizes on the practical techniques of building a quantitative trading system using R programming language. Topics such as the lifecycle of developing a sound trading strategy and strategy validation in the form of back-testing are introduced.",
         "letter": "FE",
         "name": "Quantitative Hedge Fund Strategies",
         "number": "571",
-        "prerequisites": []
+        "prerequisites": ["FE 570"]
     },
     {
         "corequisites": [],
@@ -12212,13 +12212,13 @@
         "prerequisites": []
     },
     {
-        "corequisites": [],
+        "corequisites": ["FE 513"],
         "cross_listed": [],
-        "details": "This course will provide an overview of issues and trends in data quality, data storage, data scrubbing, data flows, and data encryption. Topics will include data abstractions and integration, enterprise level data issues, data management issues with collection, warehousing, preprocessing and querying. Furthermore, the Hadoop based programming framework for big data issues will be introduced along with any governance and policy issues. Prerequisites: Corequisites: FE 513",
+        "details": "This course will provide an overview of issues and trends in data quality, data storage, data scrubbing, data flows, and data encryption. Topics will include data abstractions and integration, enterprise level data issues, data management issues with collection, warehousing, preprocessing and querying. Furthermore, the Hadoop based programming framework for big data issues will be introduced along with any governance and policy issues.",
         "letter": "FE",
         "name": "Foundations of Financial Data Science",
         "number": "582",
-        "prerequisites": []
+        "prerequisites": ["FE 513"]
     },
     {
         "corequisites": [],
@@ -12248,13 +12248,13 @@
         "prerequisites": []
     },
     {
-        "corequisites": [],
+        "corequisites": ["FE 610"],
         "cross_listed": [],
-        "details": "This course deals with basic financial derivatives theory, arbitrage, hedging, and risk. The theory discusses Ito\u2019s lemma , the diffusion equation and parabolic partial differential equations, and the Black-Scholes model and formulae. The course includes applications of asset price random walks, the log-normal distribution, and estimating volatility from historic data. Numerical techniques, such as finite difference and binomial methods, are used to value options for practical examples. Financial information and software packages available on the Internet are used for modeling and analysis. Prerequisites: Corequisites: FE 610",
+        "details": "This course deals with basic financial derivatives theory, arbitrage, hedging, and risk. The theory discusses Ito\u2019s lemma , the diffusion equation and parabolic partial differential equations, and the Black-Scholes model and formulae. The course includes applications of asset price random walks, the log-normal distribution, and estimating volatility from historic data. Numerical techniques, such as finite difference and binomial methods, are used to value options for practical examples. Financial information and software packages available on the Internet are used for modeling and analysis.",
         "letter": "FE",
         "name": "Pricing and Hedging",
         "number": "620",
-        "prerequisites": []
+        "prerequisites": ["FE 610"]
     },
     {
         "corequisites": [],
@@ -12277,20 +12277,20 @@
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course introduces the modern portfolio theory and optimal portfolio selection using optimization techniques such as linear programming. Topics include contingent investment decisions, deferral options, combination options and mergers and acquisitions. The course introduces various concepts of financial risk measures. Prerequisites: FE 620, FE 621",
+        "details": "This course introduces the modern portfolio theory and optimal portfolio selection using optimization techniques such as linear programming. Topics include contingent investment decisions, deferral options, combination options and mergers and acquisitions. The course introduces various concepts of financial risk measures.",
         "letter": "FE",
         "name": "Portfolio Theory and Applications",
         "number": "630",
-        "prerequisites": []
+        "prerequisites": ["FE 620", "FE 621"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course deals with risk assessment and engineering in financial systems. It covers credit risk, market risk, operational risk, liquidity risk, and model risk. Topics include classical measures of risk such as VaR, methods for monitoring volatilities and correlations, copulas, credit derivatives, the calculation of economic capital, and risk-adjusted return on capital (RAROC). The nature of bank regulation and the Basel II capital requirements for banks are examined. Case studies illustrate risk engineering successes and failures in financial enterprises. Prerequisites: FE 535",
+        "details": "This course deals with risk assessment and engineering in financial systems. It covers credit risk, market risk, operational risk, liquidity risk, and model risk. Topics include classical measures of risk such as VaR, methods for monitoring volatilities and correlations, copulas, credit derivatives, the calculation of economic capital, and risk-adjusted return on capital (RAROC). The nature of bank regulation and the Basel II capital requirements for banks are examined. Case studies illustrate risk engineering successes and failures in financial enterprises.",
         "letter": "FE",
         "name": "Financial Enterprise Risk Engineering",
         "number": "635",
-        "prerequisites": []
+        "prerequisites": ["FE 535"]
     },
     {
         "corequisites": [],
@@ -12304,11 +12304,11 @@
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course investigates statistical methods implemented in multiple quantitative trading strategies with emphasis on automated trading and based on combined technical-analytic and fundamental indicators to enhance the trade-decision making mechanism. Topics explore high-frequency finance, markets and data, time series, microscopic operators, and micro-patterns. Methodologies include, but not limited to, Bayesian classifiers, weak classifiers, boosting and general metaalgorithmic emerging methods of machine learning applied to trading strategies. Back-testing and assessment of model risk are explored. Prerequisites: FE 545",
+        "details": "This course investigates statistical methods implemented in multiple quantitative trading strategies with emphasis on automated trading and based on combined technical-analytic and fundamental indicators to enhance the trade-decision making mechanism. Topics explore high-frequency finance, markets and data, time series, microscopic operators, and micro-patterns. Methodologies include, but not limited to, Bayesian classifiers, weak classifiers, boosting and general metaalgorithmic emerging methods of machine learning applied to trading strategies. Back-testing and assessment of model risk are explored.",
         "letter": "FE",
         "name": "Algorithmic Trading Strategies",
         "number": "670",
-        "prerequisites": []
+        "prerequisites": ["FE 545"]
     },
     {
         "corequisites": [],
@@ -12340,20 +12340,20 @@
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Topics include Ito calculus review, linear stochastic differential equations (SDE\u2019s), examples of solvable SDE\u2019s, weak and strong solutions, existence and uniqueness of strong solutions, Ito-Taylor expansions, SDE for Markov processes with jumps, Levy processes, forward and backward equtions and the Feynman-Kac representation formula, and introduction to stochastic control. Applications are mostly from fianncial engineering but applications in areas such as population dynamics, energy, climatology and seismology may also be presented. Prerequisites: FE 610, MA 611, MA 623",
+        "details": "Topics include Ito calculus review, linear stochastic differential equations (SDE\u2019s), examples of solvable SDE\u2019s, weak and strong solutions, existence and uniqueness of strong solutions, Ito-Taylor expansions, SDE for Markov processes with jumps, Levy processes, forward and backward equtions and the Feynman-Kac representation formula, and introduction to stochastic control. Applications are mostly from fianncial engineering but applications in areas such as population dynamics, energy, climatology and seismology may also be presented.",
         "letter": "FE",
         "name": "Applied Stochastic Differential Equations",
         "number": "710",
-        "prerequisites": []
+        "prerequisites": ["FE 610", "MA 611", "MA 623"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "In this course students will understand the implied volatility, and the empirical static and dynamic behavior of the volatility surface formed using option prices for all strikes and expirations. The students will also examine the volatility risk, stochastic volatility and local volatility models, numerical methods for volatility surface calibration, Monte Carlo simulation of stochastic volatility models, and pricing options through fast Fourier transform. Topics include: the Black-Scholes implied volatility, empirical statics and dynamics of the volatility surface, volatility risk premium, stochastic volatility models (Heston, HullWhite, Stein-Stein, SABR, Bates, Scott, etc), Dupire\u2019s local volatility model, Heston-Nandi GARCH model, arbitrage-free properties of the volatility surface, volatility surface parametrization and calibration, simulation of the Heston model, stochastic volatility model with jumps, option pricing based on fast Fourier transforms, and volatility derivatives (Variance swap, CBOE VIX futures and options, etc). Other advanced current research topics will be introduced as well. The students are required to have a solid working knowledge of stochastic calculus, and FE610 is a pre-requisite for this course. The course uses statistical softwares such as Matlab or R throughout. A companion one credit of a relevant lab course is recommended if this knowledge is not acquired before. Prerequisites: FE 610",
+        "details": "In this course students will understand the implied volatility, and the empirical static and dynamic behavior of the volatility surface formed using option prices for all strikes and expirations. The students will also examine the volatility risk, stochastic volatility and local volatility models, numerical methods for volatility surface calibration, Monte Carlo simulation of stochastic volatility models, and pricing options through fast Fourier transform. Topics include: the Black-Scholes implied volatility, empirical statics and dynamics of the volatility surface, volatility risk premium, stochastic volatility models (Heston, HullWhite, Stein-Stein, SABR, Bates, Scott, etc), Dupire\u2019s local volatility model, Heston-Nandi GARCH model, arbitrage-free properties of the volatility surface, volatility surface parametrization and calibration, simulation of the Heston model, stochastic volatility model with jumps, option pricing based on fast Fourier transforms, and volatility derivatives (Variance swap, CBOE VIX futures and options, etc). Other advanced current research topics will be introduced as well. The students are required to have a solid working knowledge of stochastic calculus, and FE610 is a pre-requisite for this course. The course uses statistical softwares such as Matlab or R throughout. A companion one credit of a relevant lab course is recommended if this knowledge is not acquired before.",
         "letter": "FE",
         "name": "The Volatility Surface: Risk and Models",
         "number": "720",
-        "prerequisites": []
+        "prerequisites": ["FE 610"]
     },
     {
         "corequisites": [],
