@@ -43,7 +43,21 @@
   { 
     "name" : "Engineering Management",
     "school" : "School of Systems and Enterprises",
-    "type" : "Master of Engineering"
+    "type" : "Master of Engineering",
+    "minCredits" : 30,
+    "minDegreeCredits" : 18,
+    "minGPA" : 0,
+    "possibleCourses" : {
+      "courseSet" : [ 
+        "EM 600",
+        "EM 605",
+        ["EM 612", "EM 680"],
+        "EM 624",
+        "SYS 660",
+        ["SYS 611", "SYS 681"]
+      ],
+      "numCoursesFromSet" : 6
+    },
   },
   { 
     "name" : "Systems Analytics",
