@@ -21,11 +21,6 @@
     }
   },
   { 
-    "name" : "Software Engineering",
-    "school" : "School of Systems and Enterprises",
-    "type" : "Bachelor of Science"
-  },
-  { 
     "name" : "Financal Analysis",
     "school" : "School of Systems and Enterprises",
     "type" : "Master of Science"
@@ -33,12 +28,21 @@
   { 
     "name" : "Financial Engineering",
     "school" : "School of Systems and Enterprises",
-    "type" : "Master of Science"
-  },
-  { 
-    "name" : "Sociotechnical Systems",
-    "school" : "School of Systems and Enterprises",
-    "type" : "Master of Science"
+    "type" : "Master of Science",
+    "minCredits" : 30,
+    "minDegreeCredits" : 18,
+    "minGPA" : 0,
+    "possibleCourses" : {
+      "courseSet" : [ 
+        "FE 610",
+        "FE 620",
+        "FE 621", 
+        "FE 630",
+        "FE 580",
+        ["FE 800", "FE 900"]
+      ],
+      "numCoursesFromSet" : 6
+    }
   },
   { 
     "name" : "Engineering Management",
@@ -60,14 +64,22 @@
     }
   },
   { 
-    "name" : "Systems Analytics",
-    "school" : "School of Systems and Enterprises",
-    "type" : "Master of Engineering"
-  },
-  { 
     "name" : "Systems Engineering",
     "school" : "School of Systems and Enterprises",
-    "type" : "Master of Engineering"
+    "type" : "Master of Engineering",
+    "minCredits" : 30,
+    "minDegreeCredits" : 18,
+    "minGPA" : 0,
+    "possibleCourses" : {
+      "courseSet" : [ 
+        "SYS 625",
+        "SYS 650",
+        "SYS 605",
+        "EM 612",
+        ["SYS 800", "SYS 900"]
+      ],
+      "numCoursesFromSet" : 5
+    }
   },
   { 
     "minCredits" : 30,
