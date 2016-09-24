@@ -2,7 +2,23 @@
   { 
     "name" : "Software Engineering",
     "school" : "School of Systems and Enterprises",
-    "type" : "Master of Science"
+    "type" : "Master of Science",
+    "minCredits" : 30,
+    "minDegreeCredits" : 24,
+    "minGPA" : 0,
+    "possibleCourses" : {
+      "courseSet" : [ 
+        "SSW 540",
+        "SSW 555",
+        "SSW 564",
+        "SSW 565",
+        "SSW 567",
+        "SSW 533",
+        "SSW 690",
+        "SSW 695"
+      ],
+      "numCoursesFromSet" : 8
+    },
   },
   { 
     "name" : "Software Engineering",
