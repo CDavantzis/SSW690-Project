@@ -4555,15 +4555,13 @@
         "prerequisites": []
     },
     {
-        "corequisites": [],
+        "corequisites": ["CS 135"],
         "cross_listed": [],
-        "details": "Advanced programming concepts covering classical data structures and object-oriented programming. Emphasis will be on building a collection of re-usable software components that will form the basis of future programming efforts. The data structures covered include lists, stacks, queues, trees, binary search trees, and balanced search trees. The object-oriented features of Java covered include classes, templates, inheritance, polymorphism and run-time binding. Also included is a discussion of the analysis of asymptotic running times of algorithms. Prerequisites: CS 181 Corequisites: CS 135",
+        "details": "Advanced programming concepts covering classical data structures and object-oriented programming. Emphasis will be on building a collection of re-usable software components that will form the basis of future programming efforts. The data structures covered include lists, stacks, queues, trees, binary search trees, and balanced search trees. The object-oriented features of Java covered include classes, templates, inheritance, polymorphism and run-time binding. Also included is a discussion of the analysis of asymptotic running times of algorithms.",
         "letter": "CS",
         "name": "Introduction to Computer Science Honors II",
         "number": "182",
-        "prerequisites": [
-            "CS 181"
-        ]
+        "prerequisites": ["CS 181"]
     },
     {
         "corequisites": [],
@@ -4575,156 +4573,150 @@
         "prerequisites": []
     },
     {
-        "corequisites": [],
+        "corequisites": ["CS 135"],
         "cross_listed": [],
-        "details": "This is a course on standard data structures, including sorting and searching and using the Java language. The topics include: stages of software development; testing; UML diagrams; elementary data structures (lists, stacks, queues, and maps); use of elementary data structures in application frameworks; searching; sorting; and introduction to asymptotic complexity analysis. Prerequisites: CS 115 Corequisites: CS 135",
+        "details": "This is a course on standard data structures, including sorting and searching and using the Java language. The topics include: stages of software development; testing; UML diagrams; elementary data structures (lists, stacks, queues, and maps); use of elementary data structures in application frameworks; searching; sorting; and introduction to asymptotic complexity analysis.",
         "letter": "CS",
         "name": "Data Structures",
         "number": "284",
-        "prerequisites": [
-            "CS 115"
-        ]
+        "prerequisites": ["CS 115"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course provides a basic introduction to the key concepts in security. It covers basic concepts such as authentication, confidentiality, integrity, and nonrepudiation as well as important techniques and applications. Topics include access control, security economics, ethics, privacy, software/operating system security, and security policies. Prerequisites: CS 135 or MA 134",
+        "details": "This course provides a basic introduction to the key concepts in security. It covers basic concepts such as authentication, confidentiality, integrity, and nonrepudiation as well as important techniques and applications. Topics include access control, security economics, ethics, privacy, software/operating system security, and security policies.",
         "letter": "CS",
         "name": "Introduction to IT Security",
         "number": "306",
-        "prerequisites": []
+        "prerequisites": [["CS 135", "MA 134"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Introduction to recursive functional programming and equational reasoning; lists as inductive types and list induction; introduction to formal languages, automata, and the theory of computation; regular expressions, finite state machines, and pumping lemma; context free grammars and push down automata; turing machines, recursive enumerability, and unsolvable problems; and complexity and intractability. A number of models of computation are considered, as well as their relation to various problem classes (e.g. solvable problems and polynomial time solvable problems). Some experiments are performed that involve writing small Scheme programs. Prerequisites: CS 115, and CS 135",
+        "details": "Introduction to recursive functional programming and equational reasoning; lists as inductive types and list induction; introduction to formal languages, automata, and the theory of computation; regular expressions, finite state machines, and pumping lemma; context free grammars and push down automata; turing machines, recursive enumerability, and unsolvable problems; and complexity and intractability. A number of models of computation are considered, as well as their relation to various problem classes (e.g. solvable problems and polynomial time solvable problems). Some experiments are performed that involve writing small Scheme programs.",
         "letter": "CS",
         "name": "Automata and Computation",
         "number": "334",
-        "prerequisites": []
+        "prerequisites": ["CS 115", "CS 135"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course provides a general introduction to the essentials of the software development process, that series of activities that facilitate developing better software in less time. The course introduces software development and deployment life cycles, requirements acquisition and analysis, software architecture and design, and resource management and scheduling in the implementation phase. Students gain experience with tools and methodologies for configuration management and project management. Security engineering is considered as an essential part of the software development process, particularly from the standpoint of applied risk management. Prerequisites: CS 181 or CS 284, CS 135",
+        "details": "This course provides a general introduction to the essentials of the software development process, that series of activities that facilitate developing better software in less time. The course introduces software development and deployment life cycles, requirements acquisition and analysis, software architecture and design, and resource management and scheduling in the implementation phase. Students gain experience with tools and methodologies for configuration management and project management. Security engineering is considered as an essential part of the software development process, particularly from the standpoint of applied risk management.",
         "letter": "CS",
         "name": "Software Development Process",
         "number": "347",
-        "prerequisites": []
+        "prerequisites": [["CS 181", "CS 284"], "CS 135"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Gives students practice in solving challenging problems by applying algorithmic problem solving techniques learned in prior courses. Students will develop their problem-solving, algorithm-creation, and programming abilities. Problems will be complex and will require invention of an algorithm, not simply straightforward application of standard techniques. Students will work in teams. To provide a focus point and to help make the course fun, students will program their solutions in a style similar to that employed by programming competitions such as the national ACM programming contest. May be repeated for credit. Prerequisites: CS 182 or CS 385",
+        "details": "Gives students practice in solving challenging problems by applying algorithmic problem solving techniques learned in prior courses. Students will develop their problem-solving, algorithm-creation, and programming abilities. Problems will be complex and will require invention of an algorithm, not simply straightforward application of standard techniques. Students will work in teams. To provide a focus point and to help make the course fun, students will program their solutions in a style similar to that employed by programming competitions such as the national ACM programming contest. May be repeated for credit.",
         "letter": "CS",
         "name": "Creative Problem Solving and Team Programming",
         "number": "370",
-        "prerequisites": []
+        "prerequisites": [["CS 182", "CS 385"]]
     },
     {
         "corequisites": [],
-        "cross_listed": [
-            "CPE 358"
-        ],
-        "details": "Digital systems; number systems and codes; Boolean algebra; application of Boolean algebra to switching circuits; minimization Boolean functions using algebraic, Karnaugh map, and tabular methods; design of combinational circuits; programmable logic devices; sequential circuit components; design and analysis of synchronous and asynchronous sequential circuits. Cross-listed with: CPE 358 Prerequisites: CS 115, CS 181",
+        "cross_listed": ["CPE 358"],
+        "details": "Digital systems; number systems and codes; Boolean algebra; application of Boolean algebra to switching circuits; minimization Boolean functions using algebraic, Karnaugh map, and tabular methods; design of combinational circuits; programmable logic devices; sequential circuit components; design and analysis of synchronous and asynchronous sequential circuits.",
         "letter": "CS",
         "name": "Switching Theory & Logical Design",
         "number": "381",
-        "prerequisites": []
+        "prerequisites": ["CS 115", "CS 181"]
     },
     {
-        "corequisites": [],
+        "corequisites": [["CS 181", "CS 284"]],
         "cross_listed": [],
-        "details": "The main aspects of computers: data (data types and formats, number bases), hardware (stored program computer concept, addressing methods and program sequencing, instruction sets and their implementation, the CPU and microprogrammed control, input/output organization, peripherals and interfacing, and main memory), communication (network protocols), software (operating systems, dispatching algorithms), and assembly language programming. Prerequisites: CS 115 Corequisites: CS 181 or CS 284",
+        "details": "The main aspects of computers: data (data types and formats, number bases), hardware (stored program computer concept, addressing methods and program sequencing, instruction sets and their implementation, the CPU and microprogrammed control, input/output organization, peripherals and interfacing, and main memory), communication (network protocols), software (operating systems, dispatching algorithms), and assembly language programming.",
         "letter": "CS",
         "name": "Computer Organization and Programming",
         "number": "383",
-        "prerequisites": [
-            "CS 115"
-        ]
+        "prerequisites": ["CS 115"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This is a course on more complex data structures, and algorithm design and analysis, using the C++ language. Topics include: advanced and/or balanced search trees; hashing; further asymptotic complexity analysis; standard algorithm design techniques; graph algorithms; complex sort algorithms; and other \u201cclassic\u201d algorithms that serve as examples of design techniques. Prerequisites: CS 181 or CS 284",
+        "details": "This is a course on more complex data structures, and algorithm design and analysis, using the C++ language. Topics include: advanced and/or balanced search trees; hashing; further asymptotic complexity analysis; standard algorithm design techniques; graph algorithms; complex sort algorithms; and other \u201cclassic\u201d algorithms that serve as examples of design techniques.",
         "letter": "CS",
         "name": "Algorithms",
         "number": "385",
-        "prerequisites": []
+        "prerequisites": [["CS 181", "CS 284"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Introduction to systems programming in C on UNIX. Students will be introduced to tools for compilation, dynamic linking, debugging, editing, automatic rebuilding, and version control. Some aspects of the UNIX system call interface will be studied, drawn from this list: process creation, signals, terminal I/O, file I/O, inter-process communication, threads, network protocol stacks, programming with sockets, and introduction to RPC. Style issues to be covered include: naming, layout, commenting, portability, design for robustness and debugability, and language pitfalls. X programming and GUI design will be covered, if time allows. Prerequisites: CS 182 or CS 385",
+        "details": "Introduction to systems programming in C on UNIX. Students will be introduced to tools for compilation, dynamic linking, debugging, editing, automatic rebuilding, and version control. Some aspects of the UNIX system call interface will be studied, drawn from this list: process creation, signals, terminal I/O, file I/O, inter-process communication, threads, network protocol stacks, programming with sockets, and introduction to RPC. Style issues to be covered include: naming, layout, commenting, portability, design for robustness and debugability, and language pitfalls. X programming and GUI design will be covered, if time allows.",
         "letter": "CS",
         "name": "Systems Programming",
         "number": "392",
-        "prerequisites": []
+        "prerequisites": [["CS 182", "CS 385"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Under the guidance of a faculty member, students will prepare for, participate in, then evaluate an experience in which the students represent Stevens in an off campus team outreach activity. Examples of such activities include, but are not limited to, technical competitions, cross-discipline design contests, and Ambassador programs. Course may be repeated as a free elective up to a maximum of 3 credits. Prerequisites: CS 182 or CS 284",
+        "details": "Under the guidance of a faculty member, students will prepare for, participate in, then evaluate an experience in which the students represent Stevens in an off campus team outreach activity. Examples of such activities include, but are not limited to, technical competitions, cross-discipline design contests, and Ambassador programs. Course may be repeated as a free elective up to a maximum of 3 credits.",
         "letter": "CS",
         "name": "Outreach Participation",
         "number": "397",
-        "prerequisites": []
+        "prerequisites": [["CS 182", "CS 284"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Students in this course work in teams to develop real software for real clients. Topics in software engineering additional to, or more advanced than those taught in CS 347 are introduced \u201cjust in time,\u201d as needed. Prerequisites: CS 347, and CS 385 or CS 182 or CS 590",
+        "details": "Students in this course work in teams to develop real software for real clients. Topics in software engineering additional to, or more advanced than those taught in CS 347 are introduced \u201cjust in time,\u201d as needed.",
         "letter": "CS",
         "name": "Senior Design I",
         "number": "423",
-        "prerequisites": []
+        "prerequisites": ["CS 347", ["CS 385", "CS 182", "CS 590"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course is a continuation of CS423. Prerequisites: CS 423",
+        "details": "This course is a continuation of CS423.",
         "letter": "CS",
         "name": "Senior Design II",
         "number": "424",
-        "prerequisites": []
+        "prerequisites": ["CS 423"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Under the guidance of a cybersecurity faculty member of the department, students will participate in a year-long cybersecurity project. The project may be conducted in a number of ways, including as a cybersecurity-only project, as a project where the cybersecurity student is integrated into the senior capstone project of another discipline like CS, QF, ECE, or as a project where the cybersecurity student interacts in a consultant role with one or more senior capstone teams of another discipline. Prerequisites: CS 576, and CS 577",
+        "details": "Under the guidance of a cybersecurity faculty member of the department, students will participate in a year-long cybersecurity project. The project may be conducted in a number of ways, including as a cybersecurity-only project, as a project where the cybersecurity student is integrated into the senior capstone project of another discipline like CS, QF, ECE, or as a project where the cybersecurity student interacts in a consultant role with one or more senior capstone teams of another discipline.",
         "letter": "CS",
         "name": "Cybersecurity Capstone I",
         "number": "425",
-        "prerequisites": []
+        "prerequisites": ["CS 576", "CS 577"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Continuation of CS425. Prerequisites: CS 425",
+        "details": "Continuation of CS425.",
         "letter": "CS",
         "name": "Cybersecurity Capstone II",
         "number": "426",
-        "prerequisites": []
+        "prerequisites": ["CS 425"]
     },
     {
         "corequisites": [],
         "cross_listed": [
             "CPE 442"
         ],
-        "details": "Introduction to the design and querying of relational databases. Topics include: relational schemas; keys and foreign key references; relational algebra (as an introduction to SQL); SQL in depth; Entity-Relationship (ER) database design; translating from ER models to relational schemas and from relational schemas to ER models; functional dependencies; and normalization. Cross-listed with: CPE 442 Prerequisites: CS 182 or CS 385",
+        "details": "Introduction to the design and querying of relational databases. Topics include: relational schemas; keys and foreign key references; relational algebra (as an introduction to SQL); SQL in depth; Entity-Relationship (ER) database design; translating from ER models to relational schemas and from relational schemas to ER models; functional dependencies; and normalization.",
         "letter": "CS",
         "name": "Database Management Systems",
         "number": "442",
-        "prerequisites": []
+        "prerequisites": [["CS 182", "CS 385"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "In this course students use skills developed in earlier courses to work in teams with clients on the development of software to be used by the clients or by the organizations for which they work. Potential clients include Stevens faculty, Stevens departments that provide services to students, not-for-profit organizations, government agencies, and, on occasion, for-profit companies. Teams work with clients to iteratively develop GUI-based prototypes of software that will satisfy the clients\u2019 needs (requirements engineering); they perform the analysis and design required before implementation begins, and, finally, they implement the software, and deploy it to the client\u2019s site together with documentation required by the software\u2019s users and maintainers. Prerequisites: CS 385, and CS 442",
+        "details": "In this course students use skills developed in earlier courses to work in teams with clients on the development of software to be used by the clients or by the organizations for which they work. Potential clients include Stevens faculty, Stevens departments that provide services to students, not-for-profit organizations, government agencies, and, on occasion, for-profit companies. Teams work with clients to iteratively develop GUI-based prototypes of software that will satisfy the clients\u2019 needs (requirements engineering); they perform the analysis and design required before implementation begins, and, finally, they implement the software, and deploy it to the client\u2019s site together with documentation required by the software\u2019s users and maintainers.",
         "letter": "CS",
         "name": "Database Practicum",
         "number": "443",
-        "prerequisites": []
+        "prerequisites": ["CS 385", "CS 442"]
     },
     {
         "corequisites": [],
@@ -4745,11 +4737,11 @@
         "prerequisites": []
     },
     {
-        "corequisites": [],
+        "corequisites": ["MA 222"],
         "cross_listed": [
             "CPE 488"
         ],
-        "details": "An introduction to the functional level structure of modern pipelined processors and the empirical and analytic evaluation of their performance. Topics include: empirical and analytic techniques for measuring performance (use of various means, Amdahl\u2019s Law, and benchmarks); tradeoff analysis; principles of instruction set design and evaluation (memory addressing, operations, types and sizes of operands, instruction set encoding, CISC vs. RISC, and related compilation issues); pipelining (basics, data hazards, and control hazards); and memory systems. Cross-listed with: CPE 488 Prerequisites: CS 383 Corequisites: MA 222",
+        "details": "An introduction to the functional level structure of modern pipelined processors and the empirical and analytic evaluation of their performance. Topics include: empirical and analytic techniques for measuring performance (use of various means, Amdahl\u2019s Law, and benchmarks); tradeoff analysis; principles of instruction set design and evaluation (memory addressing, operations, types and sizes of operands, instruction set encoding, CISC vs. RISC, and related compilation issues); pipelining (basics, data hazards, and control hazards); and memory systems.",
         "letter": "CS",
         "name": "Computer Architecture",
         "number": "488",
@@ -4760,16 +4752,16 @@
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "The use and internals of modern operating systems. Lectures focus on internals whereas programming assignments focus on use of the operating system interface. Major topics include: the process concept; concurrency and how to program with threads; memory management techniques, including virtual memory and shared libraries; file system data structures; and I/O. Prerequisites: CS 383, CS 392",
+        "details": "The use and internals of modern operating systems. Lectures focus on internals whereas programming assignments focus on use of the operating system interface. Major topics include: the process concept; concurrency and how to program with threads; memory management techniques, including virtual memory and shared libraries; file system data structures; and I/O.",
         "letter": "CS",
         "name": "Operating Systems",
         "number": "492",
-        "prerequisites": []
+        "prerequisites": ["CS 383", "CS 392"]
     },
     {
-        "corequisites": [],
+        "corequisites": [["CS 182", "CS 385"]],
         "cross_listed": [],
-        "details": "An introduction to programming language design and implementation, with an emphasis on the abstractions provided by programming languages. Assignments involve problem-solving issues in principles of programming languages such as Scheme and ML; recursive types and recursive functions; structural induction; abstract data types; abstract syntax; implementing languages with interpreters; static vs. dynamic scoping, closures, state; exceptions; types: type-checking, type inference, static vs. dynamic typing; object-oriented languages: classes and interfaces, inheritance and subtyping; polymorphism and genericity; and design patterns and the visitor pattern. Prerequisites: CS 334 Corequisites: CS 182 or CS 385",
+        "details": "An introduction to programming language design and implementation, with an emphasis on the abstractions provided by programming languages. Assignments involve problem-solving issues in principles of programming languages such as Scheme and ML; recursive types and recursive functions; structural induction; abstract data types; abstract syntax; implementing languages with interpreters; static vs. dynamic scoping, closures, state; exceptions; types: type-checking, type inference, static vs. dynamic typing; object-oriented languages: classes and interfaces, inheritance and subtyping; polymorphism and genericity; and design patterns and the visitor pattern.",
         "letter": "CS",
         "name": "Principles of Programming Languages",
         "number": "496",
@@ -4806,8 +4798,8 @@
     },
     {
         "corequisites": [],
-        "cross_listed": [],
-        "details": "An introduction to the Java programming language for those students who have little or no programming background. It is intended as an elective for the Master of Science in Information Systems to be taken near the end of the program. Basic topics considered will be programs and program structure in general and Java syntax, data types, flow of control, classes, methods and objects, arrays, exception handling, and recursion. In addition, the use of Java in enterprise-wide computing and distributed systems will be introduced by considering APIs in general, and the ones specific to JDBC and the Java security features in particular. Not for credit for Computer Science department undergraduate majors. Cross-listed with: SOC 501",
+        "cross_listed": ["SOC 501"],
+        "details": "An introduction to the Java programming language for those students who have little or no programming background. It is intended as an elective for the Master of Science in Information Systems to be taken near the end of the program. Basic topics considered will be programs and program structure in general and Java syntax, data types, flow of control, classes, methods and objects, arrays, exception handling, and recursion. In addition, the use of Java in enterprise-wide computing and distributed systems will be introduced by considering APIs in general, and the ones specific to JDBC and the Java security features in particular. Not for credit for Computer Science department undergraduate majors.",
         "letter": "CS",
         "name": "Introduction to JAVA Programming",
         "number": "501",
@@ -4818,16 +4810,16 @@
         "cross_listed": [
             "MA 503"
         ],
-        "details": "Topics include basic discrete probability, including urn models and random mappings; a brief introduction to information theory; elements of number theory, including the prime number theorem, the Euler phi function, the Euclidean algorithm, and the Chinese remainder theorem; and elements of abstract algebra and finite fields including basic fundamentals of groups, rings, polynomial rings, vector spaces, and finite fields. Carries credit toward the Applied Mathematics degree only when followed by CS 579. Recommended for high-level undergraduate students. Cross-listed with: MA 503 Prerequisites: MA 502 or CS 135",
+        "details": "Topics include basic discrete probability, including urn models and random mappings; a brief introduction to information theory; elements of number theory, including the prime number theorem, the Euler phi function, the Euclidean algorithm, and the Chinese remainder theorem; and elements of abstract algebra and finite fields including basic fundamentals of groups, rings, polynomial rings, vector spaces, and finite fields. Carries credit toward the Applied Mathematics degree only when followed by CS 579. Recommended for high-level undergraduate students.",
         "letter": "CS",
         "name": "Discrete Mathematics for Cryptography",
         "number": "503",
-        "prerequisites": []
+        "prerequisites": [["MA 502", "CS 135"]]
     },
     {
         "corequisites": [],
-        "cross_listed": [],
-        "details": "Axioms of probability; discrete and continuous random vectors; functions of random variables; expectations, moments, characteristic functions, and momentgenerating functions; inequalities, convergence concepts, and limit theorems; central limit theorem; and characterization of simple stochastic processes: widesense stationality and ergodicity. Cross-listed with: EE 605, CS 655",
+        "cross_listed": ["EE 605", "CS 655"],
+        "details": "Axioms of probability; discrete and continuous random vectors; functions of random variables; expectations, moments, characteristic functions, and momentgenerating functions; inequalities, convergence concepts, and limit theorems; central limit theorem; and characterization of simple stochastic processes: widesense stationality and ergodicity.",
         "letter": "CS",
         "name": "Probability and Stochastic Processes I",
         "number": "505",
@@ -4845,56 +4837,56 @@
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "An introduction to programming language design and implementation, with an emphasis on the abstractions provided by programming languages. Assignments involve problem-solving issues in principles of programming languages such as Scheme and ML. Recursive types and recursive functions; structural induction; abstract data types; abstract syntax; implementing languages with interpreters; static vs. dynamic scoping, closures, and state; exceptions; types: type-checking, type inference, static vs. dynamic typing; object-oriented languages: classes and interfaces, inheritance, and subtyping; polymorphism and genericity; and design patterns and the visitor pattern. Prerequisites: MA 502, and CS 590",
+        "details": "An introduction to programming language design and implementation, with an emphasis on the abstractions provided by programming languages. Assignments involve problem-solving issues in principles of programming languages such as Scheme and ML. Recursive types and recursive functions; structural induction; abstract data types; abstract syntax; implementing languages with interpreters; static vs. dynamic scoping, closures, and state; exceptions; types: type-checking, type inference, static vs. dynamic typing; object-oriented languages: classes and interfaces, inheritance, and subtyping; polymorphism and genericity; and design patterns and the visitor pattern.",
         "letter": "CS",
         "name": "Principles of Programming Languages",
         "number": "510",
-        "prerequisites": []
+        "prerequisites": ["MA 502", "CS 590"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "The study of concurrency as it appears at all levels and in different types of computing systems. Topics include: models of concurrency; languages for expressing concurrency; formal systems for reasoning about concurrency; the challenges of concurrent programming; race conditions; deadlock; livelock and nondeterministic behavior; prototypical synchronization problems, such as readers-writers and dining philosophers; mechanisms for solution of these problems, such as semaphores, monitors, and conditional critical regions; important libraries for concurrent programming; message passing, both synchronous and asynchronous; and applications of multithreaded concurrent programming and parallel algorithms. Substantial programming required. Prerequisites: CS 590 or CS 385",
+        "details": "The study of concurrency as it appears at all levels and in different types of computing systems. Topics include: models of concurrency; languages for expressing concurrency; formal systems for reasoning about concurrency; the challenges of concurrent programming; race conditions; deadlock; livelock and nondeterministic behavior; prototypical synchronization problems, such as readers-writers and dining philosophers; mechanisms for solution of these problems, such as semaphores, monitors, and conditional critical regions; important libraries for concurrent programming; message passing, both synchronous and asynchronous; and applications of multithreaded concurrent programming and parallel algorithms. Substantial programming required.",
         "letter": "CS",
         "name": "Concurrent Programming",
         "number": "511",
-        "prerequisites": []
+        "prerequisites": [["CS 590","CS 385"]]
     },
     {
         "corequisites": [],
         "cross_listed": [
             "SOC 550"
         ],
-        "details": "This course introduces fundamental and practical tools, techniques, and algorithms for Knowledge Discovery and Data Mining (KD&DM). It provides a balanced approach between methods and practice. On the methodological side, it covers several techniques for transforming corporate data into business intelligence. These include: online Analytical Processing (OLAP) Systems, Artificial Neural Networks (ANN), Rule-Based Systems (RBS), Fuzzy Logic (FL), Machine Learning (ML), Classification Trees (C4.5 Algorithm), and Classification and Regression Trees (CART Algorithm). To illustrate the practical significance of the various techniques, half of the course is devoted to case studies. The case studies, drawn from real-world applications, demonstrate application of techniques to real-world problems. Cross-listed with: SOC 550 Prerequisites: MA 331 or MA 541",
+        "details": "This course introduces fundamental and practical tools, techniques, and algorithms for Knowledge Discovery and Data Mining (KD&DM). It provides a balanced approach between methods and practice. On the methodological side, it covers several techniques for transforming corporate data into business intelligence. These include: online Analytical Processing (OLAP) Systems, Artificial Neural Networks (ANN), Rule-Based Systems (RBS), Fuzzy Logic (FL), Machine Learning (ML), Classification Trees (C4.5 Algorithm), and Classification and Regression Trees (CART Algorithm). To illustrate the practical significance of the various techniques, half of the course is devoted to case studies. The case studies, drawn from real-world applications, demonstrate application of techniques to real-world problems.",
         "letter": "CS",
         "name": "Knowledge Discovery and Data Mining",
         "number": "513",
-        "prerequisites": []
+        "prerequisites": [["MA 331", "MA 541"]]
     },
     {
         "corequisites": [],
         "cross_listed": [
             "CPE 514, NIS 514"
         ],
-        "details": "Measures of cost, performance, and speedup; instruction set design; processor design; hard-wired and microprogrammed control; memory hierarchies; pipelining; input/output systems; and additional topics as time permits. The emphasis in this course is on quantitative analysis of design alternatives. Cross-listed with: CPE 514, NIS 514 Prerequisites: CS 550, and CS 590 or CS 570",
+        "details": "Measures of cost, performance, and speedup; instruction set design; processor design; hard-wired and microprogrammed control; memory hierarchies; pipelining; input/output systems; and additional topics as time permits. The emphasis in this course is on quantitative analysis of design alternatives.",
         "letter": "CS",
         "name": "Computer Architecture",
         "number": "514",
-        "prerequisites": []
+        "prerequisites": ["CS 550", ["CS 590", "CS 570"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course is an introduction to the structure and design of compilers. Topics include lexical analysis; syntax analysis; symbol table construction; semantic analysis; syntax-directed translation; and if time permits dataflow analysis, liveness analysis; and register allocation. The emphasis in this course is on the integration of the various parts of a compiler. Each student writes a complete compiler for a small, but substantial, language. Prerequisites: CS 590 or CS 385 or CS 182 or CS 570",
+        "details": "This course is an introduction to the structure and design of compilers. Topics include lexical analysis; syntax analysis; symbol table construction; semantic analysis; syntax-directed translation; and if time permits dataflow analysis, liveness analysis; and register allocation. The emphasis in this course is on the integration of the various parts of a compiler. Each student writes a complete compiler for a small, but substantial, language.",
         "letter": "CS",
         "name": "Compiler Design",
         "number": "516",
-        "prerequisites": []
+        "prerequisites": [["CS 590", "CS 385", "CS 182", "CS 570"]]
     },
     {
         "corequisites": [],
-        "cross_listed": [],
-        "details": "The course provides an understanding of electronic commerce and related architectures, protocols, and technologies. It describes the e-commerce concept, objectives, and market drivers, as well as its requirements and underpinning techniques and technologies, including the Internet, WWW, multimedia, intelligent agents, client-server, and data mining. Security in e-commerce is addressed, including types of security attacks, security mechanisms, Virtual Private Networks (VPNs), firewalls, Intranets, and extranets. Implementation issues in e-commerce, including the design and management of its infrastructure and applications (ERP, CRM, and SCM), are discussed. M-commerce is addressed, electronic payment systems with their associated protocols are described, and various B2C and B2B applications are presented. Also, policy and regulatory issues in ecommerce are discussed. Cross-listed with: SOC 519",
+        "cross_listed": ["SOC 519"],
+        "details": "The course provides an understanding of electronic commerce and related architectures, protocols, and technologies. It describes the e-commerce concept, objectives, and market drivers, as well as its requirements and underpinning techniques and technologies, including the Internet, WWW, multimedia, intelligent agents, client-server, and data mining. Security in e-commerce is addressed, including types of security attacks, security mechanisms, Virtual Private Networks (VPNs), firewalls, Intranets, and extranets. Implementation issues in e-commerce, including the design and management of its infrastructure and applications (ERP, CRM, and SCM), are discussed. M-commerce is addressed, electronic payment systems with their associated protocols are described, and various B2C and B2B applications are presented. Also, policy and regulatory issues in ecommerce are discussed.",
         "letter": "CS",
         "name": "Introduction to E-commerce",
         "number": "519",
@@ -4903,34 +4895,34 @@
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "The use and internals of modern operating systems. Lectures focus on internals, whereas programming assignments focus on use of the operating system interface. Major topics include: the process concept; concurrency and how to program with threads; memory management techniques, including virtual memory and shared libraries; file system data structures; and I/O. Prerequisites: CS 550, and CS 570 or CS 590",
+        "details": "The use and internals of modern operating systems. Lectures focus on internals, whereas programming assignments focus on use of the operating system interface. Major topics include: the process concept; concurrency and how to program with threads; memory management techniques, including virtual memory and shared libraries; file system data structures; and I/O.",
         "letter": "CS",
         "name": "Introduction to Operating Systems",
         "number": "520",
-        "prerequisites": []
+        "prerequisites": ["CS 550", ["CS 570", "CS 590"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Introduction to IP networking. Examination of all layers of the OSI stack. Detailed examination of the IP, ICMP, UDP, and TCP protocols. Basic concepts of network design: end-to-end principle, routing, encapsulation, flow control, congestion control, and security. Detailed coverage of TCP. Some treatment of important Internet applications and services. Emphasis on network layer and above. Assignments focus on protocols and software. Prerequisites: CS 520 or CS 492",
+        "details": "Introduction to IP networking. Examination of all layers of the OSI stack. Detailed examination of the IP, ICMP, UDP, and TCP protocols. Basic concepts of network design: end-to-end principle, routing, encapsulation, flow control, congestion control, and security. Detailed coverage of TCP. Some treatment of important Internet applications and services. Emphasis on network layer and above. Assignments focus on protocols and software.",
         "letter": "CS",
         "name": "TCP/IP Networking",
         "number": "521",
-        "prerequisites": []
+        "prerequisites": [["CS 520", "CS 492"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course introduces the field of mobile computing and the closely related field of pervasive computing. Topics covered include: mobile hardware, wireless communication, ubiquitous data access, resource scarcity, sensing and actuation, location and context awareness, security and privacy, design methodologies and infrastructure, and end-to-end application considerations. Prerequisites: CS 182 or CS 385 or CS 570 or CS 590",
+        "details": "This course introduces the field of mobile computing and the closely related field of pervasive computing. Topics covered include: mobile hardware, wireless communication, ubiquitous data access, resource scarcity, sensing and actuation, location and context awareness, security and privacy, design methodologies and infrastructure, and end-to-end application considerations.",
         "letter": "CS",
         "name": "Mobile Systems and Applications",
         "number": "522",
-        "prerequisites": []
+        "prerequisites": [["CS 182", "CS 385", "CS 570", "CS 590"]]
     },
     {
         "corequisites": [],
-        "cross_listed": [],
-        "details": "This course introduces the concepts of cloud computing, using the frameworks of software as a service (SaaS), platform as a service (PaaS), and infrastructure as a service (IaaS). Fundamental concepts from each framework are introduced and related to the structure of the modern cloud. Cloud computing: economics of outsourcing. SaaS: The Web as a client-server system. Web stack: HTML and HTTP. Web data: XML and JSON. Web services and example APIs. PaaS: Introduction to databases and middleware. Data storage in the cloud. Privacy issues. IaaS: Design of server farms. Virtualization and green computing. Service discovery: DNS and content distribution networks. Batch processing in the cloud. Assignments include quizzes, examinations, and a presentation and term paper on a cloud-related topic. Cross-listed with: SOC 524",
+        "cross_listed": ["SOC 524"],
+        "details": "This course introduces the concepts of cloud computing, using the frameworks of software as a service (SaaS), platform as a service (PaaS), and infrastructure as a service (IaaS). Fundamental concepts from each framework are introduced and related to the structure of the modern cloud. Cloud computing: economics of outsourcing. SaaS: The Web as a client-server system. Web stack: HTML and HTTP. Web data: XML and JSON. Web services and example APIs. PaaS: Introduction to databases and middleware. Data storage in the cloud. Privacy issues. IaaS: Design of server farms. Virtualization and green computing. Service discovery: DNS and content distribution networks. Batch processing in the cloud. Assignments include quizzes, examinations, and a presentation and term paper on a cloud-related topic.",
         "letter": "CS",
         "name": "Introduction to Cloud Computing",
         "number": "524",
@@ -4939,11 +4931,11 @@
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course is an introduction to programming and administration of mainframe computers, which are the backbone of modern enterprise computing. Introduction to z/OS and z/VM; protection and virtualization; total cost of ownership (TCO); conversational Monitoring System (CMS); initial program load (IPL) and launching new virtual machines; writing scripts in REXX; interactive z/OS facilities: TSO/E, ISPF and Unix; Unix system services; JCL and SDSF; transaction management using the Java CICS API; and network programming concepts: virtual LANs, open service adapters, and hipersockets. Prerequisites: CS 590 or CS 385 or CS 182 or CS 570",
+        "details": "This course is an introduction to programming and administration of mainframe computers, which are the backbone of modern enterprise computing. Introduction to z/OS and z/VM; protection and virtualization; total cost of ownership (TCO); conversational Monitoring System (CMS); initial program load (IPL) and launching new virtual machines; writing scripts in REXX; interactive z/OS facilities: TSO/E, ISPF and Unix; Unix system services; JCL and SDSF; transaction management using the Java CICS API; and network programming concepts: virtual LANs, open service adapters, and hipersockets.",
         "letter": "CS",
         "name": "Enterprise and Cloud Computing",
         "number": "526",
-        "prerequisites": []
+        "prerequisites": [["CS 590", "CS 385", "CS 182", "CS 570"]]
     },
     {
         "corequisites": [],
@@ -4956,8 +4948,8 @@
     },
     {
         "corequisites": [],
-        "cross_listed": [],
-        "details": "An objective cost model is necessary for planning and executing software projects. A cost model provides a framework for communicating business decisions among the stakeholders of a software effort; it supports contract negotiations, process improvement analysis, tool purchases, architecture changes, component make/buy tradeoffs, and several other return-oninvestment decisions. This course provides the student with a through introduction to software estimation and to industry standard tools, like COCOMOII, used in cost estimation. Cross-listed with CpE533.",
+        "cross_listed": ["CPE 533"],
+        "details": "An objective cost model is necessary for planning and executing software projects. A cost model provides a framework for communicating business decisions among the stakeholders of a software effort; it supports contract negotiations, process improvement analysis, tool purchases, architecture changes, component make/buy tradeoffs, and several other return-oninvestment decisions. This course provides the student with a through introduction to software estimation and to industry standard tools, like COCOMOII, used in cost estimation.",
         "letter": "CS",
         "name": "Cost Estimation and Metrics",
         "number": "533",
@@ -4974,8 +4966,8 @@
     },
     {
         "corequisites": [],
-        "cross_listed": [],
-        "details": "Types of multimedia information: voice, data video facsimile, graphics, and their characterization; modeling techniques to represent multimedia information; analysis and comparative performances of different models; detection techniques for multimedia signals; specification of multimedia representation based on service requirements; and evaluation of different multimedia representations to satisfy user applications and for generating test scenarios for standardization. Cross-listed with: CPE 536, CPE 536, NIS 536",
+        "cross_listed": ["CPE 536", "CPE 536", "NIS 536"],
+        "details": "Types of multimedia information: voice, data video facsimile, graphics, and their characterization; modeling techniques to represent multimedia information; analysis and comparative performances of different models; detection techniques for multimedia signals; specification of multimedia representation based on service requirements; and evaluation of different multimedia representations to satisfy user applications and for generating test scenarios for standardization.",
         "letter": "CS",
         "name": "Integrated Services - Multimedia",
         "number": "536",
@@ -4986,52 +4978,52 @@
         "cross_listed": [
             "CPE 537"
         ],
-        "details": "This is an introductory-level course to computer graphics. No previous knowledge on the subject is assumed. The objective of the course is to provide a comprehensive introduction to the field of computer graphics, focusing on the underlying theory, and thus providing strong foundations for both designers and users of graphical systems. The course will study the conceptual framework for interactive computer graphics, introduce the use of OpenGL as an application programming interface (API), and cover algorithmic and computer architecture issues. Cross-listed with: CPE 537 Prerequisites: CS 590 or CS 385 or CS 182 or CS 570",
+        "details": "This is an introductory-level course to computer graphics. No previous knowledge on the subject is assumed. The objective of the course is to provide a comprehensive introduction to the field of computer graphics, focusing on the underlying theory, and thus providing strong foundations for both designers and users of graphical systems. The course will study the conceptual framework for interactive computer graphics, introduce the use of OpenGL as an application programming interface (API), and cover algorithmic and computer architecture issues.",
         "letter": "CS",
         "name": "Interactive Computer Graphics",
         "number": "537",
-        "prerequisites": []
+        "prerequisites": [["CS 590", "CS 385", "CS 182", "CS 570"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Visual analytics is the combination of data filtering, statistical algorithms, and visual presentation in an interactive visual interface. This course provides an introduction to both information and scientific visualization. Topics include: perception (color, space/order, and depth/occlusion), interaction (navigation, zooming, focus, and context), design studies and evaluation, and data representation (graphs, trees, volumes, and time series). Applications include: software, scientific, financial, and cartographic visualization. Junior, senior, or graduate standing is required. Prerequisites: CS 590 or CS 385 or CS 182 or CS 570",
+        "details": "Visual analytics is the combination of data filtering, statistical algorithms, and visual presentation in an interactive visual interface. This course provides an introduction to both information and scientific visualization. Topics include: perception (color, space/order, and depth/occlusion), interaction (navigation, zooming, focus, and context), design studies and evaluation, and data representation (graphs, trees, volumes, and time series). Applications include: software, scientific, financial, and cartographic visualization. Junior, senior, or graduate standing is required.",
         "letter": "CS",
         "name": "Visual Analytics",
         "number": "538",
-        "prerequisites": []
+        "prerequisites": [["CS 590", "CS 385", "CS 182", "CS 570"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "The course is an introduction to the techniques for designing and building computer games and real-time graphics-oriented simulations. The topics include: 3-D game engine architecture, design, and implementation; simulation, modeling, and object control; character behavior and behaviorbased animation; human-computer interaction; and event-driven simulations. Prerequisites: CS 537",
+        "details": "The course is an introduction to the techniques for designing and building computer games and real-time graphics-oriented simulations. The topics include: 3-D game engine architecture, design, and implementation; simulation, modeling, and object control; character behavior and behaviorbased animation; human-computer interaction; and event-driven simulations.",
         "letter": "CS",
         "name": "Real-Time Rendering, Gaming, and Simulations Programming",
         "number": "539",
-        "prerequisites": []
+        "prerequisites": ["CS 537"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "An introduction to the large and diverse field of artificial intelligence. Topics include: problem-solving by search and constraint satisfaction; alpha-beta search for two-player games; and logic and knowledge representation, planning, learning, decision theory, statistical learning, and computer vision. Prerequisites: CS 590 or CS 182 or CS 385 or CS 570",
+        "details": "An introduction to the large and diverse field of artificial intelligence. Topics include: problem-solving by search and constraint satisfaction; alpha-beta search for two-player games; and logic and knowledge representation, planning, learning, decision theory, statistical learning, and computer vision.",
         "letter": "CS",
         "name": "Artificial Intelligence",
         "number": "541",
-        "prerequisites": []
+        "prerequisites": [["CS 590", "CS 385", "CS 182", "CS 570"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course provides an introduction to entertainment-based user interface design and development from a computer science perspective. The course includes: a survey and classification of the types of computer-mediated entertainment (CME); challenges in developing such interfaces; software architectures to support CME; design principles for sketching CME; and software tools to create CME and provide the technical infrastructure necessary to sustain it. Prerequisites: CS 347, and CS 545 or SSW 540",
+        "details": "This course provides an introduction to entertainment-based user interface design and development from a computer science perspective. The course includes: a survey and classification of the types of computer-mediated entertainment (CME); challenges in developing such interfaces; software architectures to support CME; design principles for sketching CME; and software tools to create CME and provide the technical infrastructure necessary to sustain it.",
         "letter": "CS",
         "name": "Principles of Computer Mediated Entertainment",
         "number": "543",
-        "prerequisites": []
+        "prerequisites": ["CS 347", ["CS 545", "SSW 540"]]
     },
     {
         "corequisites": [],
-        "cross_listed": [],
-        "details": "From medical centers and individual physicians adopting electronic medical records, to patients keeping track of chronic diseases through websites and apps, we live in an era of unprecedented access to health data. These data enable inference of drug side effects, causes of disease, and new treatments, but the new terminologies, policies, and challenges in understanding the data itself can make it difficult for computational researchers to apply their techniques to this new area and for health professionals to begin using informatics to solve practical problems. This course will give both groups the foundation needed to propose, evaluate and develop projects such as secondary analysis of health data and will enable them to begin effective interdisciplinary collaborations. Students will learn how health data is collected (in both hospital and nonhospital settings), how the structure of record systems impacts the research process and interpretation of results, and how to design and evaluate studies involving secondary use of health data (while complying with HIPAA and IRB regulations) in order to gain new medical knowledge and improve healthcare delivery. Cross-listed with: SOC 552",
+        "cross_listed": ["SOC 552"],
+        "details": "From medical centers and individual physicians adopting electronic medical records, to patients keeping track of chronic diseases through websites and apps, we live in an era of unprecedented access to health data. These data enable inference of drug side effects, causes of disease, and new treatments, but the new terminologies, policies, and challenges in understanding the data itself can make it difficult for computational researchers to apply their techniques to this new area and for health professionals to begin using informatics to solve practical problems. This course will give both groups the foundation needed to propose, evaluate and develop projects such as secondary analysis of health data and will enable them to begin effective interdisciplinary collaborations. Students will learn how health data is collected (in both hospital and nonhospital settings), how the structure of record systems impacts the research process and interpretation of results, and how to design and evaluate studies involving secondary use of health data (while complying with HIPAA and IRB regulations) in order to gain new medical knowledge and improve healthcare delivery.",
         "letter": "CS",
         "name": "Health Informatics",
         "number": "544",
@@ -5042,56 +5034,54 @@
         "cross_listed": [
             "SOC 510"
         ],
-        "details": "This is an introduction to Human Computer Interaction (HCI). It covers basic concepts, principles, and frameworks in HCI; models of interaction; and design guidelines and methodologies. The course includes extensive readings and reports, as well as work on projects involving interface design and development. Cross-listed with: SOC 510 Prerequisites: CS 590 or CS 385 or CS 182 or CS 570",
+        "details": "This is an introduction to Human Computer Interaction (HCI). It covers basic concepts, principles, and frameworks in HCI; models of interaction; and design guidelines and methodologies. The course includes extensive readings and reports, as well as work on projects involving interface design and development.",
         "letter": "CS",
         "name": "Human-Computer Interaction",
         "number": "545",
-        "prerequisites": []
+        "prerequisites": [["CS 590", "CS 385", "CS 182", "CS 570"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course will provide students with a first strong approach of internet programming. It will give the basic knowledge on how the Internet works and how to create advanced web sites by the use of script languages, after learning the basics of HTML. The course will teach the students how to create a complex global site through the creation of individual working modules, giving them the skills required in any business such as proper team work and coordination between groups. Prerequisites: CS 561 or CS 442, and CS 146 or SOC 611",
+        "details": "This course will provide students with a first strong approach of internet programming. It will give the basic knowledge on how the Internet works and how to create advanced web sites by the use of script languages, after learning the basics of HTML. The course will teach the students how to create a complex global site through the creation of individual working modules, giving them the skills required in any business such as proper team work and coordination between groups.",
         "letter": "CS",
         "name": "Web Programming",
         "number": "546",
-        "prerequisites": []
+        "prerequisites": [["CS 561", "CS 442"], ["CS 146", "SOC 611"]]
     },
     {
         "corequisites": [],
         "cross_listed": [
             "SOC 542"
         ],
-        "details": "This course addresses the important engineering issues in building largescale enterprise software systems. The course emphasizes service-oriented architectures (SOA) and best practices for building service-oriented enterprises in a vendorneutral fashion. Introduction to SOA; BPM; project management, and configuration management; Web services; mainframe services, virtualization, and data integration; application integration; legacy integration; enterprise integration; federal enterprise architecture (FEA); and case studies. Cross-listed with: SOC 542 Prerequisites: CS 590 or CS 385 or CS 182 or CS 570 or SOC 605",
+        "details": "This course addresses the important engineering issues in building largescale enterprise software systems. The course emphasizes service-oriented architectures (SOA) and best practices for building service-oriented enterprises in a vendorneutral fashion. Introduction to SOA; BPM; project management, and configuration management; Web services; mainframe services, virtualization, and data integration; application integration; legacy integration; enterprise integration; federal enterprise architecture (FEA); and case studies.",
         "letter": "CS",
         "name": "Enterprise Software Architecture and Design",
         "number": "548",
-        "prerequisites": []
+        "prerequisites": [["CS 590", "CS 385", "CS 182", "CS 570", "SOC 605"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Developing robust applications in distributed environments. Coursework includes developing a fault-tolerant distributed application. RPC and RMI; Web Services; application servers (e.g., JEE and Websphere). Transactions: concurrency control and recovery, distributed transactions, nested transactions, and business transactions. Models of distributed systems, impossibility results, and Byzantine failures. Protocol design and examples (2PC and 3PC). Distributed snapshots. Logical time and vector clocks. Replication for fault tolerance: primary-backup and state machine approaches, quorum consensus, and process groups. Peer-to-peer networks. Prerequisites: CS 590 or CS 385 or CS 182 or CS 570",
+        "details": "Developing robust applications in distributed environments. Coursework includes developing a fault-tolerant distributed application. RPC and RMI; Web Services; application servers (e.g., JEE and Websphere). Transactions: concurrency control and recovery, distributed transactions, nested transactions, and business transactions. Models of distributed systems, impossibility results, and Byzantine failures. Protocol design and examples (2PC and 3PC). Distributed snapshots. Logical time and vector clocks. Replication for fault tolerance: primary-backup and state machine approaches, quorum consensus, and process groups. Peer-to-peer networks.",
         "letter": "CS",
         "name": "Distributed Systems and Cloud Computing",
         "number": "549",
+        "prerequisites": [["CS 590", "CS 385", "CS 182", "CS 570"]]
+    },
+    {
+        "corequisites": [],
+        "cross_listed": ["CPE 550"],
+        "details": "This course provides an intensive introduction to material on computer organization and assembly language programming required for entrance into the graduate program in Computer Science or Computer Engineering. The topics covered are: structure of stored program computers; linking and loading; assembly language programming, with an emphasis on translation of high-level language constructs; data representation and arithmetic algorithms; basics of logic design; processor design: data path, hardwired control and microprogrammed control. Students will be given assembly language programming assignments on a regular basis. Undergraduates need permission of advisor.",
+        "letter": "CS",
+        "name": "Computer Organization and Programming",
+        "number": "550",
         "prerequisites": []
     },
     {
         "corequisites": [],
-        "cross_listed": [],
-        "details": "This course provides an intensive introduction to material on computer organization and assembly language programming required for entrance into the graduate program in Computer Science or Computer Engineering. The topics covered are: structure of stored program computers; linking and loading; assembly language programming, with an emphasis on translation of high-level language constructs; data representation and arithmetic algorithms; basics of logic design; processor design: data path, hardwired control and microprogrammed control. Students will be given assembly language programming assignments on a regular basis. Prerequisites: Undergraduates need permission of advisor. Cross-listed with: CPE 550",
-        "letter": "CS",
-        "name": "Computer Organization and Programming",
-        "number": "550",
-        "prerequisites": [
-            "Undergraduates need permission of advisor."
-        ]
-    },
-    {
-        "corequisites": [],
-        "cross_listed": [],
-        "details": "This course will introduce statistical processing of natural language texts, particularly counting words and phrases in and of themselves as well as associations between them using correlations and other measures. Goals of text mining include document classification, information retrieval, source authentication, and stylistic categorization. Typical document sources are newspaper stories, email captures, and Internet pages, as well as collections of non-fiction and fiction such as Federalist Papers and Edgar Allan Poe short stories. Cross-listed with: SOC 553",
+        "cross_listed": ["SOC 553"],
+        "details": "This course will introduce statistical processing of natural language texts, particularly counting words and phrases in and of themselves as well as associations between them using correlations and other measures. Goals of text mining include document classification, information retrieval, source authentication, and stylistic categorization. Typical document sources are newspaper stories, email captures, and Internet pages, as well as collections of non-fiction and fiction such as Federalist Papers and Edgar Allan Poe short stories.",
         "letter": "CS",
         "name": "Introduction to Text Mining and Statistical Natural Language Processing",
         "number": "553",
@@ -5100,25 +5090,25 @@
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course focuses on teaching students the newest technologies available in Web Programming. Topics include advanced client side programming, responsive design, NoSQL databases, JQuery, AJAX, Web Site security, and the latest Frameworks. Students will be given the opportunity to suggest topics they would like to discover at the end of the semester. The course is a very hands-on course where everything taught will be practiced through in-class exercises. Prerequisites: CS 546",
+        "details": "This course focuses on teaching students the newest technologies available in Web Programming. Topics include advanced client side programming, responsive design, NoSQL databases, JQuery, AJAX, Web Site security, and the latest Frameworks. Students will be given the opportunity to suggest topics they would like to discover at the end of the semester. The course is a very hands-on course where everything taught will be practiced through in-class exercises.",
         "letter": "CS",
         "name": "Web Programming II",
         "number": "554",
-        "prerequisites": []
+        "prerequisites": ["CS 546"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course focuses on teaching students the newest technologies available in Web Programming. Topics include advanced client side programming, responsive design, NoSQL databases, JQuery, AJAX, Web Site security, and the latest Frameworks. Students will be given the opportunity to suggest topics they would like to discover at the end of the semester. The course is a very hands-on course where everything taught will be practiced through in-class exercises. Prerequisites: CS 546",
+        "details": "This course focuses on teaching students the newest technologies available in Web Programming. Topics include advanced client side programming, responsive design, NoSQL databases, JQuery, AJAX, Web Site security, and the latest Frameworks. Students will be given the opportunity to suggest topics they would like to discover at the end of the semester. The course is a very hands-on course where everything taught will be practiced through in-class exercises.",
         "letter": "CS",
         "name": "Web Programming II",
         "number": "554",
-        "prerequisites": []
+        "prerequisites": ["CS 546"]
     },
     {
         "corequisites": [],
-        "cross_listed": [],
-        "details": "In software problem areas that require exploratory development efforts, those with complex requirements and high levels of change, agile software development practices are highly effective when deployed in a collaborative, people-centered organizational culture. This course examines agile methods, including Extreme Programming (XP), Scrum, Lean, Crystal, Dynamic Systems Development Method and Feature-Driven Development to understand how rapid realization of software occurs most effectively. The ability of agile development teams to rapidly develop high quality, customer-valued software is examined and contrasted with teams following more traditional methodologies that emphasize planning and documentation. Students will learn agile development principles and techniques covering the entire software development process from problem conception through development, testing and deployment, and will be able to effectively participate in and manage agile software developments as a result of their successfully completing this course. Case studies and software development projects are used throughout. Cross-listed with: SSW 555",
+        "cross_listed": ["SSW 555"],
+        "details": "In software problem areas that require exploratory development efforts, those with complex requirements and high levels of change, agile software development practices are highly effective when deployed in a collaborative, people-centered organizational culture. This course examines agile methods, including Extreme Programming (XP), Scrum, Lean, Crystal, Dynamic Systems Development Method and Feature-Driven Development to understand how rapid realization of software occurs most effectively. The ability of agile development teams to rapidly develop high quality, customer-valued software is examined and contrasted with teams following more traditional methodologies that emphasize planning and documentation. Students will learn agile development principles and techniques covering the entire software development process from problem conception through development, testing and deployment, and will be able to effectively participate in and manage agile software developments as a result of their successfully completing this course. Case studies and software development projects are used throughout.",
         "letter": "CS",
         "name": "Agile Methods for Software Development",
         "number": "555",
@@ -5129,38 +5119,38 @@
         "cross_listed": [
             "CPE 558"
         ],
-        "details": "An introduction to the field of Computer Vision, focusing on the underlying algorithmic, geometric, and optic issues. The course starts with a brief overview of basic image processing topics (convolution, smoothing, and edge detection). It then proceeds on various image analysis topics: binary images, moments-based shape analysis, Hough transform, image formation, depth and shape recovery, photometry, motion, classification, and special topics. Cross-listed with: CPE 558 Prerequisites: MA 232, and CS 182 or CS 385 or CS 570 or CS 590",
+        "details": "An introduction to the field of Computer Vision, focusing on the underlying algorithmic, geometric, and optic issues. The course starts with a brief overview of basic image processing topics (convolution, smoothing, and edge detection). It then proceeds on various image analysis topics: binary images, moments-based shape analysis, Hough transform, image formation, depth and shape recovery, photometry, motion, classification, and special topics.",
         "letter": "CS",
         "name": "Computer Vision",
         "number": "558",
-        "prerequisites": []
+        "prerequisites": ["MA 232", ["CS 590", "CS 385", "CS 182", "CS 570"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "In many fields (e.g., computer vision, speech recognition, data mining, and bioinformatics), machine learning has become a crucial ingredient in translating research into applications. The course is intended to provide an in-depth overview of recent advances in machine learning, with applications in fields such as computer vision, data mining, natural language processing. Fundamental topics that will be covered include supervised (Bayesian) and unsupervised learning, non-parametric methods, graphical models (Bayes Nets and Markov Random Fields) and dimensionality reduction. The course will also cover several of the most important recent developments in learning algorithms, including boosting, Support Vector Machines and kernel methods, and outline the fundamental concepts behind these approaches. Prerequisites: MA 222",
+        "details": "In many fields (e.g., computer vision, speech recognition, data mining, and bioinformatics), machine learning has become a crucial ingredient in translating research into applications. The course is intended to provide an in-depth overview of recent advances in machine learning, with applications in fields such as computer vision, data mining, natural language processing. Fundamental topics that will be covered include supervised (Bayesian) and unsupervised learning, non-parametric methods, graphical models (Bayes Nets and Markov Random Fields) and dimensionality reduction. The course will also cover several of the most important recent developments in learning algorithms, including boosting, Support Vector Machines and kernel methods, and outline the fundamental concepts behind these approaches.",
         "letter": "CS",
         "name": "Machine Learning: Fundamentals and Applications",
         "number": "559",
-        "prerequisites": []
+        "prerequisites": ["MA 222"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Introduction to the design and querying of relational databases. Topics include: relational schemas; keys and foreign key references; relational algebra (as an introduction to SQL); SQL in depth; Entity-Relationship (ER) database design; translating from ER models to relational schemas and from relational schemas to ER models; functional dependencies; and normalization. Prerequisites: CS 590 or CS 570",
+        "details": "Introduction to the design and querying of relational databases. Topics include: relational schemas; keys and foreign key references; relational algebra (as an introduction to SQL); SQL in depth; Entity-Relationship (ER) database design; translating from ER models to relational schemas and from relational schemas to ER models; functional dependencies; and normalization.",
         "letter": "CS",
         "name": "Database Management Systems I",
         "number": "561",
-        "prerequisites": []
+        "prerequisites": [["CS 590", "CS 570"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Continuation of CS 561. Topics include UML modeling of relational databases; indexing, both static and dynamic; B-trees and B+-trees; query optimization; concurrency control; and recovery control. Prerequisites: CS 561",
+        "details": "Continuation of CS 561. Topics include UML modeling of relational databases; indexing, both static and dynamic; B-trees and B+-trees; query optimization; concurrency control; and recovery control.",
         "letter": "CS",
         "name": "Database Management Systems II",
         "number": "562",
-        "prerequisites": []
+        "prerequisites": ["CS 561"]
     },
     {
         "corequisites": [],
@@ -5210,76 +5200,74 @@
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "\u201cThis course studies the mathematical models for computer security (Bell- LaPadula, Clark-Wilson, Biba, and Gligor models). It analyzes and compares, with respect to formal and pragmatic criteria, the properties of various models for hardware, software, and database security. Topics also include: formal specification and verification of security properties, operating system security, trust management, multi-level security, security labeling, security auditing and intrusion detection, security policy, safeguards and countermeasures, risk mitigation, covert channels, identification and authentication, password schemes, access control lists, and data fusion techniques. The course includes a project. Prerequisites: CS 590 or CS 385 or CS 182 or CS 570 Corequisites:",
+        "details": "\u201cThis course studies the mathematical models for computer security (Bell- LaPadula, Clark-Wilson, Biba, and Gligor models). It analyzes and compares, with respect to formal and pragmatic criteria, the properties of various models for hardware, software, and database security. Topics also include: formal specification and verification of security properties, operating system security, trust management, multi-level security, security labeling, security auditing and intrusion detection, security policy, safeguards and countermeasures, risk mitigation, covert channels, identification and authentication, password schemes, access control lists, and data fusion techniques. The course includes a project.",
         "letter": "CS",
         "name": "Fundamentals of CyberSecurity",
         "number": "573",
-        "prerequisites": [
-            "CS 590 or CS 385 or CS 182 or CS 570"
-        ]
+        "prerequisites": [["CS 590", "CS 385", "CS 182", "CS 570"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "\u201cTheory of object-oriented design, classes, interfaces, inheritance hierarchy, and correctness; abstract data types, encapsulation, formal specification with preconditions, postconditions and invariants, and proofs of correctness; objectoriented software, objects and classes, genericity, inheritance, polymorphism, and overloading; single and multiple inheritance, programming by contract, subclassing as subcontract, specification, and verification; programming language examples include C+ +, Java, Smalltalk, and Eiffel.\u201d Prerequisites: CS 590 or CS 385 or CS 182 or CS 570",
+        "details": "\u201cTheory of object-oriented design, classes, interfaces, inheritance hierarchy, and correctness; abstract data types, encapsulation, formal specification with preconditions, postconditions and invariants, and proofs of correctness; objectoriented software, objects and classes, genericity, inheritance, polymorphism, and overloading; single and multiple inheritance, programming by contract, subclassing as subcontract, specification, and verification; programming language examples include C+ +, Java, Smalltalk, and Eiffel.\u201d",
         "letter": "CS",
         "name": "Object-Oriented Analysis and Design",
         "number": "574",
-        "prerequisites": []
+        "prerequisites": [["CS 590", "CS 385", "CS 182", "CS 570"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course will cover a wide range of topics in the area of Systems Security. A computer system is composed by software, hardware, policies, and practices. Systems security involves both designing and building secure systems, as well as improving and evaluating the security of exiting systems. This course is giving a particular emphasis into providing hands-on experience to students through building, attacking, and securing systems. The class is programming intensive. Those who take the class should be skill programmers and should have some experience with the C programming language and programming on a Linux environment. It is recommended that students are also familiar with the assembly language and with network and operating system basics. Prerequisites: (CS 392 and CS 306) or CS 631",
+        "details": "This course will cover a wide range of topics in the area of Systems Security. A computer system is composed by software, hardware, policies, and practices. Systems security involves both designing and building secure systems, as well as improving and evaluating the security of exiting systems. This course is giving a particular emphasis into providing hands-on experience to students through building, attacking, and securing systems. The class is programming intensive. Those who take the class should be skill programmers and should have some experience with the C programming language and programming on a Linux environment. It is recommended that students are also familiar with the assembly language and with network and operating system basics.",
         "letter": "CS",
         "name": "Secure Systems",
         "number": "576",
-        "prerequisites": []
+        "prerequisites": ["CS 392", "CS 306", ["CS 631"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Software in binary form reveals very little about its design, inner workings, and purpose. There are many reasons for obtaining such information, such as recovering information about the software\u2019s development when it is lost, enabling interoperability, recovering data stored in obsolete encodings, analyzing software of unknown provenance, retrofitting software with additional functionality, etc. This course introduces students to the techniques involved in software reverse engineering and analysis. The course goes over multiple architectures, but mostly focuses on x86 and x86_64, and students are exposed to both static and dynamic analyses. This course is giving a particular emphasis into providing hands-on experience to students through disassembling, reverse engineering software, and programming custom analyses. Those who take the class should be skilled programmers and should not be afraid to dive deep into low-level code. Prerequisites: (CS 392 and CS 306) or CS 631",
+        "details": "Software in binary form reveals very little about its design, inner workings, and purpose. There are many reasons for obtaining such information, such as recovering information about the software\u2019s development when it is lost, enabling interoperability, recovering data stored in obsolete encodings, analyzing software of unknown provenance, retrofitting software with additional functionality, etc. This course introduces students to the techniques involved in software reverse engineering and analysis. The course goes over multiple architectures, but mostly focuses on x86 and x86_64, and students are exposed to both static and dynamic analyses. This course is giving a particular emphasis into providing hands-on experience to students through disassembling, reverse engineering software, and programming custom analyses. Those who take the class should be skilled programmers and should not be afraid to dive deep into low-level code.",
         "letter": "CS",
         "name": "Reverse Engineering and Application Analysis",
         "number": "577",
-        "prerequisites": []
+        "prerequisites": ["CS 392", "CS 306", ["CS 631"]]
     },
     {
         "corequisites": [],
         "cross_listed": [
             "SOC 551"
         ],
-        "details": "Increasing use of computers and networks in business, government, recreation, and almost all aspects of daily life has led to a proliferation of online sensitive data that, if used improperly, can harm the data subjects. As a result, concern about the ownership, control, privacy, and accuracy of these data has become a top priority. This course focuses on both the technical challenges of handling sensitive data and the policy and legal issues facing data subjects, data owners, and data users. This course is suitable for advanced undergraduate computer science majors, graduate students in computer science, and students in technology management or other majors with some computer science background. Course readings draw on a variety of sources, including both technical materials and the popular press. Cross-listed with: SOC 551 Prerequisites: CS 579 or CS 594 or CS 306 or CS 506",
+        "details": "Increasing use of computers and networks in business, government, recreation, and almost all aspects of daily life has led to a proliferation of online sensitive data that, if used improperly, can harm the data subjects. As a result, concern about the ownership, control, privacy, and accuracy of these data has become a top priority. This course focuses on both the technical challenges of handling sensitive data and the policy and legal issues facing data subjects, data owners, and data users. This course is suitable for advanced undergraduate computer science majors, graduate students in computer science, and students in technology management or other majors with some computer science background. Course readings draw on a variety of sources, including both technical materials and the popular press.",
         "letter": "CS",
         "name": "Privacy in a Networked World",
         "number": "578",
-        "prerequisites": []
+        "prerequisites": [["CS 579", "CS 594", "CS 306", "CS 506"]]
     },
     {
         "corequisites": [],
         "cross_listed": [
             "CPE 579"
         ],
-        "details": "This course provides a broad introduction to cornerstones of security (authenticity, confidentiality, message integrity, and non-repudiation) and the mechanisms to achieve them as well as the underlying mathematical basics. Topics include: block and stream ciphers, public-key systems, key management, certificates, public-key infrastructure (PKI), digital signature, nonrepudiation, and message authentication. Various security standards and protocols such as DES, AES, PGP, and Kerberos, are studied. Cross-listed with: CPE 579 Prerequisites: CS 503, and CS 182 or CS 385 or CS 570 or CS 590",
+        "details": "This course provides a broad introduction to cornerstones of security (authenticity, confidentiality, message integrity, and non-repudiation) and the mechanisms to achieve them as well as the underlying mathematical basics. Topics include: block and stream ciphers, public-key systems, key management, certificates, public-key infrastructure (PKI), digital signature, nonrepudiation, and message authentication. Various security standards and protocols such as DES, AES, PGP, and Kerberos, are studied.",
         "letter": "CS",
         "name": "Foundations of Cryptography",
         "number": "579",
-        "prerequisites": []
+        "prerequisites": ["CS 503", ["CS 182", "CS 385", "CS 570", "CS 590"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "The technical issues involved in modern internet and online social networks. Basic social network terminology; properties of social networks: connectivity, long tail, network effects; and how these properties affect real life software systems, e.g.: blogs, wikis, social bookmarks and tagging, folksonomy, and online social networks. Students will learn programming with online social networking APIs: OpenSocial, Facebook, and Twitter. They shall also develop an appreciation of ethical, legal, and technical issues like privacy, anonymity, and authentication inherent in online social network applications. Course includes a term project resulting in a social networking application that uses the social networking APIs to operate on one of the popular social software platforms. Prerequisites: CS 392, and CS 182 or CS 385 or CS 570 or CS 590",
+        "details": "The technical issues involved in modern internet and online social networks. Basic social network terminology; properties of social networks: connectivity, long tail, network effects; and how these properties affect real life software systems, e.g.: blogs, wikis, social bookmarks and tagging, folksonomy, and online social networks. Students will learn programming with online social networking APIs: OpenSocial, Facebook, and Twitter. They shall also develop an appreciation of ethical, legal, and technical issues like privacy, anonymity, and authentication inherent in online social network applications. Course includes a term project resulting in a social networking application that uses the social networking APIs to operate on one of the popular social software platforms.",
         "letter": "CS",
         "name": "Online Social Networks",
         "number": "581",
-        "prerequisites": []
+        "prerequisites": ["CS 392", ["CS 182", "CS 385", "CS 570", "CS 590"]]
     },
     {
         "corequisites": [],
-        "cross_listed": [],
-        "details": "This course covers what causality is, how we can infer it using automated methods, and how to use causes to predict future events, explain past occurrences and intervene on systems. Students will learn both the theory behind causal inference methods as well as how to apply them to real-world datasets such as from finance, biology, and politics. In addition to Bayesian networks, we will cover methods for causal inference in time series including dynamic Bayesian networks, Granger causality, and logic-based methods. Cross-listed with: SOC 582",
+        "cross_listed": ["SOC 582"],
+        "details": "This course covers what causality is, how we can infer it using automated methods, and how to use causes to predict future events, explain past occurrences and intervene on systems. Students will learn both the theory behind causal inference methods as well as how to apply them to real-world datasets such as from finance, biology, and politics. In addition to Bayesian networks, we will cover methods for causal inference in time series including dynamic Bayesian networks, Granger causality, and logic-based methods.",
         "letter": "CS",
         "name": "Causal Inference",
         "number": "582",
@@ -5290,45 +5278,45 @@
         "cross_listed": [
             "SOC 585"
         ],
-        "details": "The course will provide the students with: (i) A theoretical understanding of the principles, concepts, and structures underlying game designs; (ii) An analysis of game specific engineering frameworks and architectures including software and hardware architectures, game play mechanics, design documentation, and production methodology; (iii) An introduction to the innovation processes and skills needed to formulate a viable design and take it from the idea stage to a published game. Cross-listed with: SOC 585 Prerequisites: CS 385 or CS 182 or CS 590 or CS 570",
+        "details": "The course will provide the students with: (i) A theoretical understanding of the principles, concepts, and structures underlying game designs; (ii) An analysis of game specific engineering frameworks and architectures including software and hardware architectures, game play mechanics, design documentation, and production methodology; (iii) An introduction to the innovation processes and skills needed to formulate a viable design and take it from the idea stage to a published game.",
         "letter": "CS",
         "name": "Introduction to Game Development",
         "number": "585",
-        "prerequisites": []
+        "prerequisites": [["CS 385", "CS 182", "CS 590", "CS 570"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course examines the use of machine learning techniques in all stages of game design. Topics covered include environment and character modeling, motion synthesis, behavior learning, evolution and competition. The emphasis will be on cutting edge technology that utilizes the vast amounts of recorded game data as a basis for learning more realistic or more effective game design strategies. Advanced topics that will also be covered are gamebot identification in online games, as well as integration and evaluation of learning in games. Students will participate in groups to develop a game using principles learned in class. To complete the project, they will be required to implement and observe a representative set of the techniques covered in class. Prerequisites: MA 222, and CS 585, and CS 539 or CS 587",
+        "details": "This course examines the use of machine learning techniques in all stages of game design. Topics covered include environment and character modeling, motion synthesis, behavior learning, evolution and competition. The emphasis will be on cutting edge technology that utilizes the vast amounts of recorded game data as a basis for learning more realistic or more effective game design strategies. Advanced topics that will also be covered are gamebot identification in online games, as well as integration and evaluation of learning in games. Students will participate in groups to develop a game using principles learned in class. To complete the project, they will be required to implement and observe a representative set of the techniques covered in class.",
         "letter": "CS",
         "name": "Machine Learning for Game Design",
         "number": "586",
-        "prerequisites": []
+        "prerequisites": ["MA 222", "CS 585", ["CS 539" or "CS 587"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "In this course we will study the science and concrete programming tools underlying the design and implementation of game engines. The course will cover the principal components and techniques of a modern game engine: physics simulation engines, 3D graphics engines, artificial intelligence engines, scripting languages, network gaming for massively multiplayer games. Prerequisites: CS 537, and CS 539, and CS 541",
+        "details": "In this course we will study the science and concrete programming tools underlying the design and implementation of game engines. The course will cover the principal components and techniques of a modern game engine: physics simulation engines, 3D graphics engines, artificial intelligence engines, scripting languages, network gaming for massively multiplayer games.",
         "letter": "CS",
         "name": "Game Engine Design",
         "number": "587",
-        "prerequisites": []
+        "prerequisites": ["CS 537", "CS 539", "CS 541"]
     },
     {
         "corequisites": [],
         "cross_listed": [
             "CPE 590"
         ],
-        "details": "This is a course on more complex data structures, and algorithm design and analysis, using one or more modern imperative language(s), as chosen by the instructor. Topics include: advanced and/or balanced search trees; hashing; further asymptotic complexity analysis; standard algorithm design techniques; graph algorithms; complex sort algorithms; and other \u201cclassic\u201d algorithms that serve as examples of design techniques. Cross-listed with: CPE 590 Prerequisites: CS 570 or CS 501",
+        "details": "This is a course on more complex data structures, and algorithm design and analysis, using one or more modern imperative language(s), as chosen by the instructor. Topics include: advanced and/or balanced search trees; hashing; further asymptotic complexity analysis; standard algorithm design techniques; graph algorithms; complex sort algorithms; and other \u201cclassic\u201d algorithms that serve as examples of design techniques.",
         "letter": "CS",
         "name": "Algorithms",
         "number": "590",
-        "prerequisites": []
+        "prerequisites": [["CS 570", "CS 501"]]
     },
     {
         "corequisites": [],
-        "cross_listed": [],
-        "details": "The recently introduced terminology of Big Data refers to data sets whose volume (amount of data collected, number of data sources), velocity (rate at which data is collected) and variety (heterogeneity of data and data sources) are so extreme that advanced data mining algorithms are needed to process and discover useful patterns in data for actionable intelligent decisions, in a reasonable amount of time. Cross-listed with: SOC 593",
+        "cross_listed": ["SOC 593"],
+        "details": "The recently introduced terminology of Big Data refers to data sets whose volume (amount of data collected, number of data sources), velocity (rate at which data is collected) and variety (heterogeneity of data and data sources) are so extreme that advanced data mining algorithms are needed to process and discover useful patterns in data for actionable intelligent decisions, in a reasonable amount of time.",
         "letter": "CS",
         "name": "Data Mining II: Advanced Algorithms for Mining Big Data",
         "number": "593",
@@ -5339,20 +5327,20 @@
         "cross_listed": [
             "SOC 594"
         ],
-        "details": "This course addresses the security of e-business and cyber environments from an end-to-end perspective, including data center security and access security. The information security phases of inspection, protection, detection, reaction, and reflection are emphasized. Topics also include: server and application security, virtual local area networks (VLANs), secure access and financial transaction techniques, and backup and disaster recovery techniques. The course also reviews financial Electronic Data Interchange (EDI) and smart card security in banking applications, and describes how the business and financial risks associated with security are estimated and managed. The course includes a project and related lab experiments. Cross-listed with: SOC 594 Prerequisites: CS 548 or SOC 542",
+        "details": "This course addresses the security of e-business and cyber environments from an end-to-end perspective, including data center security and access security. The information security phases of inspection, protection, detection, reaction, and reflection are emphasized. Topics also include: server and application security, virtual local area networks (VLANs), secure access and financial transaction techniques, and backup and disaster recovery techniques. The course also reviews financial Electronic Data Interchange (EDI) and smart card security in banking applications, and describes how the business and financial risks associated with security are estimated and managed. The course includes a project and related lab experiments.",
         "letter": "CS",
         "name": "Enterprise Security and Information Assurance",
         "number": "594",
-        "prerequisites": []
+        "prerequisites": [["CS 548", "SOC 542"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course covers programming for the Windows system environment using current Microsoft tools and technologies. The course emphasizes inter-process communication and synchronization techniques as well as explaining advanced memory management, file handling and asynchronous I/O, multi-threaded processes, and techniques applicable to high-performance and large-scale software systems. Prerequisites: CS 392 or CS 631",
+        "details": "This course covers programming for the Windows system environment using current Microsoft tools and technologies. The course emphasizes inter-process communication and synchronization techniques as well as explaining advanced memory management, file handling and asynchronous I/O, multi-threaded processes, and techniques applicable to high-performance and large-scale software systems.",
         "letter": "CS",
         "name": "Introduction to Windows Programming",
         "number": "596",
-        "prerequisites": []
+        "prerequisites": ["CS 392", "CS 631"]
     },
     {
         "corequisites": [],
@@ -5366,134 +5354,134 @@
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Visual information retrieval studies the processing, indexing, querying, organization, classification, search, and browsing of visual information from images, videos, and other new emerging visual media. This course will cover traditional techniques as well as recent advances in visual information retrieval, especially under the context of web-scale image and video search. Students will acquire in-depth knowledge on state-of-the-art algorithms and technologies to transform unstructured visual data into structured representation for indexing and retrieval. These algorithms and technologies have empowered a broad range of applications in internet image and video search engine mobile augmented reality, location recognition, and online shopping, etc. Prerequisites: CS 182 or CS 385 or CS 570 or CS 590",
+        "details": "Visual information retrieval studies the processing, indexing, querying, organization, classification, search, and browsing of visual information from images, videos, and other new emerging visual media. This course will cover traditional techniques as well as recent advances in visual information retrieval, especially under the context of web-scale image and video search. Students will acquire in-depth knowledge on state-of-the-art algorithms and technologies to transform unstructured visual data into structured representation for indexing and retrieval. These algorithms and technologies have empowered a broad range of applications in internet image and video search engine mobile augmented reality, location recognition, and online shopping, etc.",
         "letter": "CS",
         "name": "Visual Information Retrieval",
         "number": "598",
-        "prerequisites": []
+        "prerequisites": [["CS 385", "CS 182", "CS 590", "CS 570"]]
     },
     {
         "corequisites": [],
         "cross_listed": [
             "CPE 600"
         ],
-        "details": "Design, implementation, and asymptotic time and space analysis of advanced algorithms, as well as analyzing worst-case and average-case complexity of algorithms. Students will be expected to run experiments to test the actual performance of the algorithms on sample inputs. Introduction to NP-complete problems and approximation algorithms. Cross-listed with: CPE 600 Prerequisites: CS 135 or MA 502, and CS 182 or CS 385 or CS 570 or CS 590",
+        "details": "Design, implementation, and asymptotic time and space analysis of advanced algorithms, as well as analyzing worst-case and average-case complexity of algorithms. Students will be expected to run experiments to test the actual performance of the algorithms on sample inputs. Introduction to NP-complete problems and approximation algorithms. ",
         "letter": "CS",
         "name": "Advanced Algorithm Design and Implementation",
         "number": "600",
-        "prerequisites": []
+        "prerequisites": [["CS 135", "MA 502"], ["CS 385", "CS 182", "CS 590", "CS 570"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Analysis of algorithms: resource-bounded computation and time and space complexity. Various models of computation will be studied. Complexity classes and reducibilities, hardness, and completeness. Randomized algorithms and approximation algorithms. Prerequisites: CS 600",
+        "details": "Analysis of algorithms: resource-bounded computation and time and space complexity. Various models of computation will be studied. Complexity classes and reducibilities, hardness, and completeness. Randomized algorithms and approximation algorithms.",
         "letter": "CS",
         "name": "Algorithmic Complexity",
         "number": "601",
-        "prerequisites": []
+        "prerequisites": ["CS 600"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course is an advanced graduate course on database systems and data exploration on Web. It covers a few key current research topics in database systems and Web data exploration including: (1) information retrieval (IR) from Web, (2) semistructured XML databases from the perspective of theory (thus accompanies the application-centric software engineering courses that uses XML), and (3) Web information integration. This course is suitable for advanced undergraduate computer science majors, graduate students in computer science, and students in technology management or other majors with some computer science background. Course readings are drawn from the recent top-tier international database conferences and journals. Prerequisites: CS 561 or CS 442",
+        "details": "This course is an advanced graduate course on database systems and data exploration on Web. It covers a few key current research topics in database systems and Web data exploration including: (1) information retrieval (IR) from Web, (2) semistructured XML databases from the perspective of theory (thus accompanies the application-centric software engineering courses that uses XML), and (3) Web information integration. This course is suitable for advanced undergraduate computer science majors, graduate students in computer science, and students in technology management or other majors with some computer science background. Course readings are drawn from the recent top-tier international database conferences and journals.",
         "letter": "CS",
         "name": "Data Management and Exploration on the Web",
         "number": "609",
-        "prerequisites": []
+        "prerequisites": [["CS 561", "CS 442"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course covers some of the most essential aspects of systems administration, giving students the opportunity to develop the skills necessary to analyze and troubleshoot problems arising in every day usage of networked computer systems, applying equally to single-user systems, as well as to large-scale installations. Some of the topics covered include: hardware configuration, operating system installation, shell programming, security policies, back-up deployment and disaster recovery, network design, software installation and maintenance, operating system tuning, and best practices for problem determination. Security topics including packet sniffers and spoofers, buffer overflow attacks and stack protection, and firewalls and intrusion detection are also covered, with an emphasis on their implementation. Students are expected to be comfortable in a Unix-like environment on a user level and have a solid understanding of TCP/IP networking and operating system concepts. Prerequisites: CS 520 or CS 492",
+        "details": "This course covers some of the most essential aspects of systems administration, giving students the opportunity to develop the skills necessary to analyze and troubleshoot problems arising in every day usage of networked computer systems, applying equally to single-user systems, as well as to large-scale installations. Some of the topics covered include: hardware configuration, operating system installation, shell programming, security policies, back-up deployment and disaster recovery, network design, software installation and maintenance, operating system tuning, and best practices for problem determination. Security topics including packet sniffers and spoofers, buffer overflow attacks and stack protection, and firewalls and intrusion detection are also covered, with an emphasis on their implementation. Students are expected to be comfortable in a Unix-like environment on a user level and have a solid understanding of TCP/IP networking and operating system concepts.",
         "letter": "CS",
         "name": "Systems Administration",
         "number": "615",
-        "prerequisites": []
+        "prerequisites": [["CS 520", "CS 492"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Design and analysis of distributed algorithms, and impossibility results showing when some problems are unsolvable. Models of synchronous and asynchronous distributed computing. Fault models, including crash failures and malicious failures, and communication models, including message passing and shared memory systems. Distributed algorithms and impossibility results for problems, such as consensus, Byzantine agreement, clock synchronization, mutual exclusion, and secure multiparty computation. Prerequisites: CS 600",
+        "details": "Design and analysis of distributed algorithms, and impossibility results showing when some problems are unsolvable. Models of synchronous and asynchronous distributed computing. Fault models, including crash failures and malicious failures, and communication models, including message passing and shared memory systems. Distributed algorithms and impossibility results for problems, such as consensus, Byzantine agreement, clock synchronization, mutual exclusion, and secure multiparty computation.",
         "letter": "CS",
         "name": "Foundations of Distributed Computing",
         "number": "625",
-        "prerequisites": []
+        "prerequisites": ["CS 600"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "A second course in computer networking that explores protocols underlying the modern Internet. Topics covered include IPv6, IPSec, mobility, quality of service, traffic engineering, multicase, transport protocols for streaming media, BGP decision algorithms, router techniques (address lookup, packet classification, switch fabric design), and mathematical techniques for describing properties of flows and flow interaction. The course uses free and/or open source tools and testbeds to conduct quantitative measurements of live traffic and to construct simulations of the operation of advanced protocols. Example tools and testbeds are: tcpdump, Wireshark, ns, Click, C-BGP, ntop, PlanetLab, and Emulab. Not all such tools and testbeds will be used in any individual offering of the course. Prerequisites: CS 521",
+        "details": "A second course in computer networking that explores protocols underlying the modern Internet. Topics covered include IPv6, IPSec, mobility, quality of service, traffic engineering, multicase, transport protocols for streaming media, BGP decision algorithms, router techniques (address lookup, packet classification, switch fabric design), and mathematical techniques for describing properties of flows and flow interaction. The course uses free and/or open source tools and testbeds to conduct quantitative measurements of live traffic and to construct simulations of the operation of advanced protocols. Example tools and testbeds are: tcpdump, Wireshark, ns, Click, C-BGP, ntop, PlanetLab, and Emulab. Not all such tools and testbeds will be used in any individual offering of the course.",
         "letter": "CS",
         "name": "Advanced Internet Protocols",
         "number": "629",
-        "prerequisites": []
+        "prerequisites": ["CS 521"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Analysis of finite automata and regular sets. Formal languages and grammars, and Chomsky-hierarchy. Context-free languages and PDAs. Applications to parsing. Prerequisites: MA 502",
+        "details": "Analysis of finite automata and regular sets. Formal languages and grammars, and Chomsky-hierarchy. Context-free languages and PDAs. Applications to parsing.",
         "letter": "CS",
         "name": "Models of Computation and Formal Languages",
         "number": "630",
-        "prerequisites": []
+        "prerequisites": ["MA 502"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "In this course, students will learn to develop complex system-level software in the C programming language while gaining an intimate understanding of the UNIX family of operating systems and their programming environment. Topics covered will include the user/kernel interface, fundamental concepts of UNIX, user authentication, basic and advanced I/O, file systems, signals, process relationships, and interprocess communication. Fundamental concepts of software development and maintenance on UNIX systems (development and debugging tools such as \u201cmake\u201d and \u201cgdb\u201d) will also be covered. Prerequisites: CS 520",
+        "details": "In this course, students will learn to develop complex system-level software in the C programming language while gaining an intimate understanding of the UNIX family of operating systems and their programming environment. Topics covered will include the user/kernel interface, fundamental concepts of UNIX, user authentication, basic and advanced I/O, file systems, signals, process relationships, and interprocess communication. Fundamental concepts of software development and maintenance on UNIX systems (development and debugging tools such as \u201cmake\u201d and \u201cgdb\u201d) will also be covered.",
         "letter": "CS",
         "name": "Advanced Programming in the UNIX Environment",
         "number": "631",
-        "prerequisites": []
+        "prerequisites": ["CS 520"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Computable functions and Turing machines. Primitive recursive functions, recursive functions, loop-programs, and whileprograms. Decidability, solvability, and unsolvable problems. High complexity classes and reducibilities, hardness, and completeness. The arithmetical hierarchy and definability. The connection to complexity theory is emphasized throughout the course. Prerequisites: MA 502",
+        "details": "Computable functions and Turing machines. Primitive recursive functions, recursive functions, loop-programs, and whileprograms. Decidability, solvability, and unsolvable problems. High complexity classes and reducibilities, hardness, and completeness. The arithmetical hierarchy and definability. The connection to complexity theory is emphasized throughout the course.",
         "letter": "CS",
         "name": "Decidability and Computability",
         "number": "634",
-        "prerequisites": []
+        "prerequisites": ["MA 502"]
     },
     {
         "corequisites": [],
         "cross_listed": [
             "CPE 638"
         ],
-        "details": "Mathematical foundations and algorithms for advanced computer graphics. Topics include 3-D modeling, texture mapping, curves and surfaces, physics-based modeling, and visualization. Special attention will be paid to surfaces and shapes. The class will consist of lectures and discussion on research papers assigned for reading. In class, we will study the theoretical foundations and algorithmic issues. In programming assignments, we will use OpenGL as the particular API for writing graphics programs. C/C++ programming skills are essential for this course. Cross-listed with: CPE 638 Prerequisites: CS 537",
+        "details": "Mathematical foundations and algorithms for advanced computer graphics. Topics include 3-D modeling, texture mapping, curves and surfaces, physics-based modeling, and visualization. Special attention will be paid to surfaces and shapes. The class will consist of lectures and discussion on research papers assigned for reading. In class, we will study the theoretical foundations and algorithmic issues. In programming assignments, we will use OpenGL as the particular API for writing graphics programs. C/C++ programming skills are essential for this course.",
         "letter": "CS",
         "name": "Advanced Computer Graphics",
         "number": "638",
-        "prerequisites": []
+        "prerequisites": ["CS 537"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Formal systems for specification and verification of software; review of the first-order predicate calculus; abstract data types, formal specification, preconditions, postconditions, invariants, predicate transformers, proofs of correctness, and partial and total correctness; correctness for assignments, alternatives, iterations, and procedure calls. Tools for deductive verification, model checking, and analysis of specifications and models. Prerequisites: CS 600",
+        "details": "Formal systems for specification and verification of software; review of the first-order predicate calculus; abstract data types, formal specification, preconditions, postconditions, invariants, predicate transformers, proofs of correctness, and partial and total correctness; correctness for assignments, alternatives, iterations, and procedure calls. Tools for deductive verification, model checking, and analysis of specifications and models.",
         "letter": "CS",
         "name": "Formal Verification of Software",
         "number": "643",
-        "prerequisites": []
+        "prerequisites": ["CS 600"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Introduction to the theory and applications of networks and graphs. Topics include paths, connectivity, trees, cycles, planarity, network flows, matchings, colorings, and some extremal problems. Prerequisites: MA 502",
+        "details": "Introduction to the theory and applications of networks and graphs. Topics include paths, connectivity, trees, cycles, planarity, network flows, matchings, colorings, and some extremal problems.",
         "letter": "CS",
         "name": "Introduction to Network and Graph Theory",
         "number": "651",
-        "prerequisites": []
+        "prerequisites": ["MA 502"]
     },
     {
         "corequisites": [],
         "cross_listed": [
             "CPE 655, CS 505"
         ],
-        "details": "Queuing models will be developed and applied to current problems in telecommunication networks and performance analysis of computer systems. Topics include elementary queuing theory, birth-death processes, open and closed networks of queues, priority queues, conservation laws, models for time-shared computer systems and computer communication networks. Cross-listed with: CPE 655, CS 505 Prerequisites: EE 605, CS 505",
+        "details": "Queuing models will be developed and applied to current problems in telecommunication networks and performance analysis of computer systems. Topics include elementary queuing theory, birth-death processes, open and closed networks of queues, priority queues, conservation laws, models for time-shared computer systems and computer communication networks.",
         "letter": "CS",
         "name": "Queuing Systems With Computer Applications I",
         "number": "655",
-        "prerequisites": []
+        "prerequisites": ["EE 605", "CS 505"]
     },
     {
         "corequisites": [],
@@ -5507,56 +5495,56 @@
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Basic graph-theoretic notions; data structures for graph representation; running time analysis; review of depth-first search, breadth-first search, and minimum spanning trees; network flow problems; graph connectivity; matchings; Eulerian graphs and digraphs; de Bruijn graphs; Hamiltonian graphs; traveling salesman problem; planar graphs; planarity testing; vertex and edge colorings; chromatic polynomials; five-coloring algorithm; and the Four-color problem. Prerequisites: MA 502, CS 600",
+        "details": "Basic graph-theoretic notions; data structures for graph representation; running time analysis; review of depth-first search, breadth-first search, and minimum spanning trees; network flow problems; graph connectivity; matchings; Eulerian graphs and digraphs; de Bruijn graphs; Hamiltonian graphs; traveling salesman problem; planar graphs; planarity testing; vertex and edge colorings; chromatic polynomials; five-coloring algorithm; and the Four-color problem.",
         "letter": "CS",
         "name": "Graph Algorithms",
         "number": "660",
-        "prerequisites": []
+        "prerequisites": ["MA 502", "CS 600"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Forensics involves the identification, preservation, and analysis of evidence of attacks in order to identify attackers and document their activity with sufficient reliability to justify appropriate technological, business, and legal responses. This course focuses on the technological and not on the legal components of the topic. The technical aspects will focus on analyzing both network and host data. This includes review of network traffic logs (pcap, flow records) and profiles and their types, identification of attack signatures and fingerprints, study of various traceback methods, application of data mining techniques, and the extraction of information (e.g., from malware, including botnet traffic) acquired through the use of network analysis tools and techniques, recovering evidence left behind, and technologies that can be used to assist in the analysis of obtained data or in obtaining more data. We will look into methodologies for recovering data from persistent storage and memory. Investigate the use of virtual machines in providing auditing capabilities to analysts and in setting traps for attackers. The class will not only cover the subjects in theory but instead also provide the students with an extensive hands-on experience. The class will involve a fair amount of programming. Prerequisites: (CS 392 and CS 306) or CS 631",
+        "details": "Forensics involves the identification, preservation, and analysis of evidence of attacks in order to identify attackers and document their activity with sufficient reliability to justify appropriate technological, business, and legal responses. This course focuses on the technological and not on the legal components of the topic. The technical aspects will focus on analyzing both network and host data. This includes review of network traffic logs (pcap, flow records) and profiles and their types, identification of attack signatures and fingerprints, study of various traceback methods, application of data mining techniques, and the extraction of information (e.g., from malware, including botnet traffic) acquired through the use of network analysis tools and techniques, recovering evidence left behind, and technologies that can be used to assist in the analysis of obtained data or in obtaining more data. We will look into methodologies for recovering data from persistent storage and memory. Investigate the use of virtual machines in providing auditing capabilities to analysts and in setting traps for attackers. The class will not only cover the subjects in theory but instead also provide the students with an extensive hands-on experience. The class will involve a fair amount of programming.",
         "letter": "CS",
         "name": "Forensic Analysis",
         "number": "665",
-        "prerequisites": []
+        "prerequisites": ["CS 392", "CS 306", ["CS 631"]]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Hierarchical network management for LAN and distributed discrete and integrated services networks; network management concepts; administrative and operational management; performance management; fault management; maintenance management; and security management and architectural management of different ownerships. Concept of managed objects, manager-agent relationship, and applications of network management protocols. Standard management protocols: SNMP and CMIP. Prerequisites: CS 521",
+        "details": "Hierarchical network management for LAN and distributed discrete and integrated services networks; network management concepts; administrative and operational management; performance management; fault management; maintenance management; and security management and architectural management of different ownerships. Concept of managed objects, manager-agent relationship, and applications of network management protocols. Standard management protocols: SNMP and CMIP.",
         "letter": "CS",
         "name": "Network Management",
         "number": "669",
-        "prerequisites": []
+        "prerequisites": ["CS 521"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "The class will cover advanced network and host security concepts and mechanisms. The class will cover the subjects in theory and provide the students with an extensive hands-on experience: assessing vulnerabilities, writing real working exploits for existing systems in a closed and controlled environment, and developing countermeasures to these perceived and real threats, also in the form of projects. The class will involve a fair amount of programming. Those who take the class are expected to be able to program in C/C++, have some a solid knowledge of assembly language, and be familiar with network basics and programming, as well as modern operating systems (Windows, MacOS, Unix). Prerequisites: CS 576, and CS 577, and CS 579",
+        "details": "The class will cover advanced network and host security concepts and mechanisms. The class will cover the subjects in theory and provide the students with an extensive hands-on experience: assessing vulnerabilities, writing real working exploits for existing systems in a closed and controlled environment, and developing countermeasures to these perceived and real threats, also in the form of projects. The class will involve a fair amount of programming. Those who take the class are expected to be able to program in C/C++, have some a solid knowledge of assembly language, and be familiar with network basics and programming, as well as modern operating systems (Windows, MacOS, Unix).",
         "letter": "CS",
         "name": "Threats, Exploits, and Countermeasures",
         "number": "675",
-        "prerequisites": []
+        "prerequisites": ["CS 576", "CS 577", "CS 579"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course covers a wide range of advanced topics in the area of Systems Security. A computer system is composed by software, hardware, policies, and practices. Systems security involves both designing and building secure systems, as well as improving and evaluating the security of existing systems. During this course, students will study and present in the classroom recent papers in the area of systems security, write a literature survey on a particular topic, and work on a semester-long project, which will involve designing, implementing, and evaluating a system. Those who take the class should be skilled programmers and should already have some knowledge in the area of systems security. Prerequisites: CS 576",
+        "details": "This course covers a wide range of advanced topics in the area of Systems Security. A computer system is composed by software, hardware, policies, and practices. Systems security involves both designing and building secure systems, as well as improving and evaluating the security of existing systems. During this course, students will study and present in the classroom recent papers in the area of systems security, write a literature survey on a particular topic, and work on a semester-long project, which will involve designing, implementing, and evaluating a system. Those who take the class should be skilled programmers and should already have some knowledge in the area of systems security.",
         "letter": "CS",
         "name": "Advanced Topics in Systems Security",
         "number": "676",
-        "prerequisites": []
+        "prerequisites": ["CS 576"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "The course covers advanced architectures and programming techniques for visual computing and machine learning and their applications in gaming, simulation, data analysis and visualization. This class covers the architecture and programming of multicore processors and graphical processing units and associated programming frameworks and languages, for example, CUDA and OpenCL. The course will cover a wide range of applications including real-time rendering of populations and scenario developments in large scale dynamic environments, machine learning and computer vision algorithms for recognition and tracking, large scale dynamic scientific visualizations. Prerequisites: CS 537",
+        "details": "The course covers advanced architectures and programming techniques for visual computing and machine learning and their applications in gaming, simulation, data analysis and visualization. This class covers the architecture and programming of multicore processors and graphical processing units and associated programming frameworks and languages, for example, CUDA and OpenCL. The course will cover a wide range of applications including real-time rendering of populations and scenario developments in large scale dynamic environments, machine learning and computer vision algorithms for recognition and tracking, large scale dynamic scientific visualizations.",
         "letter": "CS",
         "name": "Multicore Platforms for Cognitive Gaming and Simulation",
         "number": "677",
-        "prerequisites": []
+        "prerequisites": ["CS 537"]
     },
     {
         "corequisites": [],
@@ -5587,8 +5575,8 @@
     },
     {
         "corequisites": [],
-        "cross_listed": [],
-        "details": "Systems biology is a new approach to complex biological problems. It uses a combination of the most modern techniques for comprehensive measurements of cells and molecules, combined with complex computer and mathematical modeling, to build up inclusive depictions of how living systems function. This course is an integrative approach to help comprehend dynamic biological systems. True understanding of systems biology requires a cross-disciplinary approach. Topics will include both a biological and computer science perspective taught by experts in each individual discipline. The course will cover introduction to advance biological subjects in cell biology and genetics followed by introduction to computer science methods including modeling and \u201cbio-machine\u201d features of systems biology. In class, we will also explore critical reading of current research. Cross-listed with: CH 691",
+        "cross_listed": ["CH 691"],
+        "details": "Systems biology is a new approach to complex biological problems. It uses a combination of the most modern techniques for comprehensive measurements of cells and molecules, combined with complex computer and mathematical modeling, to build up inclusive depictions of how living systems function. This course is an integrative approach to help comprehend dynamic biological systems. True understanding of systems biology requires a cross-disciplinary approach. Topics will include both a biological and computer science perspective taught by experts in each individual discipline. The course will cover introduction to advance biological subjects in cell biology and genetics followed by introduction to computer science methods including modeling and \u201cbio-machine\u201d features of systems biology. In class, we will also explore critical reading of current research.",
         "letter": "CS",
         "name": "Introduction to Systems Biology",
         "number": "691",
@@ -5599,16 +5587,16 @@
         "cross_listed": [
             "CPE 693"
         ],
-        "details": "This course covers the design and analysis of security protocols, and studies different attacks and defenses against them. Topics include: signature and authentication protocols, privacy, digital rights management, security protocols for wired, wireless and distributed networks, electronic voting, payment and micropayment protocols, anonymity, broadcast encryption and traitor tracing, quantum cryptography, and visual cryptography. The course includes a project. Cross-listed with: CPE 693 Prerequisites: CS 579",
+        "details": "This course covers the design and analysis of security protocols, and studies different attacks and defenses against them. Topics include: signature and authentication protocols, privacy, digital rights management, security protocols for wired, wireless and distributed networks, electronic voting, payment and micropayment protocols, anonymity, broadcast encryption and traitor tracing, quantum cryptography, and visual cryptography. The course includes a project.",
         "letter": "CS",
         "name": "Cryptographic Protocols",
         "number": "693",
-        "prerequisites": []
+        "prerequisites": ["CS 579"]
     },
     {
         "corequisites": [],
-        "cross_listed": [],
-        "details": "This course combines computational modeling with lab experience. The course is project based. Students will be able to choose from a pool of problems being actively researched at Stevens, understand how to obtain experimental data, design and implement a computational model, predict the behavior of the system being modeled, and use a second set of experimental results to validate the model. Cross-listed with: CH 694",
+        "cross_listed": ["CH 694"],
+        "details": "This course combines computational modeling with lab experience. The course is project based. Students will be able to choose from a pool of problems being actively researched at Stevens, understand how to obtain experimental data, design and implement a computational model, predict the behavior of the system being modeled, and use a second set of experimental results to validate the model.",
         "letter": "CS",
         "name": "Advanced Computational Modeling in Biology and Biomaterials Science",
         "number": "694",
@@ -5617,11 +5605,11 @@
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Host forensics involves the identification, preservation, and analysis of evidence of attacks in order to identify the attackers and document their activity with sufficient reliability to justify appropriate technological, business, and legal responses. This course focuses on the technological and not on the legal components of the topic. The emphasis is on the host aspect, not on the network aspect. The technical aspect addresses analysis of intruder types and the intrusion process, review of attacks and their types, identification of attack signatures and fingerprints, application of data mining techniques, study of varied discovery methods including reverse engineering, and the extraction of information from hard disks and devices. The class will not only cover the subjects in theory but instead also provide the students with an extensive hands-on experience. The class will involve a fair amount of programming. Prerequisites: CS 392 or CS 631, and CS 306",
+        "details": "Host forensics involves the identification, preservation, and analysis of evidence of attacks in order to identify the attackers and document their activity with sufficient reliability to justify appropriate technological, business, and legal responses. This course focuses on the technological and not on the legal components of the topic. The emphasis is on the host aspect, not on the network aspect. The technical aspect addresses analysis of intruder types and the intrusion process, review of attacks and their types, identification of attack signatures and fingerprints, application of data mining techniques, study of varied discovery methods including reverse engineering, and the extraction of information from hard disks and devices. The class will not only cover the subjects in theory but instead also provide the students with an extensive hands-on experience. The class will involve a fair amount of programming.",
         "letter": "CS",
         "name": "Host Forensics",
         "number": "695",
-        "prerequisites": []
+        "prerequisites": [[CS 392", "CS 631"], "CS 306"]
     },
     {
         "corequisites": [],
@@ -5635,11 +5623,11 @@
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "Methods for giving meaning to programming language constructs; Operational, Denotational, and Axiomatic semantics. Introduction to algebraic tools; recursive definitions and fixed-point semantics; proving program correctness; and program equivalence. Prerequisites: CS 630",
+        "details": "Methods for giving meaning to programming language constructs; Operational, Denotational, and Axiomatic semantics. Introduction to algebraic tools; recursive definitions and fixed-point semantics; proving program correctness; and program equivalence.",
         "letter": "CS",
         "name": "Formal Semantics of Programming Language",
         "number": "700",
-        "prerequisites": []
+        "prerequisites": ["CS 630"]
     },
     {
         "corequisites": [],
@@ -5652,8 +5640,8 @@
     },
     {
         "corequisites": [],
-        "cross_listed": [],
-        "details": "International graduate students may arrange an educationally relevant internship or paying position off campus and receive Curricular Practical Training (CPT) credit via this course. Students must maintain their full time status while receiving CPT. Prior approval of the program director is required for enrollment. To justify enrollment, the student must have a concrete commitment from a specific employer for a specific project, and must provide to the program director for his/her approval a description of the project plus a statement from the employer that he/she intends to employ the student. This information must be provided to the program director with sufficient advance notice so that the program director has time to review the materials and determine if the project is appropriate. The project must be educationally relevant; i.e., it must help the student develop skills consistent with the goals of the educational program. During the semester, the student must submit written progress reports. At the end of the semester, the student must submit for grading a written report that describes his/ her activities during that semester, even if the activity remains ongoing. The student must also present his/her activities in an accompanying oral presentation that is also graded. This is a one-credit course that may be repeated for up to a total of three credits. At the discretion of the CPT director, the course may be taken for two credits. Cross-listed with: SOC 703",
+        "cross_listed": ["SOC 703"],
+        "details": "International graduate students may arrange an educationally relevant internship or paying position off campus and receive Curricular Practical Training (CPT) credit via this course. Students must maintain their full time status while receiving CPT. Prior approval of the program director is required for enrollment. To justify enrollment, the student must have a concrete commitment from a specific employer for a specific project, and must provide to the program director for his/her approval a description of the project plus a statement from the employer that he/she intends to employ the student. This information must be provided to the program director with sufficient advance notice so that the program director has time to review the materials and determine if the project is appropriate. The project must be educationally relevant; i.e., it must help the student develop skills consistent with the goals of the educational program. During the semester, the student must submit written progress reports. At the end of the semester, the student must submit for grading a written report that describes his/ her activities during that semester, even if the activity remains ongoing. The student must also present his/her activities in an accompanying oral presentation that is also graded. This is a one-credit course that may be repeated for up to a total of three credits. At the discretion of the CPT director, the course may be taken for two credits.",
         "letter": "CS",
         "name": "Curricular Practical Training",
         "number": "703",
@@ -5661,8 +5649,8 @@
     },
     {
         "corequisites": [],
-        "cross_listed": [],
-        "details": "This course will include the essential elements of artificial intelligence (AI); knowledge representation, search techniques, heuristic, typical problems and solution methodologies which constitute the less-than-precise definition of AI which exists today. Current practical uses of AI in information management and decision-support systems (such as intelligent agents, neural networks, and search engines) will be discussed and their relative merits/success rates evaluated. A potential application will be proposed and presented by the students. Cross-listed with: MGT 777",
+        "cross_listed": ["MGT 777"],
+        "details": "This course will include the essential elements of artificial intelligence (AI); knowledge representation, search techniques, heuristic, typical problems and solution methodologies which constitute the less-than-precise definition of AI which exists today. Current practical uses of AI in information management and decision-support systems (such as intelligent agents, neural networks, and search engines) will be discussed and their relative merits/success rates evaluated. A potential application will be proposed and presented by the students.",
         "letter": "CS",
         "name": "Introduction to Expert Systems",
         "number": "777",
@@ -12663,8 +12651,8 @@
     },
     {
         "corequisites": [],
-        "cross_listed": [],
-        "details": "This course provides the conceptual framework for developing space missions of human spacecraft starting from a blank sheet of paper. It describes and teaches the human space mission design and analysis process. The entire course is process oriented to equip each participant with practical tools to complete a conceptual design and analyze the impacts of evolving requirements. At the end of this course you will be better able to tie mission elements together and perform tradeoffs between system design and mission operations that must occur, during the early stages of planning, in order to deliver cost-effective results. Cross-listed with: SDOE 635",
+        "cross_listed": ["SDOE 635"],
+        "details": "This course provides the conceptual framework for developing space missions of human spacecraft starting from a blank sheet of paper. It describes and teaches the human space mission design and analysis process. The entire course is process oriented to equip each participant with practical tools to complete a conceptual design and analyze the impacts of evolving requirements. At the end of this course you will be better able to tie mission elements together and perform tradeoffs between system design and mission operations that must occur, during the early stages of planning, in order to deliver cost-effective results.",
         "letter": "SYS",
         "name": "Human Spaceflight",
         "number": "635",
@@ -12691,11 +12679,11 @@
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This unique course gives participants a hands-on opportunity to apply key principles of space systems engineering. Participants are given a set of customer expectations in the form of broad mission objectives for a crew exploration vehicle with the task of applying systems engineering process to define top-level system requirements and design key elements of the system. The end result will be a system design review during which students present and defend their design decisions. Prerequisites: SYS 635, SDOE 635, SYS 632, SDOE 632",
+        "details": "This unique course gives participants a hands-on opportunity to apply key principles of space systems engineering. Participants are given a set of customer expectations in the form of broad mission objectives for a crew exploration vehicle with the task of applying systems engineering process to define top-level system requirements and design key elements of the system. The end result will be a system design review during which students present and defend their design decisions.",
         "letter": "SYS",
         "name": "Crew Exploration Vehicle Design",
         "number": "638",
-        "prerequisites": []
+        "prerequisites": ["SYS 635", "SDOE 635", "SYS 632", "SDOE 632"]
     },
     {
         "corequisites": [],
@@ -12718,11 +12706,11 @@
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course discusses the fundamentals of system architecting and the architecting process, along with practical heuristics. Furthermore, the course has a strong \u201chow-to\u201d orientation, and numerous case studies are used to convey and discuss good architectural concepts as well as lessons learned. Adaptation of the architectural process to ensure effective application of COTS will also be discussed. In this regard, the course participants will be introduced to an architectural assessment and evaluation model. Linkages between early architectural decisions, driven by customer requirements and concept of operations, and the system operational and support costs are highlighted. Prerequisites: SYS 625",
+        "details": "This course discusses the fundamentals of system architecting and the architecting process, along with practical heuristics. Furthermore, the course has a strong \u201chow-to\u201d orientation, and numerous case studies are used to convey and discuss good architectural concepts as well as lessons learned. Adaptation of the architectural process to ensure effective application of COTS will also be discussed. In this regard, the course participants will be introduced to an architectural assessment and evaluation model. Linkages between early architectural decisions, driven by customer requirements and concept of operations, and the system operational and support costs are highlighted.",
         "letter": "SYS",
         "name": "System Architecture and Design",
         "number": "650",
-        "prerequisites": []
+        "prerequisites": ["SYS 625"]
     },
     {
         "corequisites": [],
@@ -12790,11 +12778,11 @@
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course focuses on managing the evolution of a cyber-physical system after its initial release to the market until its retirement. The course approaches this topic on three levels. The foundation is to put in place policies, processes and infrastructure to support, maintain and respond to quality issues for released instances of the system. The second level is to drive the evolution of the system\u2019s capabilities and characteristics based on evolving needs and enabling technologies. The third level is to proactively \u201cdisrupt\u201d the market by reframing the opportunity and reinventing they system based on internal innovation, or responding to external disruptions in the marketplace or the technology space. Prerequisites: SYS 671, and SYS 672, and SYS 673",
+        "details": "This course focuses on managing the evolution of a cyber-physical system after its initial release to the market until its retirement. The course approaches this topic on three levels. The foundation is to put in place policies, processes and infrastructure to support, maintain and respond to quality issues for released instances of the system. The second level is to drive the evolution of the system\u2019s capabilities and characteristics based on evolving needs and enabling technologies. The third level is to proactively \u201cdisrupt\u201d the market by reframing the opportunity and reinventing they system based on internal innovation, or responding to external disruptions in the marketplace or the technology space.",
         "letter": "SYS",
         "name": "Sustainment of CPS: Managing Evolution",
         "number": "674",
-        "prerequisites": []
+        "prerequisites": ["SYS 671", "SYS 672", "SYS 673"]
     },
     {
         "corequisites": [],
@@ -12835,11 +12823,11 @@
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "The discipline of Systems Engineering (SE) provides us with necessary engineering and management guidance to successfully design and develop a system rather than focus on its separate individual components. However, due to the rapidly increasing complexity of today\u2019s dynamic environment, we are faced with the need to engineer multiple integrated complex systems. In response to this emerging paradigm shift, a new discipline of System of Systems Engineering (SoSE) has evolved. This course serves as an overview of the advances in SoSE and provides the students the capability to apply this knowledge in the synthesis, analysis, and evaluation of activities during the lifecycle of a System of Systems (SoS) through case study analysis. Prerequisites: SYS 625",
+        "details": "The discipline of Systems Engineering (SE) provides us with necessary engineering and management guidance to successfully design and develop a system rather than focus on its separate individual components. However, due to the rapidly increasing complexity of today\u2019s dynamic environment, we are faced with the need to engineer multiple integrated complex systems. In response to this emerging paradigm shift, a new discipline of System of Systems Engineering (SoSE) has evolved. This course serves as an overview of the advances in SoSE and provides the students the capability to apply this knowledge in the synthesis, analysis, and evaluation of activities during the lifecycle of a System of Systems (SoS) through case study analysis.",
         "letter": "SYS",
         "name": "Advances in System of Systems Engineering",
         "number": "725",
-        "prerequisites": []
+        "prerequisites": ["SYS 625"]
     },
     {
         "corequisites": [],
@@ -12853,20 +12841,20 @@
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course presents the fundamentals of complex systems architecting using the Object Modeling Group\u2019s (OMG) SysML. It addresses the differences between functional decomposition and object oriented decomposition while architecting complex systems. Emphasis is placed on modeling mission objectives to the definition of the system level architecture. Topics include identification of system level architecture alternatives and considerations, including definition of objectives for physical (hardware) and logical (software) structure, information and system assurance, behavior, cost, performance and human integration based on the system concept at every level of system decomposition. System of System (SoS) architecture is examined, addressing composition of multiple systems and engineering new, emergent behavior in the SoS. Examples used will come from a variety of operational environments (e.g. communications systems, space systems, weapon systems, etc) Special consideration is given to the importance of effective construction and transitioning of the SysML models to software engineering for software intensive systems projects. Prerequisites: SYS 625, and SYS 650",
+        "details": "This course presents the fundamentals of complex systems architecting using the Object Modeling Group\u2019s (OMG) SysML. It addresses the differences between functional decomposition and object oriented decomposition while architecting complex systems. Emphasis is placed on modeling mission objectives to the definition of the system level architecture. Topics include identification of system level architecture alternatives and considerations, including definition of objectives for physical (hardware) and logical (software) structure, information and system assurance, behavior, cost, performance and human integration based on the system concept at every level of system decomposition. System of System (SoS) architecture is examined, addressing composition of multiple systems and engineering new, emergent behavior in the SoS. Examples used will come from a variety of operational environments (e.g. communications systems, space systems, weapon systems, etc) Special consideration is given to the importance of effective construction and transitioning of the SysML models to software engineering for software intensive systems projects.",
         "letter": "SYS",
         "name": "Advanced System and Software Architecture Modeling and Assessment",
         "number": "750",
-        "prerequisites": []
+        "prerequisites": ["SYS 625", "SYS 650"]
     },
     {
         "corequisites": [],
         "cross_listed": [],
-        "details": "This course is the advanced study of analytic techniques for rational decision making that addresses uncertainty, conflicting objectives, and risk attitudes. This course covers advanced techniques for modeling uncertainty; values and risk preference. The advanced techniques for modeling uncertainty include Bayesian networks and the various approaches for both representing joint probability distributions and computing posterior distributions given new evidence. The techniques for modeling preferences address various degrees of preferential dependence among objectives. Finally, the risk preference techniques address non-exponential risk preference and the associated computation of value of information. These techniques are valuable as part of the risk management process, conduct of systems engineering trade-offs, and managing systems engineering projects Prerequisites: SYS 660",
+        "details": "This course is the advanced study of analytic techniques for rational decision making that addresses uncertainty, conflicting objectives, and risk attitudes. This course covers advanced techniques for modeling uncertainty; values and risk preference. The advanced techniques for modeling uncertainty include Bayesian networks and the various approaches for both representing joint probability distributions and computing posterior distributions given new evidence. The techniques for modeling preferences address various degrees of preferential dependence among objectives. Finally, the risk preference techniques address non-exponential risk preference and the associated computation of value of information. These techniques are valuable as part of the risk management process, conduct of systems engineering trade-offs, and managing systems engineering projects.",
         "letter": "SYS",
         "name": "Advanced Decision and Risk Analysis",
         "number": "760",
-        "prerequisites": []
+        "prerequisites": ["SYS 660"]
     },
     {
         "corequisites": [],
