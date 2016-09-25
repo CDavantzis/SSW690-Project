@@ -10,21 +10,24 @@ app.controller('AppCtrl', function($scope, $mdSidenav, $log){
   $scope.dp.headerDateFormat = 'dddd';
   $scope.dp.init();
 
-	$scope.toggleLeft = function () {
-     return $mdSidenav('left').toggle();
+  $scope.toggleLeft = function () {
+      return $mdSidenav('left').toggle();
   };
 
-	$scope.isSidebarOpen = function() {
-		return $mdSidenav('left').isOpen();
-	};
+  $scope.isSidebarOpen = function() {
+      return $mdSidenav('left').isOpen();
+  };
 });
 
-app.controller('SideCtrl', function ($scope, $mdSidenav, $log) {
+app.controller('SideCtrl', function ($scope, $mdSidenav, $log, $http) {
     $scope.close = function () {
-      // Component lookup should always be available since we are not using `ng-if`
-      $mdSidenav('left').close()
-        .then(function () {
-          $log.debug("close LEFT is done");
-        });
-   	};
+        // Component lookup should always be available since we are not using `ng-if`
+        $mdSidenav('left').close()
+                .then(function () {
+                    $log.debug("close LEFT is done");
+                });
+    };
+
+
+
 });
