@@ -4707,7 +4707,7 @@
         "letter": "CS",
         "name": "Database Management Systems",
         "number": "442",
-        "prerequisites": [["CS 182", "CS 385"]
+        "prerequisites": [["CS 182", "CS 385"]]
     },
     {
         "corequisites": [],
@@ -5291,7 +5291,7 @@
         "letter": "CS",
         "name": "Machine Learning for Game Design",
         "number": "586",
-        "prerequisites": ["MA 222", "CS 585", ["CS 539" or "CS 587"]]
+        "prerequisites": ["MA 222", "CS 585", ["CS 539","CS 587"]]
     },
     {
         "corequisites": [],
@@ -5609,7 +5609,7 @@
         "letter": "CS",
         "name": "Host Forensics",
         "number": "695",
-        "prerequisites": [[CS 392", "CS 631"], "CS 306"]
+        "prerequisites": [["CS 392", "CS 631"], "CS 306"]
     },
     {
         "corequisites": [],
