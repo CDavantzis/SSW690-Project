@@ -54,19 +54,18 @@
             md-search-text="side.searchText"
             md-selected-item-change="side.selectedItemChange(item)"
             md-items="item in side.querySearch(side.searchText)"
-            md-item-text="item.name"
+            md-item-text="item.short_name"
             md-min-length="1"
             placeholder="Enter a class name"
             md-menu-class="autocomplete-custom-template">
               <md-item-template>
                 <span class="md-item-title">
                   {% raw %}
-                  <span>{{item.name}}</span>
+                  <span>{{item.short_name}}: {{item.name}} </span>
                   {% endraw %}
                 </span>
               </md-item-template>
           </md-autocomplete>
-        	
         	</form>
     	</md-content>
     </md-sidenav>

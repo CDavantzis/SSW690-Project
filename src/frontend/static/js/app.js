@@ -54,8 +54,9 @@ app.controller('SideCtrl', function ($scope, $mdSidenav, $log, $http) {
         $log.info("loading get_courses");
         self.courses = response.data.results.map(function(item) {
             return {
-                value: item.toLowerCase(),
-                name: item
+                value: item.letter.toLowerCase() + ' ' + item.number,
+                short_name: item.letter + ' ' + item.number,
+                name: item.name
             };
         });
     });
@@ -68,7 +69,8 @@ app.controller('SideCtrl', function ($scope, $mdSidenav, $log, $http) {
       var lowercaseQuery = angular.lowercase(query);
 
       return function filterFn(item) {
-        return (item.value.indexOf(lowercaseQuery) === 0);
+        return (item.value.indexOf(lowercaseQuery) === 0) ||
+               (item.name.toLowerCase().indexOf(lowercaseQuery) === 0);
       };
 
     }

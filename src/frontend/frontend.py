@@ -11,12 +11,14 @@ def home():
 
 @app.route('/get_courses')
 def get_courses():
-    client = MongoClient()
+    client = MongoClient('ec2-52-91-131-69.compute-1.amazonaws.com', port=27017)
     db = client.catalog
     courses = db.courses
     course_list = []
     for course in courses.find({}):
-        course_list.append(course['letter'] + ' ' + course['number'])
+    	d = dict(course)
+    	del d['_id']
+        course_list.append(d)
 
     return jsonify(results=course_list)
 
