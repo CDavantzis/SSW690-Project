@@ -8,3 +8,12 @@ class BaseConfig(object):
     # MongoDB
     MONGO_HOST = 'ec2-52-91-131-69.compute-1.amazonaws.com'
     MONGO_PORT = 27017
+
+
+class DevelopmentConfig(BaseConfig):
+    pass
+
+
+class ExternalConfig(BaseConfig):
+    pass
+
