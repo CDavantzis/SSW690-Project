@@ -12,7 +12,7 @@ class Base(object):
     # Carry out tasks before server is started
     BEFORE_RUN_UPDATE_COURSES = False
     BEFORE_RUN_UPDATE_DEGREES = False
-    BEFORE_RUN_UPDATE_SCHEDULE = False  # This takes a while. 
+    BEFORE_RUN_UPDATE_SCHEDULE = False  # This takes a while.
 
 
 class DevConfig(Base):
