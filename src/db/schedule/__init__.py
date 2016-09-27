@@ -1,6 +1,7 @@
 """ Schedule Database Functions """
 from pymongo import MongoClient
 import middleware
+from src import app, mongo_client
 
 
 def update_mongodb(client=None):
@@ -10,10 +11,11 @@ def update_mongodb(client=None):
     :note: If no client provided, initialize default client.
     """
     if client is None:
-        client = MongoClient()
-    if type(client) != MongoClient:
-        raise TypeError("Client provided to 'update_mongodb' was not a MongoClient")
-    db = client.schedule
+        with app.app_context():
+            db = mongo_client.catalog
+    else:
+        db = client.catalog
+
     for term in middleware.terms():
         new_data = list(middleware.courses(term[0]))
         if len(new_data) != 0:

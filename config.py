@@ -10,8 +10,8 @@ class Base(object):
     MONGO_PORT = 27017
 
     # Carry out tasks before first app request
-    ON_LOAD_UPDATE_COURSES = True
-    ON_LOAD_UPDATE_DEGREES = True
+    ON_LOAD_UPDATE_COURSES = False
+    ON_LOAD_UPDATE_DEGREES = False
 
 
 class DevConfig(Base):

@@ -2,7 +2,7 @@
 import os
 import bson.json_util
 from pymongo import MongoClient
-
+from src import app, mongo_client
 
 FILE_NAME = "courses.json"
 FILE_LOCATION = os.path.join(os.path.dirname(os.path.relpath(__file__)), FILE_NAME)
@@ -27,9 +27,11 @@ def update_db(client=None):
 
     """
     if client is None:
-        client = MongoClient()
-
-    db = client.catalog
+        with app.app_context():
+            db = mongo_client.catalog
+    else:
+        db = client.catalog
+    print db
     new_data = load_data()
     if COLLECTION_NAME not in db.collection_names():
         db[COLLECTION_NAME].insert_many(new_data)

@@ -1,17 +1,19 @@
 from flask import Flask, render_template, jsonify
 from werkzeug.local import LocalProxy
-import db
-app = Flask(__name__)
-mongo_client = LocalProxy(db.get_db)
+from context import get_db
 
+app = Flask(__name__)
+mongo_client = LocalProxy(get_db)
+
+import db
 
 @app.before_first_request
 def on_server_load():
     if app.config.get("ON_LOAD_UPDATE_COURSES"):
-        db.catalog.courses.update_db(mongo_client)
+        db.catalog.courses.update_db()
         print "catalog.courses has been updated"
     if app.config.get("ON_LOAD_UPDATE_DEGREES"):
-        db.catalog.degrees.update_db(mongo_client)
+        db.catalog.degrees.update_db()
         print "catalog.degrees has been updated"
 
 

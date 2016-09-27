@@ -2,6 +2,7 @@
 import os
 from pymongo import MongoClient
 import bson.json_util
+from src import app, mongo_client
 
 
 FILE_NAME = "degrees.json"
@@ -27,9 +28,11 @@ def update_db(client=None):
 
     """
     if client is None:
-        client = MongoClient()
+        with app.app_context():
+            db = mongo_client.catalog
+    else:
+        db = client.catalog
 
-    db = client.catalog
     new_data = load_data()
     if COLLECTION_NAME not in db.collection_names():
         db[COLLECTION_NAME].insert_many(new_data)
