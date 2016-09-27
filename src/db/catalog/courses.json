@@ -18486,27 +18486,47 @@
     "letter": "FE",
     "name": "Time Series with Applications to Finance",
     "number": "542",
+    "prerequisites": [ [ "FE 541", "MA 331","MA 541", "MA 612" ] ]
+  },
+
+  {
+    "corequisites": [ ],
+    "cross_listed": [ ],
+    "details": "This course deals with financial technology underlying activities of markets, institutions and participants.",
+    "letter": "FE",
+    "name": "Financial Systems Technology",
+    "number": "595",
     "prerequisites": [ "" ]
   },
 
   {
     "corequisites": [ ],
     "cross_listed": [ ],
-    "details": "",
-    "letter": "",
-    "name": "",
-    "number": "",
+    "details": "This course introduces the modern portfolio theory and optimal portfolio selection using optimization techniques.",
+    "letter": "FE",
+    "name": "Portfolio Theory and Applications",
+    "number": "630",
+    "prerequisites": [ [ "FE 620", "FE 621" ] ]
+  },
+
+  {
+    "corequisites": [ ],
+    "cross_listed": [ ],
+    "details": "This course deals with risk management concepts in financial systems.",
+    "letter": "FE",
+    "name": "Introduction to Financial Risk Management",
+    "number": "535",
     "prerequisites": [ "" ]
   },
 
   {
     "corequisites": [ ],
     "cross_listed": [ ],
-    "details": "",
-    "letter": "",
-    "name": "",
-    "number": "",
-    "prerequisites": [ "" ]
+    "details": "The use and internals of modern operating systems. Lectures focus on internals and programming assignments focus on OS",
+    "letter": "CS",
+    "name": "Introduction to Operating Systems",
+    "number": "520",
+    "prerequisites": ["CS 550", ["CS 570", "CS 590"]]
   },
 
   {
@@ -18526,6 +18546,10 @@
     "letter": "",
     "name": "",
     "number": "",
-    "prerequisites": [""]
+    "prerequisites": [ "" ]
   }
+
+
+
+
 ]
