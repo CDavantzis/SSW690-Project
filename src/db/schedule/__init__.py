@@ -4,7 +4,7 @@ import middleware
 from src import app, mongo_client
 
 
-def update_mongodb(client=None):
+def update_db(client=None):
     """ Replicate existing course scheduler database in MongoDB
     :param client: pymongo MongoClient
     :type client: MongoClient
@@ -29,5 +29,5 @@ def update_mongodb(client=None):
 
 
 if __name__ == "__main__":
-    update_mongodb()
+    update_db()
 

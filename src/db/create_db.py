@@ -5,4 +5,4 @@ import schedule
 client = MongoClient()
 
 catalog.create(client)
-schedule.update_mongodb(client)
+schedule.update_db(client)

@@ -7,15 +7,6 @@ mongo_client = LocalProxy(get_db)
 
 import db
 
-@app.before_first_request
-def on_server_load():
-    if app.config.get("ON_LOAD_UPDATE_COURSES"):
-        db.catalog.courses.update_db()
-        print "catalog.courses has been updated"
-    if app.config.get("ON_LOAD_UPDATE_DEGREES"):
-        db.catalog.degrees.update_db()
-        print "catalog.degrees has been updated"
-
 
 @app.route('/')
 def home():
