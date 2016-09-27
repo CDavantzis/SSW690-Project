@@ -13,11 +13,4 @@ def home():
 
 @app.route('/get_courses')
 def get_courses():
-    db = mongo_client.catalog
-    courses = db.courses
-    course_list = []
-    for course in courses.find({}):
-        d = dict(course)
-        del d['_id']
-        course_list.append(d)
-    return jsonify(results=course_list)
+    return jsonify(results=mongo_client.catalog.find({}, {'_id': False}))
