@@ -1,4 +1,3 @@
-
 from pymongo import MongoClient
 import catalog
 import schedule
