@@ -1,8 +1,9 @@
-""" Run External Server """
+""" Run External Server
 
-# Do not use in production!
-# See http://flask.pocoo.org/docs/0.11/deploying/#deployment
+Do not use in production!
+See http://flask.pocoo.org/docs/0.11/deploying/#deployment
 
+"""
 from src import app
 from config import ExtConfig
 
