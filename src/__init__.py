@@ -22,4 +22,5 @@ def home():
 
 @app.route('/get_courses')
 def get_courses():
-    return jsonify(results=list(mongo_client.catalog.courses.find({}, {'_id': False})))
+    c = mongo_client.catalog.courses.find({}, {'_id': False}).sort([("letter", 1), ("number", 1)])
+    return jsonify(results=list(c))
