@@ -5,6 +5,7 @@ import os
 
 catalog_dir = os.path.dirname(os.path.relpath(__file__))
 
+
 def create(client): 
     print 'Dropping catalog db...'
     client.drop_database('catalog')
