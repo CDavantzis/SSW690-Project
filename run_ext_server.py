@@ -9,5 +9,5 @@ from config import ExtConfig
 if __name__ == "__main__":
     app.config.from_object(ExtConfig)
     # IMPORTANT: DEBUG MUST NEVER BE TRUE ON EXTERNALLY VISIBLE SERVERS!
-    app.run(host='0.0.0.0', port=80, debug=False)
+    app.run(host='0.0.0.0', port=80, threaded=True, debug=False)
 
