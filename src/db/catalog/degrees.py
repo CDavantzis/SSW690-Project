@@ -1,9 +1,11 @@
 """ Catalog: Degrees Functions """
+import os
 from pymongo import MongoClient
 import bson.json_util
 
 
-FILE_LOCATION = "degrees.json"
+FILE_NAME = "degrees.json"
+FILE_LOCATION = os.path.join(os.path.dirname(os.path.relpath(__file__)), FILE_NAME)
 COLLECTION_NAME = "degrees"
 
 
@@ -16,7 +18,7 @@ def load_data():
     return bson.json_util.loads(open(FILE_LOCATION).read())
 
 
-def update_mongodb(client=None):
+def update_db(client=None):
     """ Update Database With Current JSON Data
 
     :param client: pymongo MongoClient
@@ -26,8 +28,6 @@ def update_mongodb(client=None):
     """
     if client is None:
         client = MongoClient()
-    if type(client) != MongoClient:
-        raise TypeError("Client provided to 'update_mongodb' was not a MongoClient")
 
     db = client.catalog
     new_data = load_data()
@@ -41,4 +41,4 @@ def update_mongodb(client=None):
 
 
 if __name__ == "__main__":
-    update_mongodb()
+    update_db()

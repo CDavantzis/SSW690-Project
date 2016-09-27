@@ -6,12 +6,9 @@ import schedule
 
 
 def get_db():
-    """ Get MongoClient for current application
-    :returns New MongoClient if there is none in the current application context, otherwise existing MongoClient
+    """ Get current application mongo client
 
-    Example:
-        from werkzeug.local import LocalProxy
-        db = LocalProxy(get_db)
+    :returns New MongoClient if there is none in the current application context, otherwise existing MongoClient
     """
     if not hasattr(g, 'mongo_client'):
         g.mongo_client = MongoClient(current_app.config.get("MONGO_HOST"), port=current_app.config.get("MONGO_PORT"))

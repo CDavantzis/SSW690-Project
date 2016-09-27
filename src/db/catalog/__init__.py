@@ -1,5 +1,7 @@
+import courses
+import degrees
+
 import os
-from pymongo import MongoClient
 
 catalog_dir = os.path.dirname(os.path.relpath(__file__))
 
