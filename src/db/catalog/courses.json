@@ -18388,10 +18388,10 @@
   {
     "corequisites": [ ],
     "cross_listed": [ ],
-    "details": " ",
-    "letter": " ",
-    "name": " ",
-    "number": " ",
+    "details": "This course is a study of analytic techniques for rational decision-making that addresses uncertainty, conflicting objectives",
+    "letter": "SYS",
+    "name": "Decision and Risk Analysis",
+    "number": "660",
     "prerequisites": [ ]
   },
 
@@ -18399,23 +18399,133 @@
   {
     "corequisites": [ ],
     "cross_listed": [ ],
-    "details": " ",
-    "letter": " ",
-    "name": " ",
-    "number": " ",
+    "details": "This course covers the theory and application of modeling aggregate demand, fragmented demand and consumer behavior",
+    "letter": "SYS",
+    "name": "Forecasting and Demand Modeling Systems",
+    "number": "670",
     "prerequisites": [ ]
   },
 
   {
     "corequisites": [ ],
     "cross_listed": [ ],
-    "details": " ",
-    "letter": " ",
-    "name": " ",
-    "number": " ",
+    "details": "This course emphasizes the development of modeling and simulation concepts and analysis skills necessary to design,program, implement to solve complex systems/products analysis problems",
+    "letter": "SYS",
+    "name": "Simulation and Modeling",
+    "number": "611",
     "prerequisites": [ ]
+  },
+
+  {
+    "corequisites": [ ],
+    "cross_listed": [ ],
+    "details": "This course will provide an overview of issues and trends in data quality, data storage, data scrubbing, data flows, and data encryption",
+    "letter": "FE",
+    "name": "Foundations of Financial Data Science",
+    "number": "582",
+    "prerequisites": [ ]
+  },
+
+
+  {
+    "corequisites": [ ],
+    "cross_listed": [ ],
+    "details": "The course provides a practical introduction to SQL databases and Hadoop cluster systems as available in the Hanlon Financial Lab",
+    "letter": "FE",
+    "name": "Financial Lab: Practical Aspects of Database Design",
+    "number": "513",
+    "prerequisites": [ ]
+  },
+
+
+  {
+    "corequisites": [ ],
+    "cross_listed": [ ],
+    "details": "This course introduces a range of topics that current scope of financial engineering encompasses.",
+    "letter": "FE",
+    "name": "Introduction to Financial Engineering",
+    "number": "530",
+    "prerequisites": [ ]
+  },
+
+  {
+    "corequisites": [ "FE 513" ],
+    "cross_listed": [ ],
+    "details": "This course will provide an overview of issues and trends in data quality, data storage, data scrubbing, data flows, and data encryption",
+    "letter": "FE",
+    "name": "Foundations of Financial Data Science",
+    "number": "582",
+    "prerequisites": [ "FE 513" ]
+  },
+
+
+  {
+    "corequisites": [ ],
+    "cross_listed": [ ],
+    "details": "The course prepares students to employ essential ideas and reasoning of applied statistics.",
+    "letter": "FE",
+    "name": "Applied Statistics with Applications in Finance",
+    "number": "541",
+    "prerequisites": [ ]
+  },
+
+   {
+    "corequisites": [ ],
+    "cross_listed": [ ],
+    "details": "Effective visualization of complex data allows for useful insights, more effective communication, and making decisions.",
+    "letter": "FE",
+    "name": "Data Visualization Applications",
+    "number": "550",
+    "prerequisites": ["FE 540"]
+  },
+
+  {
+    "corequisites": [ ],
+    "cross_listed": [ ],
+    "details": "In this course the students will learn how to estimate financial data model and predict using time series models.",
+    "letter": "FE",
+    "name": "Time Series with Applications to Finance",
+    "number": "542",
+    "prerequisites": [ "" ]
+  },
+
+  {
+    "corequisites": [ ],
+    "cross_listed": [ ],
+    "details": "",
+    "letter": "",
+    "name": "",
+    "number": "",
+    "prerequisites": [ "" ]
+  },
+
+  {
+    "corequisites": [ ],
+    "cross_listed": [ ],
+    "details": "",
+    "letter": "",
+    "name": "",
+    "number": "",
+    "prerequisites": [ "" ]
+  },
+
+  {
+    "corequisites": [ ],
+    "cross_listed": [ ],
+    "details": "",
+    "letter": "",
+    "name": "",
+    "number": "",
+    "prerequisites": [ "" ]
+  },
+
+    {
+    "corequisites": [ ],
+    "cross_listed": [ ],
+    "details": "",
+    "letter": "",
+    "name": "",
+    "number": "",
+    "prerequisites": [""]
   }
-
-
-
 ]
