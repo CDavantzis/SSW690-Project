@@ -1,4 +1,4 @@
-class BaseConfig(object):
+class Base(object):
 
     # Flask
     DEBUG = False
@@ -14,10 +14,14 @@ class BaseConfig(object):
     ON_LOAD_UPDATE_DEGREES = True
 
 
-class DevelopmentConfig(BaseConfig):
+class DevConfig(Base):
     pass
 
 
-class ExternalConfig(BaseConfig):
+class DevLocDBConfig(DevConfig):
+    MONGO_HOST = '127.0.0.1'
+
+
+class ExtConfig(Base):
     pass
 

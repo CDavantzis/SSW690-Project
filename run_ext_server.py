@@ -4,10 +4,10 @@
 # See http://flask.pocoo.org/docs/0.11/deploying/#deployment
 
 from src import app
-from config import ExternalConfig
+from config import ExtConfig
 
 if __name__ == "__main__":
-    app.config.from_object(ExternalConfig)
-    # IMPORTANT: DEBUG MUST NEVER BE TRUE ON EXTERNALLY VISABLE SERVERS!
+    app.config.from_object(ExtConfig)
+    # IMPORTANT: DEBUG MUST NEVER BE TRUE ON EXTERNALLY VISIBLE SERVERS!
     app.run(host='0.0.0.0', port=80, debug=False)
 
