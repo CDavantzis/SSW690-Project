@@ -2,9 +2,7 @@
 from pymongo import MongoClient
 import middleware
 from src import app, mongo_client
-
-with app.app_context():
-    db = mongo_client.schedule
+from itertools import combinations, product
 
 
 def update_db(client=None):
@@ -13,19 +11,22 @@ def update_db(client=None):
     :type client: MongoClient
     :note: If no client provided, initialize default client.
     """
-    d = client.schedule if client is not None else db
+
+    if client is None:
+        with app.app_context():
+            db = mongo_client.schedule
+    else:
+        db = client.schedule
     for term in middleware.terms():
         new_data = list(middleware.courses(term[0]))
         if len(new_data) != 0:
-            if term[0] not in d.collection_names():
-                d[term[0]].insert_many(new_data)
+            if term[0] not in db.collection_names():
+                db[term[0]].insert_many(new_data)
             else:
-                d.temp.drop()
-                d.temp.insert_many(new_data)
-                d.temp.aggregate([{"$out": term[0]}])
-                d.temp.drop()
-
-from itertools import product, combinations
+                db.temp.drop()
+                db.temp.insert_many(new_data)
+                db.temp.aggregate([{"$out": term[0]}])
+                db.temp.drop()
 
 
 def has_conflict(combo):
@@ -41,14 +42,16 @@ def has_conflict(combo):
 
 
 def courses(semester, call_numbers):
-    return db[semester].aggregate([{"$match": {"_id": {"$in": call_numbers}}},
-                                   {"$group": {"_id": {"prefix": "$section.prefix",
-                                                       "number": "$section.number",
-                                                       "activity": "$activity"},
-                                               "offerings": {"$push": "$$ROOT"}}}])
+    with app.app_context():
+        return mongo_client.schedule[semester].aggregate([{"$match": {"_id": {"$in": call_numbers}}},
+                                                          {"$group": {"_id": {"prefix": "$section.prefix",
+                                                                              "number": "$section.number",
+                                                                              "activity": "$activity"},
+                                                                      "offerings": {"$push": "$$ROOT"}}}])
+
 
 if __name__ == "__main__":
-    #update_db()
+    update_db()
     for a in product(*(x.get("offerings") for x in courses("2016F", ["10281", "10282", "10283", "10298"]))):
         if not has_conflict(a):
             print a
