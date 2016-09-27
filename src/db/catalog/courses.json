@@ -18469,14 +18469,14 @@
     "prerequisites": [ ]
   },
 
-   {
+  {
     "corequisites": [ ],
     "cross_listed": [ ],
     "details": "Effective visualization of complex data allows for useful insights, more effective communication, and making decisions.",
     "letter": "FE",
     "name": "Data Visualization Applications",
     "number": "550",
-    "prerequisites": ["FE 540"]
+    "prerequisites": [ "FE 540" ]
   },
 
   {
@@ -18486,7 +18486,7 @@
     "letter": "FE",
     "name": "Time Series with Applications to Finance",
     "number": "542",
-    "prerequisites": [ [ "FE 541", "MA 331","MA 541", "MA 612" ] ]
+    "prerequisites": [ [ "FE 541", "MA 331", "MA 541", "MA 612" ] ]
   },
 
   {
@@ -18526,30 +18526,152 @@
     "letter": "CS",
     "name": "Introduction to Operating Systems",
     "number": "520",
-    "prerequisites": ["CS 550", ["CS 570", "CS 590"]]
+    "prerequisites": [
+      "CS 550",
+      [ "CS 570", "CS 590" ]
+    ]
+  },
+
+
+  {
+    "corequisites": [ ],
+    "cross_listed": [ "MA 503" ],
+    "details": "Topics include basic discrete probability, including urn models and random mappings; a brief introduction to information theory",
+    "letter": "CS",
+    "name": "Discrete Mathematics for Cryptography",
+    "number": "503",
+    "prerequisites": [ "MA 502", "CS 135" ]
+  },
+
+  {
+    "corequisites": [ "CS 574" ],
+    "cross_listed": [ ],
+    "details": "This course studies the mathematical models for computer security (Bell- LaPadula, Clark-Wilson, Biba, and Gligor models).",
+    "letter": "CS",
+    "name": "Fundamentals of CyberSecurity",
+    "number": "573",
+    "prerequisites": [ "CS 590", "CS 385", "CS 182", "CS 570" ]
+  },
+
+
+  {
+    "corequisites": [ ],
+    "cross_listed": [ "SOC 551" ],
+    "details": "This course focuses on both the technical challenges and legal issues facing data subjects",
+    "letter": "CS",
+    "name": "Privacy in a Networked World",
+    "number": "578",
+    "prerequisites": [ "CS 579", "CS 594", "CS 306", "CS 506" ]
+  },
+
+  {
+    "corequisites": [ ],
+    "cross_listed": [ "CPE 579" ],
+    "details": "This course provides a broad introduction to cornerstones of security and and the mechanisms to achieve them as well as the underlying mathematical basics",
+    "letter": "CS",
+    "name": "Foundations of Cryptography",
+    "number": "579",
+    "prerequisites": [
+      "CS 503",
+      [ "CS 182", "CS 385", "CS 570", "CS 590" ]
+    ]
+  },
+
+  {
+    "corequisites": [ ],
+    "cross_listed": [ "CPE 600" ],
+    "details": "Design, implementation, and asymptotic time and space analysis of advanced algorithms",
+    "letter": "CS",
+    "name": "Advanced Algorithm Design and Implementation",
+    "number": "600",
+    "prerequisites": [
+      [ "CS 135", "MA 502" ],
+      [ "CS 182" ],
+      [ "CS 385", "CS 570", "CS 590" ]
+    ]
+  },
+
+  {
+    "corequisites": [ ],
+    "cross_listed": [ "CS 579" ],
+    "details": "This course provides a broad introduction to cornerstones of security and and the mechanisms to achieve them as well as the underlying mathematical basics",
+    "letter": "CPE",
+    "name": "Foundations of Cryptography",
+    "number": "579",
+    "prerequisites": [ "CS 590", "CS 385" ]
+  },
+
+   {
+    "corequisites": [ ],
+    "cross_listed": [ "CS 579" ],
+    "details": "This course provides a broad introduction to cornerstones of security and and the mechanisms to achieve them as well as the underlying mathematical basics",
+    "letter": "CPE",
+    "name": "Foundations of Cryptography",
+    "number": "579",
+    "prerequisites": [ "CS 590", "CS 385" ]
   },
 
   {
     "corequisites": [ ],
     "cross_listed": [ ],
-    "details": "",
-    "letter": "",
-    "name": "",
-    "number": "",
-    "prerequisites": [ "" ]
+    "details": "The class will cover advanced network and host security concepts and mechanisms",
+    "letter": "CS",
+    "name": "Threats, Exploits, and Countermeasures",
+    "number": "675",
+    "prerequisites": [
+      [ "CS 576" ],
+      [ "CS 577" ],
+      [ "CS 579" ]
+    ]
+  },
+
+  {
+    "corequisites": [ ],
+    "cross_listed": [ ],
+    "details": "This course discusses fundamentals of systems engineering. Initial focus is on need identification and problems definition.",
+    "letter": "SYS",
+    "name": "Fundamentals of Systems Engineering",
+    "number": "625",
+    "prerequisites": [ ]
+  },
+
+  {
+    "corequisites": [ ],
+    "cross_listed": [ ],
+    "details": "This course discusses the fundamentals of system architecting and the architecting process, along with practical heuristics.",
+    "letter": "SYS",
+    "name": "System Architecture and Design",
+    "number": "650",
+    "prerequisites": [ "SYS 625" ]
+  },
+
+   {
+    "corequisites": [ ],
+    "cross_listed": [ ],
+    "details": "This course discusses fundamentals of systems engineering. Initial focus is on need identification and problems definition.",
+    "letter": "SYS",
+    "name": "Fundamentals of Systems Engineering",
+    "number": "625",
+    "prerequisites": [ ]
   },
 
     {
     "corequisites": [ ],
     "cross_listed": [ ],
-    "details": "",
-    "letter": "",
-    "name": "",
-    "number": "",
-    "prerequisites": [ "" ]
+    "details": "This course examines the real-world application of the entire space systems engineering discipline",
+    "letter": "SYS",
+    "name": "Designing Space Missions and Systems",
+    "number": "632",
+    "prerequisites": [ ]
+  },
+
+   {
+    "corequisites": [ ],
+    "cross_listed": [ ],
+    "details": "This course examines the real-world application of the entire space systems engineering discipline",
+    "letter": "SYS",
+    "name": "Mission and Systems Design Verification and Validation",
+    "number": "633",
+    "prerequisites": [ ]
   }
-
-
-
-
 ]
