@@ -12,9 +12,9 @@ def update_mongodb(client=None):
     """
     if client is None:
         with app.app_context():
-            db = mongo_client.catalog
+            db = mongo_client.schedule
     else:
-        db = client.catalog
+        db = client.schedule
 
     for term in middleware.terms():
         new_data = list(middleware.courses(term[0]))
