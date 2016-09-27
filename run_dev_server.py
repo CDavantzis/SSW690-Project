@@ -1,8 +1,8 @@
 """ Run Local Development Server """
 from src import app
-
+from config import BaseConfig
 
 if __name__ == "__main__":
-    # Todo: Implement external configuration
-    # flask_app.config.from_object(DevelopmentConfig)
-    app.run(threaded=True)
+    app.config.from_object(BaseConfig)
+    app.run(threaded=True, debug=False)
+

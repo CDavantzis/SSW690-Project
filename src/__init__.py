@@ -1,8 +1,9 @@
 from flask import Flask, render_template, jsonify
-from pymongo import MongoClient
+from werkzeug.local import LocalProxy
+from db import get_db
 
 app = Flask(__name__)
-client = MongoClient('ec2-52-91-131-69.compute-1.amazonaws.com', port=27017)
+mongo_client = LocalProxy(get_db)
 
 
 @app.route('/')
@@ -12,7 +13,7 @@ def home():
 
 @app.route('/get_courses')
 def get_courses():
-    db = client.catalog
+    db = mongo_client.catalog
     courses = db.courses
     course_list = []
     for course in courses.find({}):
