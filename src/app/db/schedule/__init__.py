@@ -1,7 +1,7 @@
 """ Schedule Database Functions """
 from pymongo import MongoClient
 import middleware
-from src import app, mongo_client
+from src.app import flask_app, mongo_client
 from itertools import combinations, product
 
 
@@ -13,7 +13,7 @@ def update_db(client=None):
     """
 
     if client is None:
-        with app.app_context():
+        with flask_app.app_context():
             db = mongo_client.schedule
     else:
         db = client.schedule
@@ -42,7 +42,7 @@ def has_conflict(combo):
 
 
 def courses(semester, call_numbers):
-    with app.app_context():
+    with flask_app.app_context():
         return mongo_client.schedule[semester].aggregate([{"$match": {"_id": {"$in": call_numbers}}},
                                                           {"$group": {"_id": {"prefix": "$section.prefix",
                                                                               "number": "$section.number",

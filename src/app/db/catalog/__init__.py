@@ -15,7 +15,6 @@ def create(client):
         if not file.endswith('.json'):
             continue 
 
-
         collection = os.path.basename(file[:file.find('.json')])
         print 'Adding collection %s to db...' % collection
         os.system('mongoimport --db catalog --collection ' + collection + ' --file ' + file + ' --jsonArray')
