@@ -18665,7 +18665,7 @@
     "prerequisites": [ ]
   },
 
-   {
+  {
     "corequisites": [ ],
     "cross_listed": [ ],
     "details": "This course examines the real-world application of the entire space systems engineering discipline",
@@ -18674,4 +18674,46 @@
     "number": "633",
     "prerequisites": [ ]
   }
+   {
+    "corequisites": [ ],
+    "cross_listed": [ ],
+    "details": "SES 602 encompasses all aspects of systemic security issues.",
+    "letter": "SES",
+    "name": "Secure Systems Foundations",
+    "number": "602",
+    "prerequisites": [ ]
+  },
+  {
+    "corequisites": [ ],
+    "cross_listed": [ ],
+    "details": "SES 603 extends the Secure Systems Foundations course, SES 602 by providing a hands-on environment",
+    "letter": "SES",
+    "name": "Secure Systems Laboratory",
+    "number": "603",
+    "prerequisites": [ "SES 602" ]
+  },
+  
+  
+  {
+    "corequisites": [ ],
+    "cross_listed": [ "SES 623" ],
+    "details": "Presents principles and processes for designing secure systems, including how to approach stakeholder needs analysis",
+    "letter": "SES",
+    "name": "Fundamentals of Security Systems Engineering",
+    "number": "622",
+    "prerequisites": [ "SES 602", "SES 603" ]
+
+  },
+  {
+    "corequisites": [ ],
+    "cross_listed": [ ],
+    "details": "This course enhances the systems security knowledge base introduced in SES 622 with project experience ",
+    "letter": "SES",
+    "name": "Systems Security Architecture and Design	",
+    "number": "623",
+    "prerequisites": ["SES 622"]
+     
+  }
+
+
 ]
