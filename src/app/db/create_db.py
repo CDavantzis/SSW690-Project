@@ -3,6 +3,6 @@ import catalog
 import schedule
 
 client = MongoClient()
-
-catalog.create(client)
+catalog.courses.update_db(client)
+catalog.degrees.update_db(client)
 schedule.update_db(client)

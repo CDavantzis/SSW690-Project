@@ -45,7 +45,7 @@ def update_db(client=None):
     new_data = load_data()
     duplicate = check_for_duplicates(new_data)
     if duplicate:
-        raise RuntimeWarning("Duplicate course {0} in courses.json".format( duplicate))
+        print RuntimeWarning("Duplicate course {0} in courses.json".format( duplicate))
     if COLLECTION_NAME not in db.collection_names():
         db[COLLECTION_NAME].insert_many(new_data)
     else:
