@@ -2,7 +2,7 @@
 import os
 from pymongo import MongoClient
 import bson.json_util
-from src.app import flask_app, mongo_client
+from app import flask_app, mongo_client
 
 
 FILE_NAME = "degrees.json"

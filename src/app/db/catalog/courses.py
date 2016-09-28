@@ -2,7 +2,7 @@
 import os
 import bson.json_util
 from pymongo import MongoClient
-from src.app import flask_app, mongo_client
+from app import flask_app, mongo_client
 
 FILE_NAME = "courses.json"
 FILE_LOCATION = os.path.join(os.path.dirname(os.path.relpath(__file__)), FILE_NAME)

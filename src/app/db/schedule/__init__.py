@@ -1,7 +1,7 @@
 """ Schedule Database Functions """
 from pymongo import MongoClient
 import middleware
-from src.app import flask_app, mongo_client
+from app import flask_app, mongo_client
 from itertools import combinations, product
 
 
