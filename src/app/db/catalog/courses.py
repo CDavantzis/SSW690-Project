@@ -6,7 +6,6 @@ from app import mongo_client
 FILE_NAME = "courses.json"
 FILE_LOCATION = os.path.join(os.path.dirname(os.path.relpath(__file__)), FILE_NAME)
 COLLECTION_NAME = "courses"
-db = mongo_client.catalog
 
 
 def check_for_duplicates(d):
@@ -30,7 +29,7 @@ def load_data():
 
 def update_db():
     """ Update Database With Current JSON Data """
-
+    db = mongo_client.catalog
     new_data = load_data()
     duplicate = check_for_duplicates(new_data)
     if duplicate:

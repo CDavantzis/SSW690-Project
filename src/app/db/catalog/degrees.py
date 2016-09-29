@@ -7,7 +7,6 @@ from app import mongo_client
 FILE_NAME = "degrees.json"
 FILE_LOCATION = os.path.join(os.path.dirname(os.path.relpath(__file__)), FILE_NAME)
 COLLECTION_NAME = "degrees"
-db = mongo_client.catalog
 
 
 def load_data():
@@ -21,6 +20,7 @@ def load_data():
 
 def update_db():
     """ Update Database With Current JSON Data """
+    db = mongo_client.catalog
     new_data = load_data()
     if COLLECTION_NAME not in db.collection_names():
         db[COLLECTION_NAME].insert_many(new_data)
