@@ -3,3 +3,6 @@
 
 # IntelliJ Project Settings
 .idea
+
+# Private python files
+*_private.py
