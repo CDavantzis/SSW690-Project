@@ -1,12 +1,12 @@
 """ Catalog: Courses Functions """
 import os
 import bson.json_util
-from pymongo import MongoClient
-from app import flask_app, mongo_client
+from app import mongo_client
 
 FILE_NAME = "courses.json"
 FILE_LOCATION = os.path.join(os.path.dirname(os.path.relpath(__file__)), FILE_NAME)
 COLLECTION_NAME = "courses"
+db = mongo_client.catalog
 
 
 def check_for_duplicates(d):
@@ -28,19 +28,8 @@ def load_data():
     return bson.json_util.loads(open(FILE_LOCATION).read())
 
 
-def update_db(client=None):
-    """ Update Database With Current JSON Data
-
-    :param client: pymongo MongoClient
-    :type client: MongoClient
-    :note: If no client provided, initialize default client.
-
-    """
-    if client is None:
-        with flask_app.app_context():
-            db = mongo_client.catalog
-    else:
-        db = client.catalog
+def update_db():
+    """ Update Database With Current JSON Data """
 
     new_data = load_data()
     duplicate = check_for_duplicates(new_data)
@@ -54,5 +43,3 @@ def update_db(client=None):
         db.temp.aggregate([{"$out": COLLECTION_NAME}])
         db.temp.drop()
 
-if __name__ == "__main__":
-    update_db()
