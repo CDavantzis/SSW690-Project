@@ -1,22 +1,12 @@
 """ Schedule Database Functions """
-from pymongo import MongoClient
 import middleware
 from app import flask_app, mongo_client
 from itertools import combinations, product
 
 
-def update_db(client=None):
-    """ Replicate existing course scheduler database in MongoDB
-    :param client: pymongo MongoClient
-    :type client: MongoClient
-    :note: If no client provided, initialize default client.
-    """
-
-    if client is None:
-        with flask_app.app_context():
-            db = mongo_client.schedule
-    else:
-        db = client.schedule
+def update_db():
+    """ Replicate existing course scheduler database in MongoDB """
+    db = mongo_client.schedule
     for term in middleware.terms():
         new_data = list(middleware.courses(term[0]))
         if len(new_data) != 0:
@@ -50,8 +40,7 @@ def courses(semester, call_numbers):
                                                                       "offerings": {"$push": "$$ROOT"}}}])
 
 
-if __name__ == "__main__":
-    update_db()
+def wip():
     for a in product(*(x.get("offerings") for x in courses("2016F", ["10281", "10282", "10283", "10298"]))):
         if not has_conflict(a):
             print a
