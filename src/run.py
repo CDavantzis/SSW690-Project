@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """ Run Web Server """
 import sys
 import argparse
