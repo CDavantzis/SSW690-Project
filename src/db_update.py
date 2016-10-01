@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """ Database Update """
 import argparse
 from app import flask_app, db
