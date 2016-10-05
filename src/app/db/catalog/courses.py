@@ -40,8 +40,12 @@ def update_db():
 
 
 def get_tree():
-    return mongo_client.catalog.courses.aggregate([{"$match": {}},
+    return mongo_client.catalog.courses.aggregate([{"$sort": {"number": 1}},
                                                    {"$group": {"_id": "$letter",
-                                                               "nodes": {"$push": {"letter": "$letter",
-                                                                                   "number": "$number",
-                                                                                   "name": "$name"}}}}])
+                                                               "nodes": {"$push": {
+                                                                   "letter": "$letter",
+                                                                   "number": "$number",
+                                                                   "name": "$name",
+                                                                   "title": {"$concat": ["$letter", "-", "$number", " ",
+                                                                                         "$name"]}}}}},
+                                                   {"$sort": {"_id": 1}}])
