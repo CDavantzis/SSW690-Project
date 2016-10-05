@@ -37,15 +37,3 @@ def update_db():
         db.temp.insert_many(load_data())
         db.temp.aggregate([{"$out": COLLECTION_NAME}])
         db.temp.drop()
-
-
-def get_tree():
-    return mongo_client.catalog.courses.aggregate([{"$sort": {"number": 1}},
-                                                   {"$group": {"_id": "$letter",
-                                                               "nodes": {"$push": {
-                                                                   "letter": "$letter",
-                                                                   "number": "$number",
-                                                                   "name": "$name",
-                                                                   "title": {"$concat": ["$letter", "-", "$number", " ",
-                                                                                         "$name"]}}}}},
-                                                   {"$sort": {"_id": 1}}])

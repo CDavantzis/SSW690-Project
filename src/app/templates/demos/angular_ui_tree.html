@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-tree/2.22.1/angular-ui-tree.min.js"></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-tree/2.22.1/angular-ui-tree.min.css"/>
+</head>
+<body>
+
+<script>
+    var app = angular.module("angular_ui_tree", ['ui.tree']);
+    app.controller('exampleControl', function ($scope, $http) {
+        $http.get("{{ url_for('get_course_tree')}}").then(function (response) {
+            $scope.data = response.data.results;
+        });
+    });
+</script>
+
+{% raw %}
+<div ng-app="angular_ui_tree">
+    <!-- Nested node template -->
+    <script type="text/ng-template" id="nodes_renderer.html">
+        <div ui-tree-handle>
+            {{node.title}}
+        </div>
+        <ol ui-tree-nodes="" ng-model="node.nodes">
+            <li ng-repeat="node in node.nodes" ui-tree-node ng-include="'nodes_renderer.html'">
+            </li>
+        </ol>
+    </script>
+    <div ng-controller="exampleControl">
+        <div ui-tree>
+            <ol ui-tree-nodes="" ng-model="data" id="tree-root">
+                <li ng-repeat="node in data" ui-tree-node ng-include="'nodes_renderer.html'"></li>
+            </ol>
+        </div>
+    </div>
+</div>
+{% endraw %}
+
+</body>
+</html>
+
