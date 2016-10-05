@@ -5,6 +5,8 @@ from context import get_db
 flask_app = Flask(__name__)
 mongo_client = LocalProxy(get_db)
 
+import db  # uses m
+
 
 @flask_app.route('/')
 def home():
@@ -15,3 +17,9 @@ def home():
 def get_courses():
     c = mongo_client.catalog.courses.find({}, {'_id': False}).sort([("letter", 1), ("number", 1)])
     return jsonify(results=list(c))
+
+
+@flask_app.route('/api/tree/courses')
+def get_course_tree():
+    return jsonify(results=list(db.catalog.courses.get_tree()))
+

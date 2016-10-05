@@ -38,3 +38,10 @@ def update_db():
         db.temp.aggregate([{"$out": COLLECTION_NAME}])
         db.temp.drop()
 
+
+def get_tree():
+    return mongo_client.catalog.courses.aggregate([{"$match": {}},
+                                                   {"$group": {"_id": "$letter",
+                                                               "nodes": {"$push": {"letter": "$letter",
+                                                                                   "number": "$number",
+                                                                                   "name": "$name"}}}}])
