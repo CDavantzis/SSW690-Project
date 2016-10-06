@@ -1,9 +1,8 @@
 
-
-var app = angular.module('scheduler', ['ngMaterial']);
+//you can inherit application modules here like ngMaterial, custom
+var app = angular.module('scheduler', ['ngMaterial', 'custom']);
 
 app.controller('AppCtrl', function($scope, $mdSidenav, $log){
-
   $scope.dp = new DayPilot.Calendar("dp");
   $scope.dp.viewType = "Week";
   $scope.dp.theme = 'calendar_g';
@@ -61,7 +60,6 @@ app.controller('SideCtrl', function ($scope, $mdSidenav, $log, $http) {
         });
     });
 
-
      /**
      * Create filter function for a query string
      */
@@ -72,8 +70,13 @@ app.controller('SideCtrl', function ($scope, $mdSidenav, $log, $http) {
         return (item.value.indexOf(lowercaseQuery) === 0) ||
                (item.name.toLowerCase().indexOf(lowercaseQuery) === 0);
       };
-
     }
+});
 
-
+app.directive('autoCompleteForm', function($log) {
+	$log.info("autocompletetest");
+	return {
+		restrict: 'E',
+		templateUrl: 'static/html/autoCompleteForm.html'
+	};
 });
