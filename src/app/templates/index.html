@@ -1,6 +1,6 @@
 <!doctype html>
 <title>Welcome to Stevens Scheduler</title>
-
+<head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
@@ -24,72 +24,45 @@
 <!-- daypilot libraries -->
 <script src="{{ url_for('static', filename='js/daypilot/daypilot-all.min.js') }}" type="text/javascript"></script>
 
-
-
+<!-- daypilot libraries -->
 <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 
-<div ng-app="scheduler">
-	<div ng-controller="AppCtrl" layout="column" layout-fill ng-cloak>
-
-	<section layout="row" flex>
-
-    <md-sidenav class="md-sidenav-left md-whiteframe-4dp" md-component-id="left" md-is-open="true" md-is-locked-open="isSidebarOpen()" md-disable-backdrop>
-
-    	<md-toolbar class="md-theme-light">
-        	<h1 class="md-toolbar-tools">Sidenav</h1>
-        	<!--
-        	<md-button class="md-icon-button" aria-label="Settings">
-          	<md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
-        	</md-button>
-        	-->
-      	</md-toolbar>
-
-      	<md-content ng-controller="SideCtrl as side" layout-padding flex>
-          <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
-            <md-nav-item md-nav-click="goto('page1')" name="page1">Scheduler</md-nav-item>
-            <md-nav-item md-nav-click="goto('page2')" name="page2">Course Info</md-nav-item>
-          </md-nav-bar>
-        	<form ng-submit="$event.preventDefault()">
-          <md-autocomplete
-            ng-disabled="false"
-            ng-no-cache="false"
-            md-selected-item="side.selectedItem"
-            md-search-text-change="side.searchTextChange(side.searchText)"
-            md-search-text="side.searchText"
-            md-selected-item-change="side.selectedItemChange(item)"
-            md-items="item in side.querySearch(side.searchText)"
-            md-item-text="item.short_name"
-            md-min-length="1"
-            placeholder="Enter a class name"
-            md-menu-class="autocomplete-custom-template">
-              <md-item-template>
-                <span class="md-item-title">
-                  {% raw %}
-                  <span>{{item.short_name}}: {{item.name}} </span>
-                  {% endraw %}
-                </span>
-              </md-item-template>
-          </md-autocomplete>
-        	</form>
-    	</md-content>
-    </md-sidenav>
-    
-
-	<md-content flex layout-padding>
-
-
-      <div layout="column" layout-align="top center">
-
-        <div id="dp">
-        </div>
-      </div>
-
-      <div flex></div>
-
-    </md-content>
-	</section>
-	
-	
-    
-    </div>
-</div>
+<!-- custom Stevens classes libraries -->
+<script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+</head>
+<body ng-app="scheduler" class="flex-container">
+	<!-- Top Row Section-->
+	<header class="header">
+			<h3> Steven's Scheduler </h3>
+	</header>
+	<!-- End Top Row Section-->
+	<!-- Middle (main) Row with 2 columns Section-->
+	<section class="section" ng-controller="AppCtrl" layout="row" layout-fill ng-cloak flex>
+		<!-- Left SideBar Section md-stuff is being used to align instead of div-->
+		<md-sidenav class="md-sidenav-left md-whiteframe-4dp" md-component-id="left" md-is-open="true" md-is-locked-open="isSidebarOpen()" md-disable-backdrop>
+			<md-toolbar class="md-theme-light">
+				<h1 class="md-toolbar-tools">Sidenav</h1>
+				<!--
+				<md-button class="md-icon-button" aria-label="Settings">
+				<md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+				</md-button>
+				-->
+			</md-toolbar>
+			
+			<md-content ng-controller="SideCtrl as side" layout-padding flex>
+				<md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+					<md-nav-item md-nav-click="goto('page1')" name="page1">Scheduler</md-nav-item>
+					<md-nav-item md-nav-click="goto('page2')" name="page2">Course Info</md-nav-item>
+				</md-nav-bar>
+				<auto-complete-form></auto-complete-form>
+				<h3> Add Tree here</h3>
+			</md-content>
+		</md-sidenav><!-- End Left SideBar Section-->
+		<!-- Right SideBar Section-->
+		<md-content class="aside" flex layout-padding layout="column" layout-align="top center">
+				<div id="dp"></div>  <!-- calender module -->
+				<div flex></div>
+		</md-content><!-- Right SideBar Section-->
+	</section> 
+<!-- End Body div-->
+</body>
