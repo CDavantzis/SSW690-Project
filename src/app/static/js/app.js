@@ -49,6 +49,22 @@ app.controller('SideCtrl', function ($scope, $mdSidenav, $log, $http) {
                 });
     };
 
+    $('#tree').on('changed.jstree', function (e, data) {
+        var i, j, r = [];
+        for (i = 0, j = data.selected.length; i < j; i++) {
+            r.push(data.instance.get_node(data.selected[i]).text);
+        }
+        console.log('Selected: ' + r.join(', '));
+    }).jstree({
+        'core': {
+            'data': function (obj, cb) {
+                $.get("/api/tree/courses_v2", function (data) {
+                    cb.call(this, data.results);
+                });
+            }
+        }
+    });
+
     $http.get("get_courses").then(function (response) {
         $log.info("loading get_courses");
         self.courses = response.data.results.map(function(item) {
