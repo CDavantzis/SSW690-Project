@@ -1,6 +1,6 @@
 
 //you can inherit application modules here like ngMaterial, custom
-var app = angular.module('scheduler', ['ngMaterial', 'custom']);
+var app = angular.module('scheduler', ['ngMaterial']);
 
 app.controller('AppCtrl', function($scope, $mdSidenav, $log){
   $scope.dp = new DayPilot.Calendar("dp");
