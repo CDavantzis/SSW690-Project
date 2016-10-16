@@ -49,9 +49,17 @@ app.controller('SideCtrl', function ($scope, $mdSidenav, $log, $http) {
                 });
     };
 
+    // can't get this to work
+    $(".class-search").change(function() {
+        var searchString = $(this).val();
+        console.log(searchString);
+        $('#tree').jstree('search', searchString);
+    });
+
     $('#tree').on('changed.jstree', function (e, data) {
         var i, j, r = [];
         for (i = 0, j = data.selected.length; i < j; i++) {
+            console.log('Pushing: ' + data.instance.get_node(data.selected[i]).text);
             r.push(data.instance.get_node(data.selected[i]).text);
         }
         console.log('Selected: ' + r.join(', '));
@@ -62,7 +70,12 @@ app.controller('SideCtrl', function ($scope, $mdSidenav, $log, $http) {
                     cb.call(this, data.results);
                 });
             }
-        }
+        },
+        "search": {
+            "case_insensitive": true,
+            "show_only_matches" : true
+        },
+        "plugin": ["search"]
     });
 
     $http.get("get_courses").then(function (response) {
@@ -87,12 +100,4 @@ app.controller('SideCtrl', function ($scope, $mdSidenav, $log, $http) {
                (item.name.toLowerCase().indexOf(lowercaseQuery) === 0);
       };
     }
-});
-
-app.directive('autoCompleteForm', function($log) {
-	$log.info("autocompletetest");
-	return {
-		restrict: 'E',
-		templateUrl: 'static/html/autoCompleteForm.html'
-	};
 });

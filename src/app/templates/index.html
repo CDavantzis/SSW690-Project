@@ -61,7 +61,12 @@
 					<md-nav-item md-nav-click="goto('page1')" name="page1">Scheduler</md-nav-item>
 					<md-nav-item md-nav-click="goto('page2')" name="page2">Course Info</md-nav-item>
 				</md-nav-bar>
-				<auto-complete-form></auto-complete-form>
+				<form ng-submit="$event.preventDefault()">
+					<md-input-container>
+						<label>Enter class name</label>
+						<input class="class-search" ng-model="string"></input>
+					</md-input-container>
+				</form>
 				<div id="tree"></div>
 			</md-content>
 		</md-sidenav><!-- End Left SideBar Section-->
