@@ -13,7 +13,7 @@
 <script>
     var app = angular.module("angular_ui_tree", ['ui.tree']);
     app.controller('exampleControl', function ($scope, $http) {
-        $http.get("{{ url_for('get_course_tree')}}").then(function (response) {
+        $http.get("{{ url_for('demos.angular_ui_tree_js')}}").then(function (response) {
             $scope.data = response.data.results;
         });
     });

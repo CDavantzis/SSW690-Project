@@ -10,7 +10,6 @@
 <div id="tree"></div>
 <div id="event_result"></div>
 <script>
-
     $('#tree').on('changed.jstree', function (e, data) {
         var i, j, r = [];
         for (i = 0, j = data.selected.length; i < j; i++) {
@@ -20,7 +19,7 @@
     }).jstree({
         'core': {
             'data': function (obj, cb) {
-                $.get("{{ url_for('get_course_tree_v2')}}", function (data) {
+                $.get("{{ url_for('demos.js_tree_js')}}", function (data) {
                     cb.call(this, data.results);
                 });
             }
