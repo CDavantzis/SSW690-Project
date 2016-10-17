@@ -6,6 +6,7 @@ from context import get_db
 flask_app = Flask(__name__)
 mongo_client = LocalProxy(get_db)
 
+import db
 from demos import demos
 flask_app.register_blueprint(demos)
 
@@ -15,22 +16,20 @@ def home():
     return render_template('index.html')
 
 
-@flask_app.route('/get_courses')
+@flask_app.route('/api/courses/list')
 def get_courses():
-    c = mongo_client.catalog.courses.find({}, {'_id': False}).sort([("letter", 1), ("number", 1)])
-    return jsonify(results=list(c))
+    """
+
+    :return:
+    """
+    return jsonify(results=list(db.catalog.courses.get_all()))
 
 
 @flask_app.route('/api/tree/courses_v2')
+@flask_app.route('/api/courses/tree')
 def get_course_tree():
-    c = mongo_client.catalog.courses.aggregate([{"$sort": {"number": 1}},
-                                                {"$group": {"_id": "$letter",
-                                                            "nodes": {"$push": {
-                                                                "a_attr": {"data-letter": "$letter",
-                                                                           "data-number": "$number"},
-                                                                "text": {"$concat": ["$letter", "-",
-                                                                                     "$number", " ",
-                                                                                     "$name"]}}}}},
-                                                {"$sort": {"_id": 1}},
-                                                {"$project": {"_id": 0, "text": "$_id", "children": "$nodes"}}])
-    return jsonify(results=list(c))
+    """
+
+    :return:
+    """
+    return jsonify(results=list(db.catalog.courses.get_tree()))

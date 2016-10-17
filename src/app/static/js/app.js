@@ -66,7 +66,7 @@ app.controller('SideCtrl', function ($scope, $mdSidenav, $log, $http) {
     }).jstree({
         'core': {
             'data': function (obj, cb) {
-                $.get("/api/tree/courses_v2", function (data) {
+                $.get("/api/courses/tree", function (data) {
                     cb.call(this, data.results);
                 });
             }

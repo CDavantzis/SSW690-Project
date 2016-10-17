@@ -37,3 +37,28 @@ def update_db():
         db.temp.insert_many(load_data())
         db.temp.aggregate([{"$out": COLLECTION_NAME}])
         db.temp.drop()
+
+
+def get_all():
+    """
+
+    :return:
+    """
+    return mongo_client.catalog.courses.find({}, {'_id': False}).sort([("letter", 1), ("number", 1)])
+
+
+def get_tree():
+    """
+
+    :return:
+    """
+    return mongo_client.catalog.courses.aggregate([{"$sort": {"number": 1}},
+                                                   {"$group": {"_id": "$letter",
+                                                               "nodes": {"$push": {
+                                                                   "a_attr": {"data-letter": "$letter",
+                                                                              "data-number": "$number"},
+                                                                   "text": {"$concat": ["$letter", "-",
+                                                                                        "$number", " ",
+                                                                                        "$name"]}}}}},
+                                                   {"$sort": {"_id": 1}},
+                                                   {"$project": {"_id": 0, "text": "$_id", "children": "$nodes"}}])
