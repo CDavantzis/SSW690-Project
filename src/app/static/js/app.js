@@ -20,7 +20,8 @@ app.controller('AppCtrl', function($scope, $mdSidenav, $log){
 
 app.controller('SideCtrl', function ($scope, $mdSidenav, $log, $http) {
     var self = this;
-
+	self.currentNavItem = "Nav_Sched";
+	
     self.selectedItemChange = function(text) {
       //$log.info('Text changed to ' + text);
     };
