@@ -73,7 +73,7 @@ app.controller('SideCtrl', function ($scope, $mdSidenav, $log, $http) {
             "case_insensitive": true,
             "show_only_matches" : true
         },
-        "plugin": ["search"]
+        "plugins": ["search"]
     });
 
     $http.get("get_courses").then(function (response) {
