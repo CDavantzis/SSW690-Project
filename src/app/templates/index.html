@@ -59,7 +59,7 @@
 				<form ng-submit="$event.preventDefault()">
 					<md-input-container>
 						<label>Enter class name</label>
-						<input class="class-search" ng-model="string"></input>
+						<input ng-keyup="side.searchTree(searchBar)" id="searchBar" ng-model="searchBar"></input>
 					</md-input-container>
 				</form>
 				<div  ng-show="side.getNav() === 'course_info'" ng-hide="side.getNav() !== 'course_info'" id="course_tree"></div>
