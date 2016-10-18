@@ -60,7 +60,7 @@
 				<form ng-submit="$event.preventDefault()">
 					<md-input-container>
 						<label>Enter class name</label>
-						<input class="class-search" ng-model="string"></input>
+						<input ng-keyup="side.searchTree(searchBar)" id="searchBar" ng-model="searchBar"></input>
 					</md-input-container>
 				</form>
 				<div id="tree"></div>
