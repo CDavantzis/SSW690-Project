@@ -50,20 +50,19 @@
 				<md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
 				</md-button>
 				-->
+			</md-toolbar>
+			
 			<md-content ng-controller="SideCtrl as side" layout-padding flex>
-				<md-nav-bar md-selected-nav-item="side.currentNavItem" nav-bar-aria-label="navigation links">
-					<md-nav-item md-nav-click="goto('Nav_Sched')" name="Nav_Sched" value="Nav_Sched">Scheduler</md-nav-item>
-					<md-nav-item md-nav-click="goto('Nav_CInfo')" name="Nav_CInfo" value="Nav_CInfo">Course Info</md-nav-item>
+				<md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+					<md-nav-item md-nav-click="goto('page1')" name="page1">Scheduler</md-nav-item>
+					<md-nav-item md-nav-click="goto('page2')" name="page2">Course Info</md-nav-item>
 				</md-nav-bar>
 				<form ng-submit="$event.preventDefault()">
 					<md-input-container>
 						<label>Enter class name</label>
-						<input ng-keyup="side.searchTree(searchBar)" id="searchBar" ng-model="searchBar"></input>
+						<input class="class-search" ng-model="string"></input>
 					</md-input-container>
 				</form>
-			</md-content>
-			</md-toolbar>
-			<md-content ng-controller="SideCtrl as side" layout-padding flex>
 				<div id="tree"></div>
 			</md-content>
 		</md-sidenav><!-- End Left SideBar Section-->

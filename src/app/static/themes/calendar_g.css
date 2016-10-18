@@ -1,5 +1,4 @@
 
-/*modified css file*/
 /* 
 
 DayPilot Calendar Theme 
@@ -9,7 +8,7 @@ http://themes.daypilot.org/calendar/theme/pectq6
 
 .calendar_g_main 
 {
-	border: 10px solid #dddddd;
+	border: 1px solid #dddddd;
 }
 
 .calendar_g_main, .calendar_g_main td 
@@ -34,7 +33,7 @@ http://themes.daypilot.org/calendar/theme/pectq6
 	margin: 0px;
 
 	color: #1d1d1d;
-	background-color: #0009a8;
+	background-color: #9a9cff;
 	
 	
 	
@@ -100,24 +99,23 @@ http://themes.daypilot.org/calendar/theme/pectq6
 
 .calendar_g_colheader_inner
 {
-    font-size: 15px;
 	text-align: center; 
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	bottom: 0px;
 	right: 0px;
-	border-right: 1px solid #000000;
-	border-bottom: 1px solid #000000;
+	border-right: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
 	
-	color: #ffffff;
-	background: #9a0303;
+	color: #555555;
+	background: #ffffff;
 	
 }
 
 .calendar_g_rowheader_inner
 {
-	font-size: 15px;
+	font-size: 12px;
 	
 	text-align: right; 
 	position: absolute;
@@ -125,11 +123,11 @@ http://themes.daypilot.org/calendar/theme/pectq6
 	left: 0px;
 	bottom: 0px;
 	right: 0px;
-	border-right: 1px solid #000000;
-	border-bottom: 1px solid  #000000;
+	border-right: 1px solid #dddddd;
+	border-bottom: 1px solid  #dddddd;
 	
-	color: #ffffff;
-	background: #9a0303;
+	color: #555555;
+	background: #ffffff;
 	
 }
 
@@ -148,11 +146,11 @@ http://themes.daypilot.org/calendar/theme/pectq6
 	left: 0px;
 	bottom: 0px;
 	right: 0px;
-	border-right: 1px solid #000000;
-	border-bottom: 1px solid  #000000;
+	border-right: 1px solid #dddddd;
+	border-bottom: 1px solid  #dddddd;
 
 	color: #555555;
-	background: #9a0303;
+	background: #ffffff;
 	
 }
 
@@ -167,7 +165,7 @@ http://themes.daypilot.org/calendar/theme/pectq6
 	border-bottom: 1px solid  #dddddd;
 
 	color: #555555;
-	background: #9a0303;
+	background: #ffffff;
 	
 
 }
@@ -183,9 +181,9 @@ http://themes.daypilot.org/calendar/theme/pectq6
 	left: 0px;
 	bottom: 0px;
 	right: 0px;
-	border-right: 1px solid #000000;
-	border-bottom: 1px solid #000000;
-	background: #dddddd ;
+	border-right: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+	background: #ffffff;
 }
 
 .calendar_g_cell_business .calendar_g_cell_inner {
