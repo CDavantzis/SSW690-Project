@@ -9,7 +9,7 @@ http://themes.daypilot.org/calendar/theme/pectq6
 
 .calendar_g_main 
 {
-	border: 1px solid #dddddd;
+	border: 10px solid #dddddd;
 }
 
 .calendar_g_main, .calendar_g_main td 
@@ -34,7 +34,7 @@ http://themes.daypilot.org/calendar/theme/pectq6
 	margin: 0px;
 
 	color: #1d1d1d;
-	background-color: #9a9cff;
+	background-color: #1c0156;
 	
 	
 	
@@ -185,7 +185,7 @@ http://themes.daypilot.org/calendar/theme/pectq6
 	right: 0px;
 	border-right: 1px solid #dddddd;
 	border-bottom: 1px solid #dddddd;
-	background: rgba(245, 254, 128, 0.22);
+	background: #feffad;
 }
 
 .calendar_g_cell_business .calendar_g_cell_inner {
