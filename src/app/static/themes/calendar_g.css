@@ -1,4 +1,5 @@
 
+/*modified css file*/
 /* 
 
 DayPilot Calendar Theme 
@@ -99,6 +100,7 @@ http://themes.daypilot.org/calendar/theme/pectq6
 
 .calendar_g_colheader_inner
 {
+    font-size: 15px;
 	text-align: center; 
 	position: absolute;
 	top: 0px;
@@ -108,14 +110,14 @@ http://themes.daypilot.org/calendar/theme/pectq6
 	border-right: 1px solid #dddddd;
 	border-bottom: 1px solid #dddddd;
 	
-	color: #555555;
-	background: #ffffff;
+	color: #000000;
+	background: #fb1818;
 	
 }
 
 .calendar_g_rowheader_inner
 {
-	font-size: 12px;
+	font-size: 15px;
 	
 	text-align: right; 
 	position: absolute;
@@ -126,8 +128,8 @@ http://themes.daypilot.org/calendar/theme/pectq6
 	border-right: 1px solid #dddddd;
 	border-bottom: 1px solid  #dddddd;
 	
-	color: #555555;
-	background: #ffffff;
+	color: #000000;
+	background: #fb1818;
 	
 }
 
@@ -150,7 +152,7 @@ http://themes.daypilot.org/calendar/theme/pectq6
 	border-bottom: 1px solid  #dddddd;
 
 	color: #555555;
-	background: #ffffff;
+	background: #5e0303;
 	
 }
 
@@ -165,7 +167,7 @@ http://themes.daypilot.org/calendar/theme/pectq6
 	border-bottom: 1px solid  #dddddd;
 
 	color: #555555;
-	background: #ffffff;
+	background: #5e0303;
 	
 
 }
@@ -183,7 +185,7 @@ http://themes.daypilot.org/calendar/theme/pectq6
 	right: 0px;
 	border-right: 1px solid #dddddd;
 	border-bottom: 1px solid #dddddd;
-	background: #ffffff;
+	background: rgba(245, 254, 128, 0.22);
 }
 
 .calendar_g_cell_business .calendar_g_cell_inner {
