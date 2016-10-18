@@ -20,6 +20,7 @@ app.controller('AppCtrl', function($scope, $mdSidenav, $log){
 
 app.controller('SideCtrl', function ($scope, $mdSidenav, $log, $http) {
     var self = this;
+    self.nav = 'scheduler';
 
     self.selectedItemChange = function(text) {
       //$log.info('Text changed to ' + text);
@@ -49,14 +50,21 @@ app.controller('SideCtrl', function ($scope, $mdSidenav, $log, $http) {
                 });
     };
 
-    // can't get this to work
-    $(".class-search").change(function() {
-        var searchString = $(this).val();
-        console.log(searchString);
-        $('#tree').jstree('search', searchString);
-    });
+    self.setNav = function(page) {
+        console.log("nav = " + page);
+        self.nav = page;
+    };
 
-    $('#tree').on('changed.jstree', function (e, data) {
+    self.getNav = function() {
+        return self.nav;
+    };
+
+    self.searchTree = function(searchString) {
+        console.log("test:" + searchString);
+        $('#course_tree').jstree('search', searchString);
+    };
+
+    $('#course_tree').on('changed.jstree', function (e, data) {
         var i, j, r = [];
         for (i = 0, j = data.selected.length; i < j; i++) {
             console.log('Pushing: ' + data.instance.get_node(data.selected[i]).text);
