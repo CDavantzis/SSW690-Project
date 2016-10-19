@@ -16,6 +16,7 @@ def home():
     return render_template('index.html')
 
 
+@flask_app.route('/get_courses')
 @flask_app.route('/api/courses/list')
 def get_courses():
     """
