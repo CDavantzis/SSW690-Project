@@ -20,7 +20,8 @@ app.controller('AppCtrl', function($scope, $mdSidenav, $log){
 
 app.controller('SideCtrl', function ($scope, $mdSidenav, $log, $http) {
     var self = this;
-
+	self.currentNavItem = "Nav_Sched";
+	
     self.selectedItemChange = function(text) {
       //$log.info('Text changed to ' + text);
     };
@@ -49,12 +50,10 @@ app.controller('SideCtrl', function ($scope, $mdSidenav, $log, $http) {
                 });
     };
 
-    // can't get this to work
-    $(".class-search").change(function() {
-        var searchString = $(this).val();
-        console.log(searchString);
+    self.searchTree = function(searchString) {
+        console.log("test:" + searchString);
         $('#tree').jstree('search', searchString);
-    });
+    };
 
     $('#tree').on('changed.jstree', function (e, data) {
         var i, j, r = [];
@@ -75,7 +74,7 @@ app.controller('SideCtrl', function ($scope, $mdSidenav, $log, $http) {
             "case_insensitive": true,
             "show_only_matches" : true
         },
-        "plugin": ["search"]
+        "plugins": ["search"]
     });
 
     $http.get("get_courses").then(function (response) {
