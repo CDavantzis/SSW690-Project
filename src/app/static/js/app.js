@@ -60,8 +60,9 @@ app.controller('SideCtrl', function ($scope, $mdSidenav, $log, $http) {
     };
 
     self.searchTree = function(searchString) {
-        console.log("test:" + searchString);
-        $('#course_tree').jstree('search', searchString);
+        if ( 0 == (searchString.length % 3)) {
+          $('#course_tree').jstree('search', searchString);
+        }
     };
 
     $('#course_tree').on('changed.jstree', function (e, data) {
