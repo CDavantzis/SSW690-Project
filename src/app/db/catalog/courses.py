@@ -7,6 +7,40 @@ FILE_NAME = "courses.json"
 FILE_LOCATION = os.path.join(os.path.dirname(os.path.relpath(__file__)), FILE_NAME)
 COLLECTION_NAME = "courses"
 
+DEPARTMENTS = {
+    "BIO": "Biology",
+    "BME": "Biomedical Engineering",
+    "CE": "Civil Engineering",
+    "CH": "Chemistry and Chemical Biology",
+    "CHE": "Chemical Engineering",
+    "CM": "Construction",
+    "CPE": "Computer Engineering",
+    "CS": "Computer Science",
+    "E": "CORE CURRICULUM COURSES",
+    "EE": "Electrical Engineering",
+    "EM": "Engineering Management",
+    "EN": "Environmental",
+    "ES": "Socio-technical Systems",
+    "FE": "Financial Engineering",
+    "IDP": "Integrated Product Development",
+    "MA": "Mathematics",
+    "ME": "Mechanical Engineering",
+    "MT": "Materials Science and Engineering",
+    "NANO": "Nanotechnology",
+    "NE": "Naval Engineering",
+    "NIS": "Information and Data Engineering",
+    "OE": "Ocean Engineering",
+    "PAE": "Product Architecture and Engineering",
+    "PEP": "Physics and Engineering Physics",
+    "PME": "Pharmaceutical",
+    "SDOE": "Systems Design and Operational Effectiveness",
+    "SES": "Systems Engineering Security",
+    "SOC": "Service Oriented",
+    "SSW": "Software Engineering",
+    "SYS": "Systems Engineering",
+    "TG": "Engineering Management"
+}
+
 
 def load_data():
     """ Load Data From JSON File
@@ -52,13 +86,16 @@ def get_tree():
 
     :return:
     """
-    return mongo_client.catalog.courses.aggregate([{"$sort": {"number": 1}},
-                                                   {"$group": {"_id": "$letter",
-                                                               "nodes": {"$push": {
-                                                                   "a_attr": {"data-letter": "$letter",
-                                                                              "data-number": "$number"},
-                                                                   "text": {"$concat": ["$letter", "-",
-                                                                                        "$number", " ",
-                                                                                        "$name"]}}}}},
-                                                   {"$sort": {"_id": 1}},
-                                                   {"$project": {"_id": 0, "text": "$_id", "children": "$nodes"}}])
+    cursor = mongo_client.catalog.courses.aggregate([{"$sort": {"number": 1}},
+                                                     {"$group": {"_id": "$letter",
+                                                                 "nodes": {"$push": {
+                                                                     "a_attr": {"data-letter": "$letter",
+                                                                                "data-number": "$number"},
+                                                                     "text": {"$concat": ["$letter", "-",
+                                                                                          "$number", " ",
+                                                                                          "$name"]}}}}},
+                                                     {"$sort": {"_id": 1}},
+                                                     {"$project": {"_id": 0, "text": "$_id", "children": "$nodes"}}])
+    for node in cursor:
+        node["text"] = "{0}: {1}".format(node["text"], DEPARTMENTS.get(node["text"], ""))
+        yield node
