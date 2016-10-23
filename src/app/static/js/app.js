@@ -3,25 +3,56 @@
 var app = angular.module('scheduler', ['ngMaterial']);
 
 app.controller('AppCtrl', function($scope, $mdSidenav, $log){
-  $scope.dp = new DayPilot.Calendar("dp");
-  $scope.dp.viewType = "Week";
-  $scope.dp.theme = 'calendar_g';
-  $scope.dp.headerDateFormat = 'dddd';
-  $scope.dp.init();
+	$scope.dp = new DayPilot.Calendar("dp");
+	$scope.dp.viewType = "Week";
+	$scope.dp.theme = 'calendar_g';
+	$scope.dp.headerDateFormat = 'dddd';
+	$scope.dp.init();
 
-  $scope.toggleLeft = function () {
-      return $mdSidenav('left').toggle();
-  };
+	$scope.toggleLeft = function () {
+		return $mdSidenav('left').toggle();
+	};
 
-  $scope.isSidebarOpen = function() {
-      return $mdSidenav('left').isOpen();
-  };
+	$scope.isSidebarOpen = function() {
+		return $mdSidenav('left').isOpen();
+	};
+	var tabs = [
+		{ title: 'One', content: "Tabs will become paginated if there isn't enough room for them."},
+		{ title: 'Two', content: "You can swipe left and right on a mobile device to change tabs."},
+		{ title: 'Three', content: "You can bind the selected tab via the selected attribute on the md-tabs element."},
+		{ title: 'Four', content: "If you set the selected tab binding to -1, it will leave no tab selected."},
+		{ title: 'Five', content: "If you remove a tab, it will try to select a new one."},
+		{ title: 'Six', content: "There's an ink bar that follows the selected tab, you can turn it off if you want."},
+		{ title: 'Seven', content: "If you set ng-disabled on a tab, it becomes unselectable. If the currently selected tab becomes disabled, it will try to select the next tab."},
+		{ title: 'Eight', content: "If you look at the source, you're using tabs to look at a demo for tabs. Recursion!"},
+		{ title: 'Nine', content: "If you set md-theme=\"green\" on the md-tabs element, you'll get green tabs."},
+		{ title: 'Ten', content: "If you're still reading this, you should just go check out the API docs for tabs!"}
+	],
+	selected = null,
+	previous = null;
+	
+	$scope.tabs = tabs;
+	$scope.selectedIndex = 0;
+	$scope.$watch('selectedIndex', function(current, old){
+		previous = selected;
+		selected = tabs[current];
+		if ( old + 1 && (old != current)) $log.debug('Goodbye ' + previous.title + '!');
+		if ( current + 1 )                $log.debug('Hello ' + selected.title + '!');
+	});
+	$scope.addTab = function (title, view) {
+		view = view || title + " Content View";
+		tabs.push({ title: title, content: view, disabled: false});
+	};
+	$scope.removeTab = function (tab) {
+		var index = tabs.indexOf(tab);
+		tabs.splice(index, 1);
+	};
 });
 
 app.controller('SideCtrl', function ($scope, $mdSidenav, $log, $http) {
     var self = this;
-    self.nav = 'scheduler';
-
+    self.nav = 'course_info';
+	
     self.selectedItemChange = function(text) {
       //$log.info('Text changed to ' + text);
     };
@@ -49,7 +80,7 @@ app.controller('SideCtrl', function ($scope, $mdSidenav, $log, $http) {
                     $log.debug("close LEFT is done");
                 });
     };
-
+	
     self.setNav = function(page) {
         console.log("nav = " + page);
         self.nav = page;
@@ -109,4 +140,12 @@ app.controller('SideCtrl', function ($scope, $mdSidenav, $log, $http) {
                (item.name.toLowerCase().indexOf(lowercaseQuery) === 0);
       };
     }
+});
+
+app.directive('tabNavigation', function($log) {
+	$log.info("tabNavigationFunction");
+	return {
+		restrict: 'E',
+		templateUrl: 'static/html/tabNavigation.html'
+	};
 });
