@@ -1,21 +1,17 @@
 
 //you can inherit application modules here like ngMaterial, custom
 var app = angular.module('scheduler', ['ngMaterial']);
-
-app.controller('AppCtrl', function($scope, $mdSidenav, $log){
+//Calendar module
+app.controller('cCalendarModule', function($scope, $log){
 	$scope.dp = new DayPilot.Calendar("dp");
 	$scope.dp.viewType = "Week";
 	$scope.dp.theme = 'calendar_g';
 	$scope.dp.headerDateFormat = 'dddd';
 	$scope.dp.init();
+});
 
-	$scope.toggleLeft = function () {
-		return $mdSidenav('left').toggle();
-	};
-
-	$scope.isSidebarOpen = function() {
-		return $mdSidenav('left').isOpen();
-	};
+//tab module for optimal class selections
+app.controller('cTabModule', function($scope, $log){
 	var tabs = [
 		{ title: 'One', content: "Tabs will become paginated if there isn't enough room for them."},
 		{ title: 'Two', content: "You can swipe left and right on a mobile device to change tabs."},
@@ -49,7 +45,36 @@ app.controller('AppCtrl', function($scope, $mdSidenav, $log){
 	};
 });
 
-app.controller('SideCtrl', function ($scope, $mdSidenav, $log, $http) {
+//Toggles side Navigation bar on and off
+app.controller('cToggleNavigation', function($scope, $mdSidenav, $log){
+    $scope.toggleLeft = buildToggler('left');
+    $scope.toggleRight = buildToggler('right');
+	
+	$scope.toggleLeft = function () {
+		return $mdSidenav('left').toggle();
+	};
+
+	$scope.isSidebarOpen = function() {
+		return $mdSidenav('left').isOpen();
+	};
+	
+    function buildToggler(componentId) {
+      return function() {
+        $mdSidenav(componentId).toggle();
+      }
+    }
+	
+    $scope.close = function () {
+        // Component lookup should always be available since we are not using `ng-if`
+        $mdSidenav('left').close()
+                .then(function () {
+                    $log.debug("close LEFT is done");
+                });
+    };
+});
+
+//Side control options Scheduler/Courses
+app.controller('SideCtrl', function ($scope, $log, $http) {
     var self = this;
     self.nav = 'course_info';
 	
@@ -71,14 +96,6 @@ app.controller('SideCtrl', function ($scope, $mdSidenav, $log, $http) {
 
       //$log.info('Results: ' + JSON.stringify(results));
       return results;
-    };
-
-    $scope.close = function () {
-        // Component lookup should always be available since we are not using `ng-if`
-        $mdSidenav('left').close()
-                .then(function () {
-                    $log.debug("close LEFT is done");
-                });
     };
 	
     self.setNav = function(page) {
@@ -142,6 +159,7 @@ app.controller('SideCtrl', function ($scope, $mdSidenav, $log, $http) {
     }
 });
 
+//Angular Element Directives
 app.directive('tabNavigation', function($log) {
 	$log.info("tabNavigationFunction");
 	return {

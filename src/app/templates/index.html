@@ -35,44 +35,44 @@
 </head>
 <body ng-app="scheduler" class="flex-container">
 	<!-- Middle (main) Row with 2 columns Section-->
-	<section class="section" ng-controller="AppCtrl" layout="row" layout-fill ng-cloak flex>
-		<md-sidenav class="md-sidenav-left md-whiteframe-4dp" md-component-id="left" 
-		layout="column" layout-fill ng-cloak md-is-open="true" md-is-locked-open="isSidebarOpen()" md-disable-backdrop>		
-			<!--<md-toolbar class="md-theme-light">
-				<h1 class="md-toolbar-tools">Sidenav</h1>
-				
-				<md-button class="md-icon-button" aria-label="Settings">
-				<md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
-				</md-button>
-						
-			</md-toolbar>-->	
-			<md-content ng-controller="SideCtrl as side">
-				<md-content layout-padding>
-				<md-nav-bar md-selected-nav-item="side.nav" nav-bar-aria-label="navigation links">
-					<md-nav-item md-nav-click="side.setNav('scheduler')" name="scheduler">Scheduler</md-nav-item>
-					<md-nav-item md-nav-click="side.setNav('course_info')" name="course_info">Course Info</md-nav-item>
-				</md-nav-bar>				
-				<form ng-submit="$event.preventDefault()">
-					<md-input-container>
-						<label>Enter class name</label>
-						<input ng-keyup="side.searchTree(searchBar)" id="searchBar" ng-model="searchBar"></input>
-					</md-input-container>
-				</form>	
+	<section class="section" layout="row" layout-fill ng-cloak flex>
+		<md-content class="leftSidelayout" ng-controller="cToggleNavigation">
+			<md-sidenav class="md-sidenav-left md-whiteframe-4dp" md-component-id="left" 
+			layout="column" layout-fill ng-cloak md-is-open="true" md-is-locked-open="isSidebarOpen()" md-disable-backdrop>		
+				<!--<md-toolbar class="md-theme-light">
+					<h1 class="md-toolbar-tools">Sidenav</h1>
+					
+					<md-button class="md-icon-button" aria-label="Settings">
+					<md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+					</md-button>
+							
+				</md-toolbar>-->	
+				<md-content ng-controller="SideCtrl as side">
+					<md-content layout-padding>
+					<md-nav-bar md-selected-nav-item="side.nav" nav-bar-aria-label="navigation links">
+						<md-nav-item md-nav-click="side.setNav('scheduler')" name="scheduler">Scheduler</md-nav-item>
+						<md-nav-item md-nav-click="side.setNav('course_info')" name="course_info">Course Info</md-nav-item>
+					</md-nav-bar>				
+					<form ng-submit="$event.preventDefault()">
+						<md-input-container>
+							<label>Enter class name</label>
+							<input ng-keyup="side.searchTree(searchBar)" id="searchBar" ng-model="searchBar"></input>
+						</md-input-container>
+					</form>	
+					</md-content>
+					<md-content layout-padding>
+					<div ng-show="side.getNav() === 'course_info'" ng-hide="side.getNav() !== 'course_info'" id="course_tree"></div>
+					</md-content>
 				</md-content>
-				<md-content layout-padding>
-				<div ng-show="side.getNav() === 'course_info'" ng-hide="side.getNav() !== 'course_info'" id="course_tree"></div>
-				</md-content>
-			</md-content>
-		</md-sidenav><!-- End Left SideBar Section-->
+			</md-sidenav><!-- End Left SideBar Section-->
+		</md-content>
 		<!-- Right SideBar Section-->
 		<md-content class="rightSidelayout" layout="column" layout-fill ng-cloak flex>
-			<md-content class="mysample" layout-padding layout-align="center">
 			<tab-navigation></tab-navigation>
-			</md-content>
-			<md-content class="aside" layout-padding layout-align="center">
+			</div>
 				<div id="dp"></div>  <!-- calender module -->
 	<!-- 			<div flex></div> -->
-			</md-content>
+			</div>
 		</md-content>
 		<!-- Right SideBar Section -->
 	</section> 
