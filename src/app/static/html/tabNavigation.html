@@ -1,6 +1,8 @@
 <md-content>
 	<div ng-controller="cToggleNavigation">
-		<md-button ng-click="toggleLeft()" class="md-raised">Toggle Sidebar</md-button>
+		<md-button ng-click="toggleLeft()" >Sidebar
+			<md-tooltip>Toggle Sidebar</md-tooltip>
+		</md-button>
 	</div>
 	<div ng-controller="cTabModule">
 		<md-tabs md-selected="selectedIndex" md-border-bottom md-autoselect>
