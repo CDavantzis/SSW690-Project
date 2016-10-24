@@ -16,7 +16,6 @@ def home():
     return render_template('index.html')
 
 
-@flask_app.route('/get_courses')
 @flask_app.route('/api/courses/list')
 def get_courses():
     """
@@ -26,7 +25,6 @@ def get_courses():
     return jsonify(results=list(db.catalog.courses.get_all()))
 
 
-@flask_app.route('/api/tree/courses_v2')
 @flask_app.route('/api/courses/tree')
 def get_course_tree():
     """
