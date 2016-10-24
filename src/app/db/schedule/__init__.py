@@ -19,6 +19,12 @@ def update_db():
                 db.temp.drop()
 
 
+def get_semesters():
+    for name in mongo_client.schedule.collection_names():
+        if not name.lower().startswith("system"):
+            yield name
+
+
 def has_conflict(combo):
     for c1, c2 in combinations(combo, 2):
         for m1 in c1.get("meetings", []):

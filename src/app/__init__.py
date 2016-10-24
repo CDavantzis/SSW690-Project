@@ -34,10 +34,12 @@ def get_course_info():
     abort(501)
 
 
-@flask_app.route('/api/schedule/semesters')
+@flask_app.route('/api/schedule/semesters', methods=['GET'])
 def get_scheduled_semesters():
     """ List all semesters available in schedule database """
-    abort(501)
+    # TODO: Sort properly and provide full semester name
+    # ^ Possibly store this information in a separate collection
+    return jsonify(results=list(db.schedule.get_semesters()))
 
 
 @flask_app.route('/api/schedule/list')
