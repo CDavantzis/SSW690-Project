@@ -8,6 +8,7 @@ FILE_LOCATION = os.path.join(os.path.dirname(os.path.relpath(__file__)), FILE_NA
 COLLECTION_NAME = "courses"
 
 DEPARTMENTS = {
+    "BIA": "Business Intelligence and Analytics",
     "BIO": "Biology",
     "BME": "Biomedical Engineering",
     "BT": "Business and Technology",
@@ -25,6 +26,7 @@ DEPARTMENTS = {
     "EN": "Environmental Engineering",
     "ES": "Enterprise Systems",
     "FE": "Financial Engineering",
+    "FIN": "Finance",
     "H": "Honor Program",
     "HAR": "Humanities/Art",
     "HHS": "Humanities/History",
@@ -33,6 +35,7 @@ DEPARTMENTS = {
     "HPL": "Humanities/Philosophy",
     "HSS": "Humanities/Social Sciences",
     "HST": "Humanities/Science and Technology",
+    "HTH": "Humanities/Theater",
     "IDP": "Integrated Product Development",
     "LFR": "Language/French",
     "LSP": "Language/Spanish",
