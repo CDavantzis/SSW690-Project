@@ -104,18 +104,6 @@ function cSideCtrl($scope, $log, $http){
       //$log.info('Item changed to ' + JSON.stringify(item));
     };
 
-    self.querySearch = function(query) {
-      //$log.info('Query: ' + query);
-
-      //$log.info('Courses: ' + self.courses);
-      
-      var results = query ? self.courses.filter( createFilterFor(query) ) : self.courses,
-          deferred;
-
-      //$log.info('Results: ' + JSON.stringify(results));
-      return results;
-    };
-	
     self.setNav = function(page) {
         console.log("nav = " + page);
         self.nav = page;
@@ -151,17 +139,6 @@ function cSideCtrl($scope, $log, $http){
             "show_only_matches" : true
         },
         "plugins": ["search"]
-    });
-
-    $http.get("get_courses").then(function (response) {
-        $log.info("loading get_courses");
-        self.courses = response.data.results.map(function(item) {
-            return {
-                value: item.letter.toLowerCase() + ' ' + item.number,
-                short_name: item.letter + ' ' + item.number,
-                name: item.name
-            };
-        });
     });
 
      /**
