@@ -1,17 +1,35 @@
+//inheriting ngMaterial from Google, and overlay.js
+(function() {
+'use strict';
 
-//you can inherit application modules here like ngMaterial, custom
-var app = angular.module('scheduler', ['ngMaterial']);
+angular.module('scheduler', ['ngMaterial','mOverlayPanel'])
+    .controller('cCalendarModule', cCalendarModule)
+	.controller('cTabModule', cTabModule)
+	.controller('cToggleNavigation', cToggleNavigation)
+	.controller('cSideCtrl', cSideCtrl)
+    .directive('tabNavigation', tabNavigation);
+	
+
 //Calendar module
-app.controller('cCalendarModule', function($scope, $log){
+function cCalendarModule($scope, $log){
 	$scope.dp = new DayPilot.Calendar("dp");
 	$scope.dp.viewType = "Week";
 	$scope.dp.theme = 'calendar_g';
 	$scope.dp.headerDateFormat = 'dddd';
+/* 	Wanted to remove Weekends and closed school hours but these are DayPilot Pro features.
+	$scope.dp.businessBeginsHour = 8;
+	$scope.dp.businessEndsHour = 21;
+	$scope.dp.showNonBusiness = false;
+	$scope.dp.onIncludeTimeCell = function(args) {
+		if (args.cell.start.getDayOfWeek() === 0 || args.cell.start.getDayOfWeek() === 6) { // hide Saturdays, Sundays
+		  args.cell.visible = false;
+		} 
+	};*/
 	$scope.dp.init();
-});
+}
 
 //tab module for optimal class selections
-app.controller('cTabModule', function($scope, $log){
+function cTabModule($scope, $log){
 	var tabs = [
 		{ title: 'One', content: "Tabs will become paginated if there isn't enough room for them."},
 		{ title: 'Two', content: "You can swipe left and right on a mobile device to change tabs."},
@@ -43,10 +61,10 @@ app.controller('cTabModule', function($scope, $log){
 		var index = tabs.indexOf(tab);
 		tabs.splice(index, 1);
 	};
-});
+}
 
 //Toggles side Navigation bar on and off
-app.controller('cToggleNavigation', function($scope, $mdSidenav, $log){
+function cToggleNavigation($scope, $mdSidenav, $log){
     $scope.toggleLeft = buildToggler('left');
     $scope.toggleRight = buildToggler('right');
 	
@@ -71,10 +89,10 @@ app.controller('cToggleNavigation', function($scope, $mdSidenav, $log){
                     $log.debug("close LEFT is done");
                 });
     };
-});
+}
 
 //Side control options Scheduler/Courses
-app.controller('SideCtrl', function ($scope, $log, $http) {
+function cSideCtrl($scope, $log, $http){
     var self = this;
     self.nav = 'course_info';
 	
@@ -157,13 +175,15 @@ app.controller('SideCtrl', function ($scope, $log, $http) {
                (item.name.toLowerCase().indexOf(lowercaseQuery) === 0);
       };
     }
-});
+}
 
 //Angular Element Directives
-app.directive('tabNavigation', function($log) {
+function tabNavigation($log) {
 	$log.info("tabNavigationFunction");
 	return {
 		restrict: 'E',
 		templateUrl: 'static/html/tabNavigation.html'
 	};
-});
+}
+
+})();

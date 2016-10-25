@@ -27,6 +27,7 @@
 
 <!-- daypilot libraries -->
 <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+<script src="{{ url_for('static', filename='js/overlay.js') }}"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
@@ -47,7 +48,7 @@
 					</md-button>
 							
 				</md-toolbar>-->	
-				<md-content ng-controller="SideCtrl as side">
+				<md-content ng-controller="cSideCtrl as side">
 					<md-content layout-padding>
 					<md-nav-bar md-selected-nav-item="side.nav" nav-bar-aria-label="navigation links">
 						<md-nav-item md-nav-click="side.setNav('scheduler')" name="scheduler">Scheduler</md-nav-item>
