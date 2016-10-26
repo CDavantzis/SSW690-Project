@@ -41,8 +41,6 @@ def static_file_hash(filename):
     return int(os.stat(filename).st_mtime)
 
 
-
-
 @flask_app.route('/')
 def home():
     return render_template('index.html')
@@ -77,7 +75,7 @@ def get_scheduled_semesters():
 @flask_app.route('/api/schedule/list')
 def get_scheduled_courses():
     """ List all courses in database for a specified semester """
-    abort(501)
+    return jsonify(results=list(db.schedule.get_all()))
 
 
 @flask_app.route('/api/schedule/tree')

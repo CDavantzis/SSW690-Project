@@ -25,6 +25,14 @@ def get_semesters():
             yield name
 
 
+def get_all():
+    """
+
+    :return:
+    """
+    return mongo_client.schedule["2016F"].find({}, {'_id': False})
+
+
 def has_conflict(combo):
     for c1, c2 in combinations(combo, 2):
         for m1 in c1.get("meetings", []):
