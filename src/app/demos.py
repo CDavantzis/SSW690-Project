@@ -40,3 +40,5 @@ def js_tree_js():
                                                 {"$sort": {"_id": 1}},
                                                 {"$project": {"_id": 0, "text": "$_id", "children": "$nodes"}}])
     return jsonify(results=list(c))
+
+

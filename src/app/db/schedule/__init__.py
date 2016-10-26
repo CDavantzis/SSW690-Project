@@ -33,6 +33,31 @@ def get_all():
     return mongo_client.schedule["2016F"].find({}, {'_id': False})
 
 
+def get_tree():
+    """
+
+    :return:
+    """
+    d = {}
+
+    for offering in mongo_client.schedule["2016F"].find({}):
+        activity = offering.get("activity")
+        title = offering.get("title")
+        section_prefix = offering.get("section", {}).get("prefix")
+        section_number = offering.get("section", {}).get("number")
+        section_code = offering.get("section", {}).get("code")
+        lvl_1_title = section_prefix
+        lvl_2_title = "{0}-{1}".format(section_prefix, section_number)
+        lvl_3_title = "{0}-{1}{2}".format(section_prefix, section_number, activity)
+        lvl_4_title = "{0}-{1}{2}".format(section_prefix, section_number, section_code)
+        lvl_1 = {"id": lvl_1_title, "parent": "#", "text": lvl_1_title}
+        lvl_2 = {"id": lvl_2_title, "parent": lvl_1_title, "text": lvl_2_title}
+        lvl_3 = {"id": lvl_3_title, "parent": lvl_2_title, "text": lvl_3_title}
+        lvl_4 = {"id": lvl_4_title, "parent": lvl_3_title, "text": lvl_4_title}
+        for lvl in (lvl_1, lvl_2, lvl_3, lvl_4):
+            d[lvl["id"]] = lvl
+
+    return d.values()
 def has_conflict(combo):
     for c1, c2 in combinations(combo, 2):
         for m1 in c1.get("meetings", []):
