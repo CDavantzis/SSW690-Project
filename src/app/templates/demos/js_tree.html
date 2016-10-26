@@ -19,7 +19,7 @@
     }).jstree({
         'core': {
             'data': function (obj, cb) {
-                $.get("{{ url_for('demos.js_tree_js')}}", function (data) {
+                $.get("{{ url_for('get_scheduled_course_tree')}}", function (data) {
                     cb.call(this, data.results);
                 });
             }

@@ -38,26 +38,26 @@ def get_tree():
 
     :return:
     """
-    d = {}
+    cursor = mongo_client.schedule["2016F"].aggregate([
+        {"$group": {"_id": {"prefix": "$section.prefix", "number": "$section.number", "activity": "$activity",
+                            "title": "$title"},
+                    "nodes": {"$push": {"text": {
+                        "$concat": ["$section.prefix", "-", "$section.number", " ", "$activity", "-",
+                                    "$section.code"]}}}}},
+        {"$sort": {"_id.number": 1}},
+        {"$sort": {"_id.prefix": 1}},
+        {"$project": {"text": {"$concat": ["$_id.prefix", "-", "$_id.number", " ", "$_id.activity"]},
+                      "children": "$nodes"}},
+        {"$group": {"_id": {"prefix": "$_id.prefix", "number": "$_id.number", "title": "$_id.title"},
+                    "nodes": {"$push": "$$ROOT"}}},
+        {"$sort": {"_id.number": 1}},
+        {"$sort": {"_id.prefix": 1}},
+        {"$project": {"text": {"$concat": ["$_id.prefix", "-", "$_id.number", " ", "$_id.title"]},
+                      "children": "$nodes"}},
+    ])
+    return list(cursor)
 
-    for offering in mongo_client.schedule["2016F"].find({}):
-        activity = offering.get("activity")
-        title = offering.get("title")
-        section_prefix = offering.get("section", {}).get("prefix")
-        section_number = offering.get("section", {}).get("number")
-        section_code = offering.get("section", {}).get("code")
-        lvl_1_title = section_prefix
-        lvl_2_title = "{0}-{1}".format(section_prefix, section_number)
-        lvl_3_title = "{0}-{1}{2}".format(section_prefix, section_number, activity)
-        lvl_4_title = "{0}-{1}{2}".format(section_prefix, section_number, section_code)
-        lvl_1 = {"id": lvl_1_title, "parent": "#", "text": lvl_1_title}
-        lvl_2 = {"id": lvl_2_title, "parent": lvl_1_title, "text": lvl_2_title}
-        lvl_3 = {"id": lvl_3_title, "parent": lvl_2_title, "text": lvl_3_title}
-        lvl_4 = {"id": lvl_4_title, "parent": lvl_3_title, "text": lvl_4_title}
-        for lvl in (lvl_1, lvl_2, lvl_3, lvl_4):
-            d[lvl["id"]] = lvl
 
-    return d.values()
 def has_conflict(combo):
     for c1, c2 in combinations(combo, 2):
         for m1 in c1.get("meetings", []):
