@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.2/themes/default/style.min.css"/>
+</head>
+<body>
+<div id="tree"></div>
+<div id="event_result"></div>
+<script>
+    $('#tree').on('changed.jstree', function (e, data) {
+        var i, j, r = [];
+        for (i = 0, j = data.selected.length; i < j; i++) {
+            r.push(data.instance.get_node(data.selected[i]).text);
+        }
+        console.log('Selected: ' + r.join(', '));
+    }).jstree({
+        'core': {
+            'data': function (obj, cb) {
+                $.get("{{ url_for('get_course_tree')}}", function (data) {
+                    cb.call(this, data.results);
+                });
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
