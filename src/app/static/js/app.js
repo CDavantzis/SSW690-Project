@@ -153,7 +153,8 @@
             },
             "search": {
                 "case_insensitive": true,
-                "show_only_matches": true
+                "show_only_matches": true,
+                "multiple": false
             },
             "plugins": ["search"]
         });
