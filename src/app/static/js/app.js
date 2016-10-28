@@ -9,7 +9,6 @@
         .controller('cSideCtrl', cSideCtrl)
         .directive('tabNavigation', tabNavigation);
 
-
     //Calendar module
     function cCalendarModule($scope, $log) {
         $scope.dp = new DayPilot.Calendar("dp");
@@ -123,19 +122,6 @@
                 //$('#course_tree').jstree(true).search(searchString);
             }, 300);
         };
-
-		$scope.openNotify = function () {
-			console.log("opened= ");
-			var dialog = ngDialog.open({
-				template:
-					'<p>You can do whatever you want when I close, however that happens.</p>' +
-					'<div class="ngdialog-buttons"><button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="closeThisDialog(1)">Close Me</button></div>',
-				plain: true
-			});
-			dialog.closePromise.then(function (data) {
-				console.log('ngDialog closed' + (data.value === 1 ? ' using the button' : '') + ' and notified by promise: ' + data.id);
-			});
-		};
 		
         $('#course_tree').on('changed.jstree', function (e, data) {
             var i, j, r = [];
@@ -144,6 +130,22 @@
                 r.push(data.instance.get_node(data.selected[i]).text);
             }
             console.log('Selected: ' + r.join(', '));
+			$scope.openNotify = function () {
+
+			var dialog = ngDialog.open({
+				className: 'ngdialog-theme-default',
+				template:
+					'<center><div><p>Course Info:' + r.join(', ')+ '</p></div></center>',
+				plain: true,
+				showClose: false,
+                closeByDocument: true,
+                closeByEscape: true,
+                appendTo: false,
+			});
+			dialog.closePromise.then(function (data) {
+				console.log('ngDialog closed' + (data.value === 1 ? ' using the button' : '') + ' and notified by promise: ' + data.id);
+			});
+		};
         }).jstree({
             'core': {
                 'data': function (obj, cb) {
