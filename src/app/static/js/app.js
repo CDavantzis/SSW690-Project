@@ -2,7 +2,7 @@
 (function () {
     'use strict';
 
-    angular.module('scheduler', ['ngMaterial', 'mOverlayPanel'])
+    angular.module('scheduler', ['ngMaterial', 'ngDialog'])
         .controller('cCalendarModule', cCalendarModule)
         .controller('cTabModule', cTabModule)
         .controller('cToggleNavigation', cToggleNavigation)
@@ -33,24 +33,12 @@
         var tabs = [
                 {title: 'One', content: "Tabs will become paginated if there isn't enough room for them."},
                 {title: 'Two', content: "You can swipe left and right on a mobile device to change tabs."},
-                {
-                    title: 'Three',
-                    content: "You can bind the selected tab via the selected attribute on the md-tabs element."
-                },
+                {title: 'Three', content: "You can bind the selected tab via the selected attribute on the md-tabs element."},
                 {title: 'Four', content: "If you set the selected tab binding to -1, it will leave no tab selected."},
                 {title: 'Five', content: "If you remove a tab, it will try to select a new one."},
-                {
-                    title: 'Six',
-                    content: "There's an ink bar that follows the selected tab, you can turn it off if you want."
-                },
-                {
-                    title: 'Seven',
-                    content: "If you set ng-disabled on a tab, it becomes unselectable. If the currently selected tab becomes disabled, it will try to select the next tab."
-                },
-                {
-                    title: 'Eight',
-                    content: "If you look at the source, you're using tabs to look at a demo for tabs. Recursion!"
-                },
+                {title: 'Six', content: "There's an ink bar that follows the selected tab, you can turn it off if you want."},
+                {title: 'Seven', content: "If you set ng-disabled on a tab, it becomes unselectable. If the currently selected tab becomes disabled, it will try to select the next tab."},
+                {title: 'Eight', content: "If you look at the source, you're using tabs to look at a demo for tabs. Recursion!"},
                 {title: 'Nine', content: "If you set md-theme=\"green\" on the md-tabs element, you'll get green tabs."},
                 {title: 'Ten', content: "If you're still reading this, you should just go check out the API docs for tabs!"}
             ],
@@ -104,7 +92,7 @@
     }
 
     //Side control options Scheduler/Courses
-    function cSideCtrl($scope, $log, $http) {
+    function cSideCtrl($scope, $log, ngDialog) {
         var self = this;
         self.nav = 'course_info';
         self.searchTimeout = false;
@@ -136,6 +124,19 @@
             }, 300);
         };
 
+		$scope.openNotify = function () {
+			console.log("opened= ");
+			var dialog = ngDialog.open({
+				template:
+					'<p>You can do whatever you want when I close, however that happens.</p>' +
+					'<div class="ngdialog-buttons"><button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="closeThisDialog(1)">Close Me</button></div>',
+				plain: true
+			});
+			dialog.closePromise.then(function (data) {
+				console.log('ngDialog closed' + (data.value === 1 ? ' using the button' : '') + ' and notified by promise: ' + data.id);
+			});
+		};
+		
         $('#course_tree').on('changed.jstree', function (e, data) {
             var i, j, r = [];
             for (i = 0, j = data.selected.length; i < j; i++) {
@@ -156,6 +157,9 @@
                 "show_only_matches": true,
                 "multiple": false
             },
+			"checkbox" : {
+				"keep_selected_style" : false
+			},
             "plugins": ["search"]
         });
 

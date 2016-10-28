@@ -7,6 +7,7 @@
 
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/layout.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stevens.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/ngDialog.css') }}">
 
 <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='themes/calendar_g.css') }}" />   
 
@@ -26,8 +27,8 @@
 <script src="{{ url_for('static', filename='js/daypilot/daypilot-all.min.js') }}" type="text/javascript"></script>
 
 <!-- daypilot libraries -->
+<script src="{{ url_for('static', filename='js/ngDialog.js') }}"></script>
 <script src="{{ url_for('static', filename='js/app.js') }}"></script>
-<script src="{{ url_for('static', filename='js/overlay.js') }}"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
@@ -62,7 +63,7 @@
 					</form>	
 					</md-content>
 					<md-content layout-padding>
-					<div ng-show="side.getNav() === 'course_info'" ng-hide="side.getNav() !== 'course_info'" id="course_tree"></div>
+					<div ng-show="side.getNav() === 'course_info'" ng-hide="side.getNav() !== 'course_info'" ng-click="openNotify()" id="course_tree"></div>
 					</md-content>
 				</md-content>
 			</md-sidenav><!-- End Left SideBar Section-->
