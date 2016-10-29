@@ -122,6 +122,7 @@
                 //$('#course_tree').jstree(true).search(searchString);
             }, 300);
         };
+
 		
         $('#course_tree').on('changed.jstree', function (e, data) {
             var i, j, r = [];
@@ -134,8 +135,8 @@
 
 			var dialog = ngDialog.open({
 				className: 'ngdialog-theme-default',
-				template:
-					'<center><div><p>Course Info:' + r.join(', ')+ '</p></div></center>',
+				template: 
+					'<center><div><p>Course Info: '+ r.join(', ') +'</p></div></center>',
 				plain: true,
 				showClose: false,
                 closeByDocument: true,
