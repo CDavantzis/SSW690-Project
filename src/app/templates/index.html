@@ -9,31 +9,31 @@
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stevens.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/ngDialog.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/ngDialog-theme-default.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='themes/fullcalendar.css') }}">
+<!-- daypilot toberemoved <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='themes/calendar_g.css') }}" />   --> 
 
-<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='themes/calendar_g.css') }}" />   
-
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.2/themes/default/style.min.css"/>
 <!-- Angular Material requires Angular.js Libraries -->
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
-
 <!-- Angular Material Library -->
 <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
 
-<!-- helper libraries -->
+<!-- daypilot libraries
 <script src="{{ url_for('static', filename='js/jquery-1.9.1.min.js') }}" type="text/javascript"></script>
-
-<!-- daypilot libraries -->
 <script src="{{ url_for('static', filename='js/daypilot/daypilot-all.min.js') }}" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js" type="text/javascript"></script> lib/jquery overwrites this TO BE REMOVED-->
 
-<!-- daypilot libraries -->
-<script src="{{ url_for('static', filename='js/ngDialog.js') }}"></script>
-<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+<!-- do not mess with this order, Fullcalendar and jstree fail if reorganized -->
+<script src="{{ url_for('static', filename='js/lib/jquery.min.js') }}" type="text/javascript"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.2/themes/default/style.min.css"/>
+<script src="{{ url_for('static', filename='js/ngDialog/ngDialog.js') }}" type="text/javascript"></script>
+<script src="{{ url_for('static', filename='js/fullcalendar/lib/moment.min.js') }} " type="text/javascript"></script>
+<script src="{{ url_for('static', filename='js/fullcalendar/fullcalendar.js') }}" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js" type="text/javascript"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}" type="text/javascript"></script>
 </head>
 <body ng-app="scheduler" class="flex-container">
 	<!-- Middle (main) Row with 2 columns Section-->
@@ -63,7 +63,7 @@
 					</form>	
 					</md-content>
 					<md-content layout-padding>
-					<div ng-show="side.getNav() === 'course_info'" ng-hide="side.getNav() !== 'course_info'" ng-click="openNotify()" id="course_tree"></div>
+					<div ng-show="side.getNav() === 'course_info'" ng-hide="side.getNav() !== 'course_info'"  id="course_tree"></div>
 					</md-content>
 				</md-content>
 			</md-sidenav><!-- End Left SideBar Section-->
@@ -73,8 +73,8 @@
 			<div class="courseSelector" layout-padding layout-align="center">
 			<tab-navigation></tab-navigation>
 			</div>
-			<div ng-controller="cCalendarModule" class="calendarDesign" layout-padding layout-align="center">
-				<div id="dp"></div>  <!-- calender module -->
+			<div layout-padding layout-align="center">
+				<div id='calendar'></div>  <!-- calender module -->
 	<!-- 			<div flex></div> -->
 			</div>
 		</md-content>

@@ -1,21 +1,37 @@
 //inheriting ngMaterial from Google, and overlay.js
+$(document).ready(function() {
+    // page is now ready, initialize the calendar..
+	console.log("Calenderloaded");
+    $('#calendar').fullCalendar({
+        // put your options and callbacks here
+		defaultView: 'agendaWeek',
+		weekends: false,
+		minTime: '08:00:00',
+        maxTime: '22:00:00',
+		header: {
+			left:   'Weekly Schedule',
+			center: false,
+			right:  false,
+		},
+    })
+});
+
 (function () {
     'use strict';
 
     angular.module('scheduler', ['ngMaterial', 'ngDialog'])
-        .controller('cCalendarModule', cCalendarModule)
         .controller('cTabModule', cTabModule)
         .controller('cToggleNavigation', cToggleNavigation)
         .controller('cSideCtrl', cSideCtrl)
         .directive('tabNavigation', tabNavigation);
 
-    //Calendar module
-    function cCalendarModule($scope, $log) {
+    //Calendar module ToBeRemoved  .controller('cCalendarModule', cCalendarModule)
+    /*function cCalendarModule($scope, $log) {
         $scope.dp = new DayPilot.Calendar("dp");
         $scope.dp.viewType = "Week";
         $scope.dp.theme = 'calendar_g';
         $scope.dp.headerDateFormat = 'dddd';
-        /* 	Wanted to remove Weekends and closed school hours but these are DayPilot Pro features.
+         	Wanted to remove Weekends and closed school hours but these are DayPilot Pro features.
          $scope.dp.businessBeginsHour = 8;
          $scope.dp.businessEndsHour = 21;
          $scope.dp.showNonBusiness = false;
@@ -23,9 +39,9 @@
          if (args.cell.start.getDayOfWeek() === 0 || args.cell.start.getDayOfWeek() === 6) { // hide Saturdays, Sundays
          args.cell.visible = false;
          }
-         };*/
+         };
         $scope.dp.init();
-    }
+    }*/
 
     //tab module for optimal class selections
     function cTabModule($scope, $log) {
@@ -124,30 +140,25 @@
         };
 
 		
-        $('#course_tree').on('changed.jstree', function (e, data) {
-            var i, j, r = [];
-            for (i = 0, j = data.selected.length; i < j; i++) {
-                console.log('Pushing: ' + data.instance.get_node(data.selected[i]).text);
-                r.push(data.instance.get_node(data.selected[i]).text);
-            }
-            console.log('Selected: ' + r.join(', '));
-			$scope.openNotify = function () {
-
-			var dialog = ngDialog.open({
-				className: 'ngdialog-theme-default',
-				template: 
-					'<center><div><p>Course Info: '+ r.join(', ') +'</p></div></center>',
-				plain: true,
-				showClose: false,
-                closeByDocument: true,
-                closeByEscape: true,
-                appendTo: false,
-			});
-			dialog.closePromise.then(function (data) {
-				console.log('ngDialog closed' + (data.value === 1 ? ' using the button' : '') + ' and notified by promise: ' + data.id);
-			});
-		};
-        }).jstree({
+        $('#course_tree')
+			.on('changed.jstree', function (e, data) {
+				var i, j, r = [];
+				for (i = 0, j = data.selected.length; i < j; i++) {
+					console.log('Pushing: ' + data.instance.get_node(data.selected[i]).text);
+					r.push(data.instance.get_node(data.selected[i]).text);
+				}
+				console.log('Selected: ' + r.join(', '));
+				var dialog = ngDialog.open({
+					className: 'ngdialog-theme-default',
+					template: '<p>Course Info:</p><div>'+ data.instance.get_node(data.selected[0]).text +'</div>',
+					plain: true,
+					showClose: false,
+					closeByDocument: true,
+					closeByEscape: true,
+					appendTo: false,
+				});
+			})
+			.jstree({
             'core': {
                 'data': function (obj, cb) {
                     $.get("/api/courses/tree", function (data) {
