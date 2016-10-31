@@ -9,7 +9,7 @@ $(document).ready(function() {
 		minTime: '08:00:00',
         maxTime: '22:00:00',
 		header: {
-			left:   'Weekly Schedule',
+			left:   false,
 			center: false,
 			right:  false,
 		},
@@ -150,7 +150,7 @@ $(document).ready(function() {
 				console.log('Selected: ' + r.join(', '));
 				var dialog = ngDialog.open({
 					className: 'ngdialog-theme-default',
-					template: '<p>Course Info:</p><div>'+ data.instance.get_node(data.selected[0]).text +'</div>',
+					template: '<p>Course Info:</p><div>'+ data.node.text +'</div>',
 					plain: true,
 					showClose: false,
 					closeByDocument: true,
