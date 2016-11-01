@@ -1,84 +1,105 @@
-<!doctype html>
-<title>Welcome to Stevens Scheduler</title>
+<!DOCTYPE HTML>
+<html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/resources/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/resources/img/favicon.ico" type="image/x-icon">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="Resource-type" content="Document" />
+    <title>Welcome to Stevens Scheduler</title>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
 
-<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/layout.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stevens.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/ngDialog.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/ngDialog-theme-default.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='themes/fullcalendar.css') }}">
+    <!-- daypilot toberemoved <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='themes/calendar_g.css') }}" />   -->
 
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/layout.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stevens.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/ngDialog.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/ngDialog-theme-default.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='themes/fullcalendar.css') }}">
-<!-- daypilot toberemoved <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='themes/calendar_g.css') }}" />   --> 
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.2/themes/default/style.min.css" />
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
 
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.2/themes/default/style.min.css"/>
-<!-- Angular Material requires Angular.js Libraries -->
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
-<!-- Angular Material Library -->
-<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <!-- daypilot libraries
+    <script src="{{ url_for('static', filename='js/jquery-1.9.1.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/daypilot/daypilot-all.min.js') }}" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js" type="text/javascript"></script> lib/jquery overwrites this TO BE REMOVED-->
+    <!-- do not mess with this order, Fullcalendar and jstree fail if reorganized -->
+    <script src="{{ url_for('static', filename='js/lib/jquery.min.js') }}" type="text/javascript"></script>
 
-<!-- daypilot libraries
-<script src="{{ url_for('static', filename='js/jquery-1.9.1.min.js') }}" type="text/javascript"></script>
-<script src="{{ url_for('static', filename='js/daypilot/daypilot-all.min.js') }}" type="text/javascript"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js" type="text/javascript"></script> lib/jquery overwrites this TO BE REMOVED-->
-
-<!-- do not mess with this order, Fullcalendar and jstree fail if reorganized -->
-<script src="{{ url_for('static', filename='js/lib/jquery.min.js') }}" type="text/javascript"></script>
-
-<script src="{{ url_for('static', filename='js/ngDialog/ngDialog.js') }}" type="text/javascript"></script>
-<script src="{{ url_for('static', filename='js/fullcalendar/lib/moment.min.js') }} " type="text/javascript"></script>
-<script src="{{ url_for('static', filename='js/fullcalendar/fullcalendar.js') }}" type="text/javascript"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js" type="text/javascript"></script>
-<script src="{{ url_for('static', filename='js/app.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/ngDialog/ngDialog.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/fullcalendar/lib/moment.min.js') }} " type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/fullcalendar/fullcalendar.js') }}" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/stevens.js') }}" type="text/javascript"></script>
 </head>
-<body ng-app="scheduler" class="flex-container">
-	<!-- Middle (main) Row with 2 columns Section-->
-	<section class="section" layout="row" layout-fill ng-cloak flex>
-		<md-content class="leftSidelayout" ng-controller="cToggleNavigation">
-			<md-sidenav class="md-sidenav-left md-whiteframe-4dp" md-component-id="left" 
-			layout="column" layout-fill ng-cloak md-is-open="true" md-is-locked-open="isSidebarOpen()" md-disable-backdrop>		
-				<!--<md-toolbar class="md-theme-light">
-					<h1 class="md-toolbar-tools">Sidenav</h1>
-					
-					<md-button class="md-icon-button" aria-label="Settings">
-					<md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
-					</md-button>
-							
-				</md-toolbar>-->	
-				<md-content ng-controller="cSideCtrl as side">
-					<md-content layout-padding>
-					<md-nav-bar md-selected-nav-item="side.nav" nav-bar-aria-label="navigation links">
-						<md-nav-item md-nav-click="side.setNav('scheduler')" name="scheduler">Scheduler</md-nav-item>
-						<md-nav-item md-nav-click="side.setNav('course_info')" name="course_info">Course Info</md-nav-item>
-					</md-nav-bar>				
-					<form ng-submit="$event.preventDefault()">
-						<md-input-container>
-							<label>Enter class name</label>
-							<input ng-keyup="side.searchTree(searchBar)" id="searchBar" ng-model="searchBar"></input>
-						</md-input-container>
-					</form>	
-					</md-content>
-					<md-content layout-padding>
-					<div ng-show="side.getNav() === 'course_info'" ng-hide="side.getNav() !== 'course_info'"  id="course_tree"></div>
-					</md-content>
-				</md-content>
-			</md-sidenav><!-- End Left SideBar Section-->
-		</md-content>
-		<!-- Right SideBar Section-->
-		<md-content class="rightSidelayout" layout="column" layout-fill ng-cloak flex>
-			<div class="courseSelector" layout-padding layout-align="center">
-			<tab-navigation></tab-navigation>
-			</div>
-			<div layout-padding layout-align="center">
-				<div id='calendar'></div>  <!-- calender module -->
-	<!-- 			<div flex></div> -->
-			</div>
-		</md-content>
-		<!-- Right SideBar Section -->
-	</section> 
-<!-- End Body div-->
+<body ng-app="scheduler" layout="column">
+
+    <md-toolbar id="stev-header" layout-align="center">
+        Stevens scheduler
+    </md-toolbar>
+
+    <div id="stev-container" layout="row" flex>
+        <md-sidenav id="stev-sidebar" md-is-locked-open="true" class="blue show-bar">
+            <md-content ng-controller="cSideCtrl as side">
+
+                <div id="stev-sidebar-nav-blk" layout="row" class="red">
+                    <!-- <div flex>Scheduler</div>
+                    <div flex>Course info</div> -->
+                    <md-nav-bar id="stev-sidebar-nav" md-selected-nav-item="side.nav" nav-bar-aria-label="navigation links">
+                        <md-nav-item class="stev-sidebar-nav-item" md-nav-click="side.setNav('scheduler')" name="scheduler">Scheduler</md-nav-item>
+                        <md-nav-item class="stev-sidebar-nav-item" md-nav-click="side.setNav('course_info')" name="course_info">Course Info</md-nav-item>
+                    </md-nav-bar>
+                </div>
+
+                <div id="stev-sidebar-ctrl" layout="row" class="green" layout-align="center center">
+                    <div id="stev-sidebar-search" flex>
+                        <form ng-submit="$event.preventDefault()">
+                            <input ng-keyup="side.searchTree(searchBar)" id="searchBar" ng-model="searchBar" placeholder="Enter class name"></input>
+                        </form>
+                    </div>
+                    <div id="stev-sidebar-btn" flex>
+                        <md-button id="stev-toggle-sidebar-btn" onclick="toogleSidebar()">Hide</md-button>
+                    </div>
+                </div>
+
+                <div id="courses-tree">
+                    <md-content>
+                        <div ng-show="side.getNav() === 'course_info'" ng-hide="side.getNav() !== 'course_info'" ng-click="openNotify()" id="course_tree"></div>
+                    </md-content>
+                </div>
+            </md-content>
+        </md-sidenav>
+
+        <md-content id="stev-content" layout="row" class="green" flex>
+            <div id="stev-content-btn-nav" layout="row">
+
+                <div id="stev-toggle-content-blk" class="stev-hide" flex="10">
+                    <md-button id="stev-toggle-content-btn" onclick="toogleSidebar()">&#10132;</md-button>
+                </div>
+
+                <div layout="column">
+                    <div id="stev-content-nav" class="courseSelector" layout-align="center" flex>
+                        <tab-navigation></tab-navigation>
+                    </div>
+
+                    <div id="stev-calendar" layout-align="center" flex>
+                        <div id='calendar'></div>
+                    </div>
+                </div>
+            </div>
+        </md-content>
+    </div>
+
 </body>
+</html>
