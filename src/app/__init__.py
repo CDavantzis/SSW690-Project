@@ -61,7 +61,19 @@ def get_course_tree():
 @flask_app.route('/api/courses/info')
 def get_course_info():
     """ Get the course info for a specified course """
-    abort(501)
+    letter = request.args.get('letter')
+    number = request.args.get('number')
+
+    if (letter is None) or (number is None):
+        abort(400)
+
+    r = mongo_client.catalog.courses.find_one({"letter": letter,
+                                               "number": number},
+                                              {'_id': False})
+    if r is not None:
+        return jsonify(r)
+
+    abort(404)
 
 
 @flask_app.route('/api/schedule/semesters', methods=['GET'])
