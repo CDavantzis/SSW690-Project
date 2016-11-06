@@ -1,177 +1,85 @@
-/* Stevens Default Red #9D1535
-Stevens Hover Red #7e102a */
-/*header.header {
-	height: 30px;
-	width: 100%;
-	color: white;
-	background-color: #9D1535;
-	margin-top: 0px;
-	margin-left: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-}*/
+/* 
+Stevens Default Red #9D1535
+Stevens Hover Red #7e102a
+Stevens Grey #BBBCBE
+*/
 
-.stev-show {
-  opacity: 1;
+body {
+	background-color: #FFFFFF;
 }
 
-.stev-hide {
-  display: none !important;
-  transition: opacity 1s ease-out;
-  opacity: 0;
+form { 
+	padding: 0px 12px 2px 24px; 
 }
 
+/* header picture codes */
 #stev-header {
-  background-color: #FFFFFF;
-  padding-left: 30px;
-  color: #1a6ec5;
-  font-size: 24px;
-  font-weight: bold;
+	background-image: url("/static/img/stevens_logo.gif");
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-size: 250px, 106px;
+	background-color: #FFFFFF;
+	padding-left: 5px;
+	color: #1a6ec5;
+	font-size: 24px;
+	font-weight: bold;
+	height: 106px;
+	width: 250px;
 }
 
-#stev-container {
-  background-color: #FFFFFF;
+/* Side bar navigation button codes */
+md-nav-bar span{
+	color: #FFFFFF;
+}
+md-nav-bar .md-nav-bar {
+	background-color: #9D1535;
+}
+md-nav-bar md-nav-ink{
+	background-color: #7e102a;
+}
+md-nav-bar md-nav-ink-bar{
+	background-color: #BBBCBE;
 }
 
-#stev-sidebar {
-  min-width: 400px;
-  border-right: 1px solid #222222;
+/* Schedule selector tab codes */
+#stev-content-tab md-tabs {
+  background-color: #9D1535;
 }
 
-#stev-sidebar-nav-blk {
-  background-color: #1d5895;
+#stev-content-tab span {
+	color: #FFFFFF;
 }
 
-#stev-sidebar-nav md-nav-ink-bar{
-  background-color: #fff;
+#stev-content-tab md-ink {
+	background-color: #7e102a;
 }
 
-.stev-sidebar-nav-item span {
-  border: none;
-  color: #FFFFFF !important;
+#stev-content-tab md-ink-bar {
+	background-color: #BBBCBE;
 }
 
-#stev-sidebar-ctrl {
-  background-color: #FFFFFF;
-  border-bottom: 1px solid #222222;
-}
-
-#stev-sidebar-search {
-  margin: 0;
-  margin-left: 28px;
-  margin-top: 14px;
-}
-
-#stev-sidebar-search input {
-  margin: 0;
-  padding: 5px;
-  border: 1px solid #1a6ec5;
-  border-width: 1px;
-  color: #222222;
-}
-
-#stev-sidebar-search form {
-  height: 49px;
-}
-
-#stev-sidebar-search md-input-container {
-  height: 36px;
-}
-
-#stev-sidebar-btn {
-  margin: 0;
-  padding: 0;
-  margin-right: 30px;
-}
-
-#stev-toggle-sidebar-blk {
-  border-radius: 0;
-  margin: 0;
-  float: right;
-  background-color: #1a6ec5;
-  color: #FFFFFF;
-}
-
-#stev-toggle-sidebar-btn {
-  line-height: 24px;
-  min-height: 33px;
-  min-width: 50px;
-  border-radius: 0;
-  margin: 0;
-  float: right;
-  background-color: #1a6ec5;
-  color: #FFFFFF;
-}
-
-#courses-tree {
-  overflow: scroll !important;
-}
-
-#stev-content {
-  
-  padding: 0;
-}
-
-#stev-toggle-content-btn {
-  margin: 0;
-  border-radius: 0;
-  background-color: #1a6ec5;
-  color: #FFFFFF;
-  line-height: 25px;
-  min-width: 32px;
-  padding: 12px 0;
-  font-size: 20px;
-}
-
-#stev-content-nav {
-  max-height: 112px;
-  min-height: 95px;
-}
-
-#stev-content-nav md-content {
-  min-height: 95px;
-}
-
-#stev-content-nav md-tabs-wrapper {
-  background-color: #1a6ec5;
-}
-
-#stev-content-nav span {
-  color: #FFFFFF;
-}
-
-#stev-content-nav md-ink-bar {
-  background-color: #fff;
-}
-
-#stev-content-nav md-tabs {
-  min-height: 95px;
-}
-
-#stev-calendar {
-
-}
-
+/* Calendar codes */
 #calendar {
-  padding: 0;
-  margin: 0;
+	padding: 0;
+	margin: 0;
 }
 
 #calendar .fc-view-container div table thead {
-  color: #fff;
-  background-color: #1a6ec5;
+	color: #fff;
+	background-color: #9D1535;
+	border-color: #BBBCBE;
 }
 
 #calendar .fc-view-container div table thead th {
-  border-color: #fff;
+	border-color: #BBBCBE;
 }
 
 #calendar .fc-view-container div table tbody .fc-axis {
-  color: #fff;
-  background-color: #1a6ec5;
-  border-color: #fff;
+	color: #fff;
+	background-color: #9D1535;
+	border-color: #BBBCBE;
 }
 
-.fc-toolbar {
-  /*display: none;*/
-}
+/* .fc-toolbar {
+	display: none;
+} */

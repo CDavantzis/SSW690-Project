@@ -26,24 +26,6 @@ $(document).ready(function () {
         .controller('cSideCtrl', cSideCtrl)
         .directive('tabNavigation', tabNavigation);
 
-    //Calendar module ToBeRemoved  .controller('cCalendarModule', cCalendarModule)
-    /*function cCalendarModule($scope, $log) {
-        $scope.dp = new DayPilot.Calendar("dp");
-        $scope.dp.viewType = "Week";
-        $scope.dp.theme = 'calendar_g';
-        $scope.dp.headerDateFormat = 'dddd';
-         	Wanted to remove Weekends and closed school hours but these are DayPilot Pro features.
-         $scope.dp.businessBeginsHour = 8;
-         $scope.dp.businessEndsHour = 21;
-         $scope.dp.showNonBusiness = false;
-         $scope.dp.onIncludeTimeCell = function(args) {
-         if (args.cell.start.getDayOfWeek() === 0 || args.cell.start.getDayOfWeek() === 6) { // hide Saturdays, Sundays
-         args.cell.visible = false;
-         }
-         };
-        $scope.dp.init();
-    }*/
-
     //tab module for optimal class selections
     function cTabModule($scope, $log) {
         var tabs = [
@@ -82,7 +64,6 @@ $(document).ready(function () {
     //Toggles side Navigation bar on and off
     function cToggleNavigation($scope, $mdSidenav, $log) {
         $scope.toggleLeft = buildToggler('left');
-        $scope.toggleRight = buildToggler('right');
 
         $scope.toggleLeft = function () {
             return $mdSidenav('left').toggle();
@@ -178,6 +159,34 @@ $(document).ready(function () {
 			    "plugins": ["search"]
 			});
 
+			
+        $('#schedule_tree')
+			.on('changed.jstree', function (e, data) {
+			    var i, j, r = [];
+			    for (i = 0, j = data.selected.length; i < j; i++) {
+			        console.log('Pushing: ' + data.instance.get_node(data.selected[i]).text);
+			        r.push(data.instance.get_node(data.selected[i]).text);
+			    }
+			    console.log('Selected: ' + r.join(', '));
+			})
+			.jstree({
+			    'core': {
+			        'data': function (obj, cb) {
+			            $.get("/api/courses/tree", function (data) {
+			                cb.call(this, data.results);
+			            });
+			        }
+			    },
+			    "search": {
+			        "case_insensitive": true,
+			        "show_only_matches": true,
+			        "multiple": false
+			    },
+			    "checkbox": {
+			        "keep_selected_style": false
+			    },
+			    "plugins": ["search", "checkbox"]
+			});
         /**
          * Create filter function for a query string
          */

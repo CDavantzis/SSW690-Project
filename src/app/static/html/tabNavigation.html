@@ -1,23 +1,8 @@
-<md-content>
-    <div ng-controller="cTabModule">
-        <md-tabs md-selected="selectedIndex" md-border-bottom md-autoselect>
-            <md-tab ng-repeat="tab in tabs" ng-disabled="tab.disabled" label="{{tab.title}}"></md-tab>
-        </md-tabs>
-    </div>
-</md-content>
-<!-- <form ng-submit="addTab(tTitle,tContent)" layout="column" class="md-padding" style="padding-top: 0;">
-<div layout="row" layout-sm="column">
-  <div flex style="position: relative;">
-    <h2 class="md-subhead" style="position: absolute; bottom: 0; left: 0; margin: 0; font-weight: 500; text-transform: uppercase; line-height: 35px; white-space: nowrap;">Add a new Tab:</h2>
-  </div>
-  <md-input-container>
-    <label for="label">Label</label>
-    <input type="text" id="label" ng-model="tTitle">
-  </md-input-container>
-  <md-input-container>
-    <label for="content">Content</label>
-    <input type="text" id="content" ng-model="tContent">
-  </md-input-container>
-  <md-button class="add-tab md-primary md-raised" ng-disabled="!tTitle || !tContent" type="submit" style="margin-right: 0;">Add Tab</md-button>
+<!-- ng-hide="isOpenLeft()" -->
+<div ng-controller="cTabModule" id="stev-content-tab">
+	<md-tabs md-selected="selectedIndex" md-border-bottom md-autoselect>
+		<div ng-controller="cToggleNavigation">
+		<md-tab ng-click="toggleLeft()" style:"min-width: 6px; max-width: 10px;">&#8658;<md-tooltip>Toggle Sidebar</md-tooltip></md-tab></div>
+	  <md-tab ng-repeat="tab in tabs" ng-disabled="tab.disabled" label="{{tab.title}}"></md-tab>
+	</md-tabs>
 </div>
-</form> -->
