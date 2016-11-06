@@ -7,7 +7,7 @@ $(document).ready(function () {
         defaultView: 'agendaWeek',
         weekends: false,
         minTime: '08:00:00',
-        maxTime: '22:00:00',
+        maxTime: '21:00:00',
         header: {
             left: false,
             center: false,
@@ -153,9 +153,6 @@ $(document).ready(function () {
 			        "show_only_matches": true,
 			        "multiple": false
 			    },
-			    "checkbox": {
-			        "keep_selected_style": false
-			    },
 			    "plugins": ["search"]
 			});
 
@@ -172,7 +169,7 @@ $(document).ready(function () {
 			.jstree({
 			    'core': {
 			        'data': function (obj, cb) {
-			            $.get("/api/courses/tree", function (data) {
+			            $.get("/api/schedule/tree", function (data) {
 			                cb.call(this, data.results);
 			            });
 			        }
