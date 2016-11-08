@@ -5,6 +5,7 @@ $(document).ready(function () {
     $('#calendar').fullCalendar({
         // put your options and callbacks here
         defaultView: 'agendaWeek',
+        columnFormat: 'dddd',
         weekends: false,
         minTime: '08:00:00',
         maxTime: '21:00:00',
