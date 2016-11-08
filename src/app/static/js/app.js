@@ -131,15 +131,24 @@ $(document).ready(function () {
 			        r.push(data.instance.get_node(data.selected[i]).text);
 			    }
 			    console.log('Selected: ' + r.join(', '));
-			    var dialog = ngDialog.open({
-			        className: 'ngdialog-theme-default',
-			        template: '<p>Course Info:</p><div>' + data.node.text + '</div>',
-			        plain: true,
-			        showClose: false,
-			        closeByDocument: true,
-			        closeByEscape: true,
-			        appendTo: false,
-			    });
+
+                $.get("/api/courses/info", { letter : data.node.a_attr['data-letter'], number : data.node.a_attr['data-number']})
+                .done(function(data) {
+
+                    console.log(data);
+                    var dialog = ngDialog.open({
+                                                className: 'ngdialog-theme-default',
+                                                template: '<p>Course Info:</p><div>' + data.details + '</div>',
+                                                plain: true,
+                                                showClose: false,
+                                                closeByDocument: true,
+                                                closeByEscape: true,
+                                                appendTo: false,
+                    });
+                });
+                
+
+			    
 			})
 			.jstree({
 			    'core': {
