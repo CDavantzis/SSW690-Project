@@ -1,5 +1,5 @@
 """ Interface with the existing Stevens Institute Course Scheduler """
-from datetime import datetime
+from datetime import datetime, timedelta
 import re
 import urllib2
 from xml.dom import minidom
@@ -52,8 +52,8 @@ def courses(term):
                  'activity': meeting.getAttribute('Activity')}
             if meeting.hasAttribute('StartTime') and meeting.hasAttribute('EndTime'):
                 m.update({
-                    "start_time": datetime.strptime(meeting.getAttribute('StartTime')[:-4], "%H:%M"),
-                    "end_time": datetime.strptime(meeting.getAttribute('EndTime')[:-4], "%H:%M")
+                    "start_time": datetime.strptime(meeting.getAttribute('StartTime')[:-4], "%H:%M")+timedelta(hours=5),
+                    "end_time": datetime.strptime(meeting.getAttribute('EndTime')[:-4], "%H:%M")+timedelta(hours=5)
                 })
             c["meetings"].append(m)
 
