@@ -172,9 +172,13 @@ $(document).ready(function () {
 			    var i, j, r = [];
 			    for (i = 0, j = data.selected.length; i < j; i++) {
 			        console.log('Pushing: ' + data.instance.get_node(data.selected[i]).text);
-			        r.push(data.instance.get_node(data.selected[i]).text);
+			        r.push(data.instance.get_node(data.selected[i]).a_attr['call-number']);
 			    }
 			    console.log('Selected: ' + r.join(', '));
+                console.log(r);
+
+                $.get('/api/schedule/combinations', { 'call_numbers' : r.join(', ') });
+
 			})
 			.jstree({
 			    'core': {
