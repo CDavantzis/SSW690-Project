@@ -33,29 +33,29 @@ def get_all():
     return mongo_client.schedule["2016F"].find({}, {'_id': False})
 
 
-def get_tree():
     """
 
     :return:
     """
-    cursor = mongo_client.schedule["2016F"].aggregate([
-        {"$group": {"_id": {"prefix": "$section.prefix", "number": "$section.number", "activity": "$activity",
+    c = mongo_client.schedule[semester].aggregate([
+        {"$group": {"_id": {"prefix": "$section.prefix",
+                            "number": "$section.number",
+                            "activity": "$activity",
                             "title": "$title"},
-                    "nodes": {"$push": {"text": {
-                        "$concat": ["$section.prefix", "-", "$section.number", " ", "$activity", "-",
-                                    "$section.code"]}}}}},
-        {"$sort": {"_id.number": 1}},
-        {"$sort": {"_id.prefix": 1}},
+                    "nodes": {"$push": {"a_attr": {"call-number": "$_id"},
+                                        "text": {
+                                            "$concat": ["$section.prefix", "-", "$section.number", " ", "$activity",
+                                                        "-", "$section.code"]}}}}},
+        {"$sort": {"_id.number": 1}}, {"$sort": {"_id.prefix": 1}},
         {"$project": {"text": {"$concat": ["$_id.prefix", "-", "$_id.number", " ", "$_id.activity"]},
                       "children": "$nodes"}},
         {"$group": {"_id": {"prefix": "$_id.prefix", "number": "$_id.number", "title": "$_id.title"},
                     "nodes": {"$push": "$$ROOT"}}},
-        {"$sort": {"_id.number": 1}},
-        {"$sort": {"_id.prefix": 1}},
+        {"$sort": {"_id.number": 1}}, {"$sort": {"_id.prefix": 1}},
         {"$project": {"text": {"$concat": ["$_id.prefix", "-", "$_id.number", " ", "$_id.title"]},
                       "children": "$nodes"}},
     ])
-    return list(cursor)
+    return list(c)
 
 
 def has_conflict(combo):
