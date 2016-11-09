@@ -33,6 +33,7 @@ def get_all():
     return mongo_client.schedule["2016F"].find({}, {'_id': False})
 
 
+def get_tree(semester="2016F"):
     """
 
     :return:
