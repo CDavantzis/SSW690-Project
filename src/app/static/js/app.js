@@ -1,7 +1,11 @@
 //inheriting ngMaterial from Google, and overlay.js
+
+var selected_call_number = [];
+var event_sources = [];
+
+
 $(document).ready(function () {
     // page is now ready, initialize the calendar..
-    console.log("Calenderloaded");
     $('#calendar').fullCalendar({
         // put your options and callbacks here
         defaultView: 'agendaWeek',
@@ -12,30 +16,17 @@ $(document).ready(function () {
         header: {
             left: false,
             center: false,
-            right: false,
+            right: false
         },
         height: "parent",
-    })
+        eventSources: function(){ return event_sources}()
+    });
+    event_sources = [{
+
+}];
+
 });
-/* TESTING */
-function calendarEvent(className, dayWeek, startTime, endTime,  online ) {
-	online = typeof online !== 'undefined' ? online : false; //defaults to false if undefined
-	
-	var newEvent = new Object();		
-	newEvent.title = className;
-/* 	newEvent.dow = dayWeek;
-	if (online) {
-		newEvent.allDay = online;
-	} else {
-		newEvent.start = startTime;
-		newEvent.end = endTime;
-	} */
-/* 
-	newEvent.dow = 1;
-	newEvent.allDay = true;
-	$('#calendar').fullCalendar( 'renderEvent', newEvent, true ); 
-	console.log("this triggered" + className);*/
-}
+
 
 (function () {
     'use strict';
@@ -107,7 +98,7 @@ function calendarEvent(className, dayWeek, startTime, endTime,  online ) {
                 });
         };
     }
-	
+
     //Side control options Scheduler/Courses
     function cSideCtrl($scope, $log, ngDialog) {
         var self = this;
@@ -118,7 +109,7 @@ function calendarEvent(className, dayWeek, startTime, endTime,  online ) {
         self.toggleYear = function () {
 			self.selectYear === 2016 ? self.selectYear = 2017 : self.selectYear = 2016 ;
         };
-
+		
         self.selectedItemChange = function (text) {
             //$log.info('Text changed to ' + text);
         };
@@ -160,22 +151,18 @@ function calendarEvent(className, dayWeek, startTime, endTime,  online ) {
                 .done(function(data) {
 
                     console.log(data);
-	
                     var dialog = ngDialog.open({
                                                 template: 
 													'<p>Course Info:</p>'+
 													'<div><p>Name: ' + data.name + '</p><p>' + data.letter + ' ' + data.number +'</p></div>'+
 													'<div><p>Description: </p>' + data.details + '</div>'+
 													'<div><button class="inline close-this-dialog" ng-click="">Select Class</button></div>',
-												className: 'ngdialog-theme-default',
-												/* scope: $scope, */
-												/* data: data, */
+												className: 'ngdialog-theme-default', 
                                                 plain: true, /*Change this to false for external templates */
                                                 showClose: false,
                                                 closeByDocument: true,
                                                 closeByEscape: true,
                                                 appendTo: false,
-												cache: false,
                     });
                 });
                 
@@ -201,17 +188,22 @@ function calendarEvent(className, dayWeek, startTime, endTime,  online ) {
 			
         $('#schedule_tree')
 			.on('changed.jstree', function (e, data) {
+                var call_number;
 			    var i, j, r = [];
 			    for (i = 0, j = data.selected.length; i < j; i++) {
-			        console.log('Pushing: ' + data.instance.get_node(data.selected[i]).text);
-			        r.push(data.instance.get_node(data.selected[i]).a_attr['call-number']);
+                    call_number = data.instance.get_node(data.selected[i]).a_attr['call-number']
+                    if (call_number){
+                        r.push(call_number);
+                    }
 			    }
-			    console.log('Selected: ' + r.join(', '));
-                console.log(r);
-
-                $.get('/api/schedule/combinations', { 'call_numbers' : r.join(', ') });
-				
-				/* calendarEvent(data.node.text, 1, '0', '0', true); TESTING to trigger */
+			    selected_call_number = r;
+                $.post('/api/schedule/combinations', {'call_numbers': r}).done(function (data) {
+                    var calendar = $('#calendar');
+                    calendar.fullCalendar('removeEvents');
+                    calendar.fullCalendar('removeEventSources');
+                    calendar.fullCalendar('addEventSource', data);
+                    calendar.fullCalendar('refetchEvents');
+                });
 
 			})
 			.jstree({
