@@ -17,6 +17,25 @@ $(document).ready(function () {
         height: "parent",
     })
 });
+/* TESTING */
+function calendarEvent(className, dayWeek, startTime, endTime,  online ) {
+	online = typeof online !== 'undefined' ? online : false; //defaults to false if undefined
+	
+	var newEvent = new Object();		
+	newEvent.title = className;
+/* 	newEvent.dow = dayWeek;
+	if (online) {
+		newEvent.allDay = online;
+	} else {
+		newEvent.start = startTime;
+		newEvent.end = endTime;
+	} */
+/* 
+	newEvent.dow = 1;
+	newEvent.allDay = true;
+	$('#calendar').fullCalendar( 'renderEvent', newEvent, true ); 
+	console.log("this triggered" + className);*/
+}
 
 (function () {
     'use strict';
@@ -88,12 +107,17 @@ $(document).ready(function () {
                 });
         };
     }
-
+	
     //Side control options Scheduler/Courses
     function cSideCtrl($scope, $log, ngDialog) {
         var self = this;
         self.nav = 'course_info';
         self.searchTimeout = false;
+		self.selectYear = 2016;
+		
+        self.toggleYear = function () {
+			self.selectYear === 2016 ? self.selectYear = 2017 : self.selectYear = 2016 ;
+        };
 
         self.selectedItemChange = function (text) {
             //$log.info('Text changed to ' + text);
@@ -136,14 +160,22 @@ $(document).ready(function () {
                 .done(function(data) {
 
                     console.log(data);
+	
                     var dialog = ngDialog.open({
-                                                className: 'ngdialog-theme-default',
-                                                template: '<p>Course Info:</p><div>' + data.details + '</div>',
-                                                plain: true,
+                                                template: 
+													'<p>Course Info:</p>'+
+													'<div><p>Name: ' + data.name + '</p><p>' + data.letter + ' ' + data.number +'</p></div>'+
+													'<div><p>Description: </p>' + data.details + '</div>'+
+													'<div><button class="inline close-this-dialog" ng-click="">Select Class</button></div>',
+												className: 'ngdialog-theme-default',
+												/* scope: $scope, */
+												/* data: data, */
+                                                plain: true, /*Change this to false for external templates */
                                                 showClose: false,
                                                 closeByDocument: true,
                                                 closeByEscape: true,
                                                 appendTo: false,
+												cache: false,
                     });
                 });
                 
@@ -178,6 +210,8 @@ $(document).ready(function () {
                 console.log(r);
 
                 $.get('/api/schedule/combinations', { 'call_numbers' : r.join(', ') });
+				
+				/* calendarEvent(data.node.text, 1, '0', '0', true); TESTING to trigger */
 
 			})
 			.jstree({

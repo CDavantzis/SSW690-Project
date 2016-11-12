@@ -28,13 +28,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js" type="text/javascript"></script>
     <script src="{{ url_for('static', filename='js/app.js') }}" type="text/javascript"></script>
 </head>
-<body ng-app="scheduler" class="flex-container">
-	<md-toolbar style="background-color:#FFFFFF; height:106px">
-		<div id="stev-header"></div>
-	</md-toolbar>
-	
-	<section layout="row" layout-fill ng-cloak flex>
-	
+<body ng-app="scheduler" class="flex-container" layout="column">
+		<md-toolbar style="background-color:#FFFFFF; height:106px">
+			<div id="stev-header"></div>
+		</md-toolbar>
+		
+		<section layout="row" layout-fill ng-cloak flex>
 		<div ng-controller="cToggleNavigation">
 			<md-sidenav class="md-sidenav-left" md-component-id="left" 
 			layout="column" layout-fill ng-cloak md-is-open="true" md-is-locked-open="isSidebarOpen()" md-disable-backdrop>	
@@ -43,12 +42,14 @@
 					<md-nav-bar md-selected-nav-item="side.nav" nav-bar-aria-label="navigation links">  
 						<md-nav-item md-nav-click="side.setNav('scheduler')" name="scheduler">Scheduler</md-nav-item>
 						<md-nav-item md-nav-click="side.setNav('course_info')" name="course_info">Course Info</md-nav-item>
+						<md-nav-item md-nav-click="side.toggleYear()" name="year">{%raw%}{{side.selectYear}}{%endraw%}</md-nav-item>
 					</md-nav-bar>
 					
 					<form ng-submit="$event.preventDefault()" layout-align="center center">
 						<md-input-container>
 							<input ng-keyup="side.searchTree(searchBar)" id="searchBar" ng-model="searchBar" placeholder="Enter class name" md-sidenav-focus></input>
 						</md-input-container>
+						<md-button class="md-button" ng-click="" ng-show="side.getNav() === 'scheduler'" ng-hide="side.getNav() !== 'scheduler'">Clear Classes</md-button>
 					</form>
 					
 					<md-content>

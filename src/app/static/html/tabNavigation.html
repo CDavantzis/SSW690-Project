@@ -1,8 +1,9 @@
-<!-- ng-hide="isOpenLeft()" -->
 <div ng-controller="cTabModule" id="stev-content-tab">
 	<md-tabs md-selected="selectedIndex" md-border-bottom md-autoselect>
 		<div ng-controller="cToggleNavigation">
-		<md-tab ng-click="toggleLeft()" style:"min-width: 6px; max-width: 10px;">&#8658;<md-tooltip>Toggle Sidebar</md-tooltip></md-tab></div>
+		<md-tab ng-click="toggleLeft()" style:"min-width: 6px; max-width: 10px;">&#8646;
+			<md-tooltip>Toggle Sidebar</md-tooltip></md-tab>
+		</div>
 	  <md-tab ng-repeat="tab in tabs" ng-disabled="tab.disabled" label="{{tab.title}}"></md-tab>
 	</md-tabs>
 </div>
