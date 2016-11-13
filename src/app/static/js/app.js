@@ -105,6 +105,13 @@ $(document).ready(function () {
         self.nav = 'course_info';
         self.searchTimeout = false;
 		self.selectYear = 2016;
+
+        self.semesters = [
+            { id: '2016F', name: 'Fall 2016'},
+            { id: '2016S', name: 'Spring 2016'},
+            { id: '2017F', name: 'Fall 2017'}
+        ];
+        self.selectedSemester = { id: '2016S', name: 'Spring 2016'};
 		
         self.toggleYear = function () {
 			self.selectYear === 2016 ? self.selectYear = 2017 : self.selectYear = 2016 ;

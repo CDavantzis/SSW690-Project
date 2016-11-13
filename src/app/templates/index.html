@@ -42,7 +42,9 @@
 					<md-nav-bar md-selected-nav-item="side.nav" nav-bar-aria-label="navigation links">  
 						<md-nav-item md-nav-click="side.setNav('scheduler')" name="scheduler">Scheduler</md-nav-item>
 						<md-nav-item md-nav-click="side.setNav('course_info')" name="course_info">Course Info</md-nav-item>
-						<md-nav-item md-nav-click="side.toggleYear()" name="year">{%raw%}{{side.selectYear}}{%endraw%}</md-nav-item>
+						<md-select ng-model="side.selectedSemester" placeholder="{%raw%}{{ side.selectedSemester.name }}{%endraw%}">
+							<md-option ng-value="semester" ng-repeat="semester in side.semesters">{%raw%}{{ semester.name }}{%endraw%}</md-option>
+						</md-select>
 					</md-nav-bar>
 					
 					<form ng-submit="$event.preventDefault()" layout-align="center center">
