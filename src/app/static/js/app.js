@@ -163,6 +163,7 @@ $(document).ready(function () {
 													'<p>Course Info:</p>'+
 													'<div><p>Name: ' + data.name + '</p><p>' + data.letter + ' ' + data.number +'</p></div>'+
 													'<div><p>Description: </p>' + data.details + '</div>'+
+                                                    '<br />' +
 													'<div><button class="inline close-this-dialog" ng-click="">Select Class</button></div>',
 												className: 'ngdialog-theme-default', 
                                                 plain: true, /*Change this to false for external templates */
