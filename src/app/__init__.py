@@ -93,7 +93,14 @@ def get_scheduled_courses():
 @flask_app.route('/api/schedule/tree')
 def get_scheduled_course_tree():
     """ List all courses in database for a specified semester in a tree """
-    return jsonify(results=db.schedule.get_tree())
+
+    items = []
+    for item in db.schedule.get_tree():
+        item['id'] = item.get('_id').get('prefix') + ' ' + item.get('_id').get('number')
+        items.append(item)
+
+
+    return jsonify(results=items)
 
 
 @flask_app.route('/api/schedule/combinations', methods=['POST'])

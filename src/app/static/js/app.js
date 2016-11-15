@@ -35,6 +35,7 @@ $(document).ready(function () {
         .controller('cTabModule', cTabModule)
         .controller('cToggleNavigation', cToggleNavigation)
         .controller('cSideCtrl', cSideCtrl)
+        .controller('cOverlayCtrl', cOverlayCtrl)
         .directive('tabNavigation', tabNavigation);
 
     //tab module for optimal class selections
@@ -160,11 +161,13 @@ $(document).ready(function () {
                     console.log(data);
                     var dialog = ngDialog.open({
                                                 template: 
+                                                    '<div ng-controller="cOverlayCtrl as overlay">' +
 													'<p>Course Info:</p>'+
 													'<div><p>Name: ' + data.name + '</p><p>' + data.letter + ' ' + data.number +'</p></div>'+
 													'<div><p>Description: </p>' + data.details + '</div>'+
                                                     '<br />' +
-													'<div><button class="inline close-this-dialog" ng-click="">Select Class</button></div>',
+													'<div><button class="inline close-this-dialog" ng-click="overlay.selectCourseCb(\'' + data.letter.replace( /^#\?/, "" ) + '\',' + data.number + ')">Select Class</button></div>' +
+                                                    '</div>',
 												className: 'ngdialog-theme-default', 
                                                 plain: true, /*Change this to false for external templates */
                                                 showClose: false,
@@ -228,7 +231,8 @@ $(document).ready(function () {
 			        "multiple": false
 			    },
 			    "checkbox": {
-			        "keep_selected_style": false
+			        "keep_selected_style": false,
+                    "check_callback": true
 			    },
 			    "plugins": ["search", "checkbox"]
 			});
@@ -243,6 +247,15 @@ $(document).ready(function () {
                     (item.name.toLowerCase().indexOf(lowercaseQuery) === 0);
             };
         }
+    }
+
+    // overlay controller
+    function cOverlayCtrl($scope, $log) {
+        var self = this;
+        self.selectCourseCb = function(course_letter, course_number) {
+            $log.info('selectCourseCb:' + course_letter + course_number);
+            $('#schedule_tree').jstree(true).select_node(course_letter + ' ' + course_number);
+        };
     }
 
     //Angular Element Directives
