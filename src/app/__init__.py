@@ -96,7 +96,9 @@ def get_scheduled_course_tree():
     return jsonify(results=db.schedule.get_tree())
 
 
-@flask_app.route('/api/schedule/combinations')
+@flask_app.route('/api/schedule/combinations', methods=['POST'])
 def get_scheduled_course_combinations():
     """ Get the course info for specified courses """
-    abort(501)
+    call_numbers = request.form.getlist('call_numbers[]')
+    d = db.schedule.working_class_combinations_calendar(call_numbers=call_numbers)
+    return jsonify(list(d))
