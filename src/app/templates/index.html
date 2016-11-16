@@ -51,7 +51,7 @@
 						<md-input-container>
 							<input ng-keyup="side.searchTree(searchBar)" id="searchBar" ng-model="searchBar" placeholder="Enter class name" md-sidenav-focus></input>
 						</md-input-container>
-						<md-button class="md-button" ng-click="" ng-show="side.getNav() === 'scheduler'" ng-hide="side.getNav() !== 'scheduler'">Clear Classes</md-button>
+						<md-button class="md-button" ng-click="side.clearSelected()" ng-show="side.getNav() === 'scheduler'" ng-hide="side.getNav() !== 'scheduler'">Clear Classes</md-button>
 					</form>
 					
 					<md-content>

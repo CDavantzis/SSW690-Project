@@ -139,6 +139,10 @@ $(document).ready(function () {
             return self.nav;
         };
 
+        self.clearSelected = function() {
+            $('#schedule_tree').jstree(true).deselect_all();
+        };
+
         self.searchTree = function (searchString) {
             if (self.searchTimeout) {
                 clearTimeout(self.searchTimeout);
