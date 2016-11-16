@@ -39,18 +39,9 @@ $(document).ready(function () {
         .directive('tabNavigation', tabNavigation);
 
     //tab module for optimal class selections
-    function cTabModule($scope, $log) {
+    function cTabModule($scope, $log, $rootScope) {
         var tabs = [
-                { title: 'One', content: "Tabs will become paginated if there isn't enough room for them." },
-                { title: 'Two', content: "You can swipe left and right on a mobile device to change tabs." },
-                { title: 'Three', content: "You can bind the selected tab via the selected attribute on the md-tabs element." },
-                { title: 'Four', content: "If you set the selected tab binding to -1, it will leave no tab selected." },
-                { title: 'Five', content: "If you remove a tab, it will try to select a new one." },
-                { title: 'Six', content: "There's an ink bar that follows the selected tab, you can turn it off if you want." },
-                { title: 'Seven', content: "If you set ng-disabled on a tab, it becomes unselectable. If the currently selected tab becomes disabled, it will try to select the next tab." },
-                { title: 'Eight', content: "If you look at the source, you're using tabs to look at a demo for tabs. Recursion!" },
-                { title: 'Nine', content: "If you set md-theme=\"green\" on the md-tabs element, you'll get green tabs." },
-                { title: 'Ten', content: "If you're still reading this, you should just go check out the API docs for tabs!" }
+                { title: 'Option 1'}               
         ],
             selected = null,
             previous = null;
@@ -63,9 +54,16 @@ $(document).ready(function () {
             if (old + 1 && (old != current)) $log.debug('Goodbye ' + previous.title + '!');
             if (current + 1) $log.debug('Hello ' + selected.title + '!');
         });
-        $scope.addTab = function (title, view) {
-            view = view || title + " Content View";
-            tabs.push({ title: title, content: view, disabled: false });
+
+        $rootScope.$on('addTab', function(event, args) {
+            $log.info('cTabModule.onEvent:' + args);
+            $scope.addTab('Option ' + args);
+        });
+
+
+        $scope.addTab = function (title) {
+            $log.info('title:' + title);
+            tabs.push({ title: title, disabled: false });
         };
         $scope.removeTab = function (tab) {
             var index = tabs.indexOf(tab);
@@ -101,7 +99,7 @@ $(document).ready(function () {
     }
 
     //Side control options Scheduler/Courses
-    function cSideCtrl($scope, $log, ngDialog) {
+    function cSideCtrl($scope, $log, $rootScope, ngDialog) {
         var self = this;
         self.nav = 'course_info';
         self.searchTimeout = false;
@@ -109,7 +107,7 @@ $(document).ready(function () {
 
         self.semesters = [
             { id: '2016F', name: 'Fall 2016'},
-            { id: '2016S', name: 'Spring 2016'},
+            { id: '2016S', name: 'Spring 2017'},
             { id: '2017F', name: 'Fall 2017'}
         ];
         self.selectedSemester = { id: '2016S', name: 'Spring 2016'};
@@ -216,11 +214,17 @@ $(document).ready(function () {
                     }
 			    }
 			    selected_call_number = r;
-                $.post('/api/schedule/combinations', {'call_numbers': r}).done(function (data) {
+                $.post('/api/schedule/combinations', {'semester': self.selectedSemester, 'call_numbers': r}).done(function (data) {
+
+                    for (i=1; i < data.length; i++) {
+                        $rootScope.$emit('addTab', i+1);
+                    }
+
+
                     var calendar = $('#calendar');
                     calendar.fullCalendar('removeEvents');
                     calendar.fullCalendar('removeEventSources');
-                    calendar.fullCalendar('addEventSource', data);
+                    calendar.fullCalendar('addEventSource', data[0]);
                     calendar.fullCalendar('refetchEvents');
                 });
 
