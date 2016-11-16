@@ -94,6 +94,8 @@ def get_scheduled_courses():
 def get_scheduled_course_tree():
     """ List all courses in database for a specified semester in a tree """
     semester = request.args.get('semester')
+    if semester is None:
+        abort(400)
     return jsonify(results=db.schedule.get_tree(semester))
 
 
@@ -101,5 +103,8 @@ def get_scheduled_course_tree():
 def get_scheduled_course_combinations():
     """ Get the course info for specified courses """
     call_numbers = request.form.getlist('call_numbers[]')
-    d = db.schedule.working_class_combinations_calendar(call_numbers=call_numbers)
+    semester = request.args.get('semester')
+    if semester is None:
+        abort(400)
+    d = db.schedule.working_class_combinations_calendar(call_numbers=call_numbers, semester=semester)
     return jsonify(list(d))
