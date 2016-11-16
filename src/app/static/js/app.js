@@ -114,8 +114,12 @@ $(document).ready(function () {
         ];
         self.selectedSemester = { id: '2016S', name: 'Spring 2016'};
 		
-        self.toggleYear = function () {
-			self.selectYear === 2016 ? self.selectYear = 2017 : self.selectYear = 2016 ;
+        self.setSemester = function () {
+			$log.info('setSemester:' + self.selectedSemester.name);
+            $.get("/api/schedule/tree", { semester : self.selectedSemester.id }, function (data) {
+                        $('#schedule_tree').jstree(true).settings.core.data = data.results;
+                        $('#schedule_tree').jstree(true).refresh();
+            });
         };
 		
         self.selectedItemChange = function (text) {
@@ -220,7 +224,7 @@ $(document).ready(function () {
 			.jstree({
 			    'core': {
 			        'data': function (obj, cb) {
-			            $.get("/api/schedule/tree", function (data) {
+			            $.get("/api/schedule/tree", { semester : self.selectedSemester.id }, function (data) {
 			                cb.call(this, data.results);
 			            });
 			        }
