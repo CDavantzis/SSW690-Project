@@ -102,8 +102,8 @@ def get_scheduled_course_tree():
 @flask_app.route('/api/schedule/combinations', methods=['POST'])
 def get_scheduled_course_combinations():
     """ Get the course info for specified courses """
+    semester = request.form.get('semester')
     call_numbers = request.form.getlist('call_numbers[]')
-    semester = request.args.get('semester')
     if semester is None:
         abort(400)
     d = db.schedule.working_class_combinations_calendar(call_numbers=call_numbers, semester=semester)
