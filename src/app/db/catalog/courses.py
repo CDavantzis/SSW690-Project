@@ -1,5 +1,6 @@
 """ Catalog: Courses Functions """
 import os
+import json
 import bson.json_util
 from app import mongo_client
 
@@ -84,6 +85,20 @@ def load_data():
         h[key] = 1
 
     return data
+
+
+def remove_dup():
+    """remove duplicate courses from the file"""
+    matched_items = {}
+    new_items = []
+    doc = bson.json_util.loads(open(FILE_LOCATION).read())
+    for entry in sorted(doc, key=lambda x: (x.get("letter"), int(x.get("number")))):
+        key = (entry.get("letter"), int(entry.get("number")))
+        if key not in matched_items:
+            new_items.append(entry)
+            matched_items[key] = 1
+    with open('courses.sorted.json', 'w') as outfile:
+        json.dump(new_items, outfile, sort_keys=True, indent=4, separators=(',', ': '))
 
 
 def update_db():
