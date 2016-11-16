@@ -40,30 +40,53 @@ $(document).ready(function () {
 
     //tab module for optimal class selections
     function cTabModule($scope, $log, $rootScope) {
-        var tabs = [
-                { title: 'Option 1'}               
-        ],
-            selected = null,
-            previous = null;
+        var tabs = [{title : 'Option 1', disabled : true},
+                    {title : 'Option 2', disabled : true},
+                    {title : 'Option 3', disabled : true},
+                    {title : 'Option 4', disabled : true},
+                    {title : 'Option 5', disabled : true},
+                    {title : 'Option 6', disabled : true},
+                    {title : 'Option 7', disabled : true},
+                    {title : 'Option 8', disabled : true},
+                    {title : 'Option 9', disabled : true},
+                    {title : 'Option 10', disabled : true}
+                ];
+        var selected = null;
+        var previous = null;
 
         $scope.tabs = tabs;
         $scope.selectedIndex = 0;
+        $rootScope.selectedOption = 0;
         $scope.$watch('selectedIndex', function (current, old) {
-            previous = selected;
-            selected = tabs[current];
-            if (old + 1 && (old != current)) $log.debug('Goodbye ' + previous.title + '!');
-            if (current + 1) $log.debug('Hello ' + selected.title + '!');
+            $rootScope.selectedOption = current - 1;
+            $log.info($rootScope.selectedOption);
+
+            $rootScope.$emit('onOptionChange');
         });
 
-        $rootScope.$on('addTab', function(event, args) {
+        $rootScope.$on('addTabs', function(event, args) {
             $log.info('cTabModule.onEvent:' + args);
-            $scope.addTab('Option ' + args);
+
+            // clear array
+            //$scope.tabs = [];
+            var total_tabs = parseInt(args);
+            var i;
+            for (i = 0; i < total_tabs; i++) {
+                //$scope.addTab('Option ' + (i + 1));
+                if (i >= 10) {
+                    break;
+                }
+
+                $scope.tabs[i].disabled = false;
+            }
+            $log.info($scope.tabs);
+            //$('#stev-content-tab').load(document.URL +  ' #stev-content-tab');
         });
 
 
         $scope.addTab = function (title) {
             $log.info('title:' + title);
-            tabs.push({ title: title, disabled: false });
+            $scope.tabs.push({ title: title, disabled: false });
         };
         $scope.removeTab = function (tab) {
             var index = tabs.indexOf(tab);
@@ -202,6 +225,20 @@ $(document).ready(function () {
 			    "plugins": ["search"]
 			});
 
+        $rootScope.$on('onOptionChange', function(event) {
+            if ($rootScope.selectedOption > -1) {
+                $log.info('onOptionChange');
+                var calendar = $('#calendar');
+                calendar.fullCalendar('removeEvents');
+                calendar.fullCalendar('removeEventSources');
+                calendar.fullCalendar('addEventSource', $rootScope.calendarData[$rootScope.selectedOption]);
+                calendar.fullCalendar('refetchEvents');
+                calendar.fullCalendar('rerenderEvents');
+
+                $log.info('setting event source to');
+                $log.info($rootScope.calendarData[$rootScope.selectedOption]);
+            }
+        });
 			
         $('#schedule_tree')
 			.on('changed.jstree', function (e, data) {
@@ -214,18 +251,18 @@ $(document).ready(function () {
                     }
 			    }
 			    selected_call_number = r;
-                $.post('/api/schedule/combinations', {'semester': self.selectedSemester, 'call_numbers': r}).done(function (data) {
+                $log.info('selectedSemester:' + self.selectedSemester.id);
+                $.post('/api/schedule/combinations', {'semester': self.selectedSemester.id, 'call_numbers': r}).done(function (data) {
 
-                    for (i=1; i < data.length; i++) {
-                        $rootScope.$emit('addTab', i+1);
-                    }
-
-
+                    $rootScope.calendarData = data;
+                    $rootScope.$emit('addTabs', $rootScope.calendarData.length);
+                    
                     var calendar = $('#calendar');
                     calendar.fullCalendar('removeEvents');
                     calendar.fullCalendar('removeEventSources');
-                    calendar.fullCalendar('addEventSource', data[0]);
+                    calendar.fullCalendar('addEventSource', $rootScope.calendarData[$rootScope.selectedOption]);
                     calendar.fullCalendar('refetchEvents');
+                    calendar.fullCalendar('rerenderEvents');
                 });
 
 			})
