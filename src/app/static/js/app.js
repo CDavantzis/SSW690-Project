@@ -15,12 +15,7 @@ $(document).ready(function () {
         maxTime: '21:00:00',
         header: false,
         height: "parent",
-        eventSources: function(){ return event_sources}()
     });
-    event_sources = [{
-
-}];
-
 });
 
 
@@ -36,58 +31,34 @@ $(document).ready(function () {
 
     //tab module for optimal class selections
     function cTabModule($scope, $log, $rootScope) {
-        var tabs = [{title : 'Option 1', disabled : true},
-                    {title : 'Option 2', disabled : true},
-                    {title : 'Option 3', disabled : true},
-                    {title : 'Option 4', disabled : true},
-                    {title : 'Option 5', disabled : true},
-                    {title : 'Option 6', disabled : true},
-                    {title : 'Option 7', disabled : true},
-                    {title : 'Option 8', disabled : true},
-                    {title : 'Option 9', disabled : true},
-                    {title : 'Option 10', disabled : true}
-                ];
-        var selected = null;
-        var previous = null;
-
-        $scope.tabs = tabs;
+        $scope.tabs = [];
         $scope.selectedIndex = 0;
         $rootScope.selectedOption = 0;
+
         $scope.$watch('selectedIndex', function (current, old) {
             $rootScope.selectedOption = current - 1;
             $log.info($rootScope.selectedOption);
-
             $rootScope.$emit('onOptionChange');
         });
 
-        $rootScope.$on('addTabs', function(event, args) {
+        $rootScope.$on('setTabCount', function(event, args) {
             $log.info('cTabModule.onEvent:' + args);
-
-            // clear array
-            //$scope.tabs = [];
-            var total_tabs = parseInt(args);
-            var i;
-            for (i = 0; i < total_tabs; i++) {
-                //$scope.addTab('Option ' + (i + 1));
-                if (i >= 10) {
-                    break;
-                }
-
-                $scope.tabs[i].disabled = false;
+            $scope.tabs = [];
+            for (var i = 0; i < parseInt(args); i++) {
+                $scope.addTab('Option ' + (i + 1));
             }
-            $log.info($scope.tabs);
-            //$('#stev-content-tab').load(document.URL +  ' #stev-content-tab');
         });
-
 
         $scope.addTab = function (title) {
             $log.info('title:' + title);
             $scope.tabs.push({ title: title, disabled: false });
         };
+
         $scope.removeTab = function (tab) {
             var index = tabs.indexOf(tab);
             tabs.splice(index, 1);
         };
+
     }
 
     //Toggles side Navigation bar on and off
@@ -129,6 +100,7 @@ $(document).ready(function () {
             { id: '2016S', name: 'Spring 2017'},
             { id: '2017F', name: 'Fall 2017'}
         ];
+
         self.selectedSemester = { id: '2016S', name: 'Spring 2016'};
 		
         self.setSemester = function () {
@@ -230,57 +202,60 @@ $(document).ready(function () {
                 calendar.fullCalendar('addEventSource', $rootScope.calendarData[$rootScope.selectedOption]);
                 calendar.fullCalendar('refetchEvents');
                 calendar.fullCalendar('rerenderEvents');
-
                 $log.info('setting event source to');
                 $log.info($rootScope.calendarData[$rootScope.selectedOption]);
             }
         });
-			
-        $('#schedule_tree')
-			.on('changed.jstree', function (e, data) {
-                var call_number;
-			    var i, j, r = [];
-			    for (i = 0, j = data.selected.length; i < j; i++) {
-                    call_number = data.instance.get_node(data.selected[i]).a_attr['call-number']
-                    if (call_number){
-                        r.push(call_number);
-                    }
-			    }
-			    selected_call_number = r;
-                $log.info('selectedSemester:' + self.selectedSemester.id);
-                $.post('/api/schedule/combinations', {'semester': self.selectedSemester.id, 'call_numbers': r}).done(function (data) {
 
-                    $rootScope.calendarData = data;
-                    $rootScope.$emit('addTabs', $rootScope.calendarData.length);
-                    
-                    var calendar = $('#calendar');
-                    calendar.fullCalendar('removeEvents');
-                    calendar.fullCalendar('removeEventSources');
-                    calendar.fullCalendar('addEventSource', $rootScope.calendarData[$rootScope.selectedOption]);
-                    calendar.fullCalendar('refetchEvents');
-                    calendar.fullCalendar('rerenderEvents');
-                });
+        var schedule_tree = $('#schedule_tree');
 
-			})
-			.jstree({
-			    'core': {
-			        'data': function (obj, cb) {
-			            $.get("/api/schedule/tree", { semester : self.selectedSemester.id }, function (data) {
-			                cb.call(this, data.results);
-			            });
-			        }
-			    },
-			    "search": {
-			        "case_insensitive": true,
-			        "show_only_matches": true,
-			        "multiple": false
-			    },
-			    "checkbox": {
-			        "keep_selected_style": false,
-                    "check_callback": true
-			    },
-			    "plugins": ["search", "checkbox"]
-			});
+        function getSelectedCallNumbers() {
+            var r = [];
+            $.each(schedule_tree.jstree("get_checked", true), function () {
+                if (this.a_attr['call-number']) {
+                    r.push(this.a_attr['call-number']);
+                }
+            });
+            return r
+        }
+
+
+        schedule_tree.on('changed.jstree', function (e, data) {
+            $.post('/api/schedule/combinations', {
+                'semester': self.selectedSemester.id,
+                'call_numbers': getSelectedCallNumbers()
+            }).done(function (data) {
+                $rootScope.calendarData = data;
+                $rootScope.$emit('setTabCount', $rootScope.calendarData.length);
+                var calendar = $('#calendar');
+                calendar.fullCalendar('removeEvents');
+                calendar.fullCalendar('removeEventSources');
+                calendar.fullCalendar('addEventSource', $rootScope.calendarData[$rootScope.selectedOption]);
+                calendar.fullCalendar('refetchEvents');
+                calendar.fullCalendar('rerenderEvents');
+            });
+
+        }).jstree({
+            'core': {
+                'data': function (obj, cb) {
+                    $.get("/api/schedule/tree", {semester: self.selectedSemester.id}, function (data) {
+                        cb.call(this, data.results);
+                    });
+                }
+            },
+            "search": {
+                "case_insensitive": true,
+                "show_only_matches": true,
+                "multiple": false
+            },
+            "checkbox": {
+                "keep_selected_style": false,
+                "check_callback": true
+            },
+            "plugins": ["search", "checkbox"]
+        });
+
+
         /**
          * Create filter function for a query string
          */
