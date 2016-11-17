@@ -13,11 +13,7 @@ $(document).ready(function () {
         weekends: false,
         minTime: '08:00:00',
         maxTime: '21:00:00',
-        header: {
-            left: false,
-            center: false,
-            right: false
-        },
+        header: false,
         height: "parent",
         eventSources: function(){ return event_sources}()
     });
