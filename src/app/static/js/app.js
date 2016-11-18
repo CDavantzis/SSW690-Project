@@ -1,6 +1,5 @@
 //inheriting ngMaterial from Google, and overlay.js
 
-
 $(document).ready(function () {
     // page is now ready, initialize the calendar..
     $('#calendar').fullCalendar({
@@ -34,21 +33,21 @@ $(document).ready(function () {
 
         $scope.$watch('selectedIndex', function (current, old) {
             $rootScope.selectedOption = current - 1;
-            $log.info($rootScope.selectedOption);
             $rootScope.$emit('onOptionChange');
         });
 
-        $rootScope.$on('setTabCount', function(event, args) {
+        $rootScope.$on('setTabCount', function (event, args) {
             $log.info('cTabModule.onEvent:' + args);
             $scope.tabs = [];
             for (var i = 0; i < parseInt(args); i++) {
                 $scope.addTab('Option ' + (i + 1));
             }
+            $scope.$apply();
         });
 
         $scope.addTab = function (title) {
             $log.info('title:' + title);
-            $scope.tabs.push({ title: title, disabled: false });
+            $scope.tabs.push({title: title, disabled: false});
         };
 
         $scope.removeTab = function (tab) {
@@ -107,7 +106,7 @@ $(document).ready(function () {
                 tree.jstree(true).refresh();
             });
         };
-		
+
         self.selectedItemChange = function (text) {
             //$log.info('Text changed to ' + text);
         };
@@ -125,7 +124,7 @@ $(document).ready(function () {
             return self.nav;
         };
 
-        self.clearSelected = function() {
+        self.clearSelected = function () {
             $('#schedule_tree').jstree(true).deselect_all();
         };
 
@@ -141,56 +140,60 @@ $(document).ready(function () {
 
 
         $('#course_tree')
-			.on('changed.jstree', function (e, data) {
-			    var i, j, r = [];
-			    for (i = 0, j = data.selected.length; i < j; i++) {
-			        console.log('Pushing: ' + data.instance.get_node(data.selected[i]).text);
-			        r.push(data.instance.get_node(data.selected[i]).text);
-			    }
-			    console.log('Selected: ' + r.join(', '));
+            .on('changed.jstree', function (e, data) {
+                var i, j, r = [];
+                for (i = 0, j = data.selected.length; i < j; i++) {
+                    console.log('Pushing: ' + data.instance.get_node(data.selected[i]).text);
+                    r.push(data.instance.get_node(data.selected[i]).text);
+                }
+                console.log('Selected: ' + r.join(', '));
 
-                $.get("/api/courses/info", { letter : data.node.a_attr['data-letter'], number : data.node.a_attr['data-number']})
-                .done(function(data) {
+                $.get("/api/courses/info", {
+                    letter: data.node.a_attr['data-letter'],
+                    number: data.node.a_attr['data-number']
+                })
+                    .done(function (data) {
 
-                    console.log(data);
-                    var dialog = ngDialog.open({
-                                                template: 
-                                                    '<div ng-controller="cOverlayCtrl as overlay">' +
-													'<p>Course Info:</p>'+
-													'<div><p>Name: ' + data.name + '</p><p>' + data.letter + ' ' + data.number +'</p></div>'+
-													'<div><p>Description: </p>' + data.details + '</div>'+
-                                                    '<br />' +
-													'<div><button class="inline close-this-dialog" ng-click="overlay.selectCourseCb(\'' + data.letter.replace( /^#\?/, "" ) + '\',' + data.number + ')">Select Class</button></div>' +
-                                                    '</div>',
-												className: 'ngdialog-theme-default', 
-                                                plain: true, /*Change this to false for external templates */
-                                                showClose: false,
-                                                closeByDocument: true,
-                                                closeByEscape: true,
-                                                appendTo: false,
+                        console.log(data);
+                        var dialog = ngDialog.open({
+                            template: '<div ng-controller="cOverlayCtrl as overlay">' +
+                            '<p>Course Info:</p>' +
+                            '<div><p>Name: ' + data.name + '</p><p>' + data.letter + ' ' + data.number + '</p></div>' +
+                            '<div><p>Description: </p>' + data.details + '</div>' +
+                            '<br />' +
+                            '<div><button class="inline close-this-dialog" ng-click="overlay.selectCourseCb(\'' + data.letter.replace(/^#\?/, "") + '\',' + data.number + ')">Select Class</button></div>' +
+                            '</div>',
+                            className: 'ngdialog-theme-default',
+                            plain: true, /*Change this to false for external templates */
+                            showClose: false,
+                            closeByDocument: true,
+                            closeByEscape: true,
+                            appendTo: false,
+                        });
                     });
-                });
-                
 
-			    
-			})
-			.jstree({
-			    'core': {
-			        'data': function (obj, cb) {
-			            $.get("/api/courses/tree", function (data) {
-			                cb.call(this, data.results);
-			            });
-			        }
-			    },
-			    "search": {
-			        "case_insensitive": true,
-			        "show_only_matches": true,
-			        "multiple": false
-			    },
-			    "plugins": ["search"]
-			});
 
-        $rootScope.$on('onOptionChange', function(event) {
+            })
+            .jstree({
+                'core': {
+                    'data': function (obj, cb) {
+                        $.get("/api/courses/tree", function (data) {
+                            cb.call(this, data.results);
+                        });
+                    },
+                    'themes': {
+                        'icons': false
+                    }
+                },
+                "search": {
+                    "case_insensitive": true,
+                    "show_only_matches": true,
+                    "multiple": false
+                },
+                "plugins": ["search"]
+            });
+
+        $rootScope.$on('onOptionChange', function (event) {
             if ($rootScope.selectedOption > -1) {
                 $log.info('onOptionChange');
                 var calendar = $('#calendar');
@@ -238,8 +241,12 @@ $(document).ready(function () {
                     $.get("/api/schedule/tree", {semester: self.selectedSemester.id}, function (data) {
                         cb.call(this, data.results);
                     });
-                }
+                },
+                'themes': {
+                    'icons': false
+                },
             },
+
             "search": {
                 "case_insensitive": true,
                 "show_only_matches": true,
@@ -249,7 +256,8 @@ $(document).ready(function () {
                 "keep_selected_style": false,
                 "check_callback": true
             },
-            "plugins": ["search", "checkbox"]
+            "plugins": ["search", "checkbox"],
+
         });
 
 
@@ -269,7 +277,7 @@ $(document).ready(function () {
     // overlay controller
     function cOverlayCtrl($scope, $log) {
         var self = this;
-        self.selectCourseCb = function(course_letter, course_number) {
+        self.selectCourseCb = function (course_letter, course_number) {
             $log.info('selectCourseCb:' + course_letter + course_number);
             $('#schedule_tree').jstree(true).select_node(course_letter + ' ' + course_number);
         };
