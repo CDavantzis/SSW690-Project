@@ -101,7 +101,7 @@ def working_class_combinations_calendar(semester="2016F", call_numbers=None):
                     combo_option.append({
                         "title": db_entry["title"],
                         "start": meeting["start_time"].strftime("%H:%M"),
-                        "end": meeting["start_time"].strftime("%H:%M"),
+                        "end": meeting["end_time"].strftime("%H:%M"),
                         "dow": map(lambda x: dow_hash.get(x), list(meeting["day"])),
                     })
                 else:
