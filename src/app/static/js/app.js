@@ -1,8 +1,5 @@
 //inheriting ngMaterial from Google, and overlay.js
 
-var selected_call_number = [];
-var event_sources = [];
-
 
 $(document).ready(function () {
     // page is now ready, initialize the calendar..
@@ -93,21 +90,21 @@ $(document).ready(function () {
         var self = this;
         self.nav = 'course_info';
         self.searchTimeout = false;
-		self.selectYear = 2016;
 
         self.semesters = [
-            { id: '2016F', name: 'Fall 2016'},
-            { id: '2016S', name: 'Spring 2017'},
-            { id: '2017F', name: 'Fall 2017'}
+            {id: '2017S', name: 'Spring 2017'},
+            {id: '2016F', name: 'Fall 2016'}
         ];
 
-        self.selectedSemester = { id: '2016S', name: 'Spring 2016'};
-		
+        self.selectedSemester = self.semesters[0];
+
         self.setSemester = function () {
-			$log.info('setSemester:' + self.selectedSemester.name);
-            $.get("/api/schedule/tree", { semester : self.selectedSemester.id }, function (data) {
-                        $('#schedule_tree').jstree(true).settings.core.data = data.results;
-                        $('#schedule_tree').jstree(true).refresh();
+            $log.info('setSemester:' + self.selectedSemester.name);
+            $.get("/api/schedule/tree", {semester: self.selectedSemester.id}, function (data) {
+                var tree = $('#schedule_tree');
+                tree.jstree(true).settings.core.data = data.results;
+                tree.jstree(true).uncheck_all();
+                tree.jstree(true).refresh();
             });
         };
 		
