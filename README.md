@@ -5,7 +5,7 @@
 Project:
 --------
 
-	Can be forked from github: https://github.com/CDavantzis/SSW690-Project
+	Can be forked from GitHub: https://github.com/CDavantzis/SSW690-Project
 
 Objective:
 ----------
@@ -29,7 +29,7 @@ Features:
 Bugs:
 -----
 
-	Located on Githut: https://github.com/CDavantzis/SSW690-Project/issues
+	Located on GitHub: https://github.com/CDavantzis/SSW690-Project/issues
 
 Future expectations:
 --------------------
