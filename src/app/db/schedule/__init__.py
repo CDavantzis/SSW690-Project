@@ -8,6 +8,7 @@ def update_db(newest_terms=0):
     """ Replicate existing course scheduler database in MongoDB """
     db = mongo_client.schedule
     for term in middleware.terms()[-newest_terms:]:
+        print "Updating db {0}".format(term)
         new_data = list(middleware.courses(term[0]))
         if len(new_data) != 0:
             if term[0] not in db.collection_names():
