@@ -10,4 +10,4 @@ def update(update_courses=True, update_degrees=True, update_schedule=True):
         catalog.degrees.update_db()
 
     if update_schedule:
-        schedule.update_db()
+        schedule.update_db(newest_terms=2)

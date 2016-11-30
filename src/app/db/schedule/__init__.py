@@ -4,10 +4,10 @@ from app import flask_app, mongo_client
 from itertools import combinations, product
 
 
-def update_db():
+def update_db(newest_terms=0):
     """ Replicate existing course scheduler database in MongoDB """
     db = mongo_client.schedule
-    for term in middleware.terms():
+    for term in middleware.terms()[-newest_terms:]:
         new_data = list(middleware.courses(term[0]))
         if len(new_data) != 0:
             if term[0] not in db.collection_names():
