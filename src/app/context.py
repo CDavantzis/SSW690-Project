@@ -9,4 +9,10 @@ def get_db():
     """
     if not hasattr(g, 'mongo_client'):
         g.mongo_client = MongoClient(current_app.config.get("MONGO_HOST"), port=current_app.config.get("MONGO_PORT"))
+
+        g.mongo_client.admin.authenticate(current_app.config.get("MONGO_USER"),
+                                          current_app.config.get("MONGO_PASSWORD"),
+                                          mechanism=current_app.config.get("MONGO_AUTH_MECH"))
+
+
     return g.mongo_client

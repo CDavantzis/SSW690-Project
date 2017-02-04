@@ -4,7 +4,13 @@ from flask import Flask, render_template, jsonify, abort, request
 from werkzeug.local import LocalProxy
 from context import get_db
 
+try:
+    from app import config_private as config
+except ImportError:
+    from app import config_public as config
+
 flask_app = Flask(__name__)
+flask_app.config.from_object(config.BaseConfig)
 mongo_client = LocalProxy(get_db)
 
 import db
